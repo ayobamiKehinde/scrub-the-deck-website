@@ -45,29 +45,29 @@ const TESTIMONIALS = [
   },
 ];
 
-const BRANDS: { name: string; domain: string | null }[] = [
-  { name: "BBC Worldwide",      domain: "bbc.com" },
-  { name: "Mercedes-Benz",      domain: "mercedes-benz.com" },
-  { name: "O2",                 domain: "o2.co.uk" },
-  { name: "Aston Martin",       domain: "astonmartin.com" },
-  { name: "Cisco",              domain: "cisco.com" },
-  { name: "Vodafone",           domain: "vodafone.com" },
-  { name: "Hilton",             domain: "hilton.com" },
-  { name: "MTV",                domain: "mtv.com" },
-  { name: "Petronas",           domain: "petronas.com" },
-  { name: "Adidas",             domain: "adidas.com" },
-  { name: "100+ Tech Startups", domain: null },
+const BRANDS = [
+  { name: "BBC Worldwide",      file: "bbc" },
+  { name: "Mercedes-Benz",      file: "mercedes" },
+  { name: "O2",                 file: "o2" },
+  { name: "Aston Martin",       file: "aston-martin" },
+  { name: "Cisco",              file: "cisco" },
+  { name: "100+ Tech Startups", file: "tech-startups" },
+  { name: "Vodafone",           file: "vodafone" },
+  { name: "Hilton",             file: "hilton" },
+  { name: "MTV",                file: "mtv" },
+  { name: "Petronas",           file: "petronas" },
+  { name: "Adidas",             file: "adidas" },
 ];
 
-function BrandLogo({ name, domain }: { name: string; domain: string | null }) {
+function BrandLogo({ name, file }: { name: string; file: string }) {
   const [imgFailed, setImgFailed] = useState(false);
-  if (!domain || imgFailed) {
+  if (imgFailed) {
     return <span className={styles.brandText}>{name}</span>;
   }
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`https://logo.clearbit.com/${domain}`}
+      src={`/images/brands/${file}.jpg`}
       alt={name}
       className={styles.brandLogo}
       onError={() => setImgFailed(true)}
@@ -264,7 +264,7 @@ export default function Testimonials() {
           <div className={styles.marqueeTrack}>
             {[...BRANDS, ...BRANDS].map((brand, i) => (
               <span key={i} className={styles.brandItem}>
-                <BrandLogo name={brand.name} domain={brand.domain} />
+                <BrandLogo name={brand.name} file={brand.file} />
                 <span className={styles.brandDot}>✦</span>
               </span>
             ))}

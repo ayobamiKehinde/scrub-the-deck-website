@@ -257,16 +257,17 @@
 }
 
 .brandLogo {
-  height: 22px;
+  height: 52px;
   width: auto;
-  max-width: 100px;
+  max-width: 130px;
   object-fit: contain;
-  filter: brightness(0) invert(0.5);
-  transition: filter 0.2s;
+  border-radius: 4px;
+  opacity: 0.85;
+  transition: opacity 0.2s;
 }
 
 .brandLogo:hover {
-  filter: brightness(0) invert(1);
+  opacity: 1;
 }
 
 .brandText {
