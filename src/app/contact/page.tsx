@@ -1,8 +1,8 @@
 import styles from "./contact.module.css";
 
 export const metadata = {
-  title: "Book a Strategy Session — Scrub the Deck",
-  description: "Book a free strategy session with Scrub the Deck. Limited spots available each quarter.",
+  title: "Book a Free Pitch Deck Strategy Session | Scrub the Deck",
+  description: "Book a free 30-minute pitch deck strategy session with Scrub the Deck. We'll review your raise, identify what your deck is missing, and tell you exactly how to fix it.",
 };
 
 export default function ContactPage() {
@@ -110,11 +110,11 @@ export default function ContactPage() {
             </div>
             <div className={styles.infoBlock}>
               <p className={styles.infoLabel}>Availability</p>
-              <p className={styles.infoValue}>Limited — {new Date().getFullYear()} Q{Math.ceil((new Date().getMonth() + 1) / 3)} cohort</p>
+              <p className={styles.infoValue}>{new Date().getFullYear()} Q{Math.ceil((new Date().getMonth() + 1) / 3)} cohort</p>
             </div>
             <blockquote className={styles.pullQuote}>
               &ldquo;Worth every penny. Closed the round in three weeks.&rdquo;
-              <cite className={styles.cite}>— Kara, FinTech Founder</cite>
+              <cite className={styles.cite}>Kara, FinTech Founder</cite>
             </blockquote>
           </aside>
 

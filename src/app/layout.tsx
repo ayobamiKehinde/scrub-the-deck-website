@@ -25,13 +25,23 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Scrub the Deck — Pitch Deck Agency",
+  title: "Scrub the Deck | Pitch Deck Agency | Investor Pitch Decks That Raise",
   description:
-    "Pitch decks that raise funding. Scrub the Deck has an 81% success rate helping founders navigate the rough seas of investment.",
+    "Scrub the Deck is a specialist pitch deck agency with an 81% fundraising success rate. We design investor pitch decks for seed, Series A and Series B startups. Trusted by BBC, Aston Martin, Cisco and 100+ tech founders.",
   metadataBase: new URL("https://scrubthedeck.com"),
+  keywords: [
+    "pitch deck agency",
+    "investor pitch deck",
+    "pitch deck design",
+    "startup pitch deck",
+    "fundraising pitch deck",
+    "seed round pitch deck",
+    "Series A pitch deck",
+    "pitch deck consultant",
+  ],
   openGraph: {
-    title: "Scrub the Deck — Pitch Deck Agency",
-    description: "Pitch decks that raise funding. 81% success rate.",
+    title: "Scrub the Deck | Pitch Deck Agency | 81% Raise Success Rate",
+    description: "Specialist pitch deck agency. We design investor decks that close rounds. Trusted by BBC, Aston Martin, Cisco and 100+ tech founders.",
     url: "https://scrubthedeck.com",
     siteName: "Scrub the Deck",
     type: "website",

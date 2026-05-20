@@ -46,9 +46,9 @@ const TESTIMONIALS = [
 ];
 
 const BRANDS = [
-  "Matatika", "Brickflow", "BBC", "VoltVis",
-  "Oort", "Atlast", "Roto", "Gist",
-  "Yule", "Nex",
+  "BBC Worldwide", "Mercedes-Benz", "O2", "Aston Martin",
+  "Cisco", "Vodafone", "Hilton", "MTV",
+  "Petronas", "Adidas", "100+ Tech Startups",
 ];
 
 const INTERVAL_MS = 5000;
@@ -232,7 +232,7 @@ export default function Testimonials() {
 
       {/* ── Brand marquee ── */}
       <div className={styles.brandsWrap}>
-        <p className={styles.brandsLabel}>Trusted by</p>
+        <p className={styles.brandsLabel}>Trusted by the world's leading brands</p>
         <div className={styles.marqueeOuter} aria-hidden="true">
           <div className={styles.marqueeTrack}>
             {[...BRANDS, ...BRANDS].map((brand, i) => (

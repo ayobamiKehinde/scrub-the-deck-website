@@ -1,8 +1,8 @@
 import styles from "./blog.module.css";
 
 export const metadata = {
-  title: "Pitch Deck Guides — Scrub the Deck",
-  description: "Expert guides on pitch deck strategy, investor storytelling, and fundraising from Scrub the Deck.",
+  title: "Pitch Deck Guides & Fundraising Tips | Scrub the Deck",
+  description: "Free pitch deck guides from a specialist pitch deck agency. Learn how to structure your investor deck, tell your story, and raise funding faster.",
 };
 
 const POSTS = [
@@ -19,7 +19,7 @@ const POSTS = [
     category: "Fundraising",
     title: "Why 'We Have No Competition' Kills Your Round",
     excerpt:
-      "Saying you have no competitors doesn't signal opportunity — it signals you haven't done your homework. Here's what to say instead.",
+      "Saying you have no competitors doesn't signal opportunity. It signals you haven't done your homework. Here's what to say instead.",
     date: "April 2025",
     readTime: "4 min read",
     slug: "no-competition-slide-mistake",

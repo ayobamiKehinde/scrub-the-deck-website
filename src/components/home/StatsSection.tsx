@@ -78,6 +78,14 @@ export default function StatsSection() {
   return (
     <section ref={sectionRef} className={styles.section}>
       <div className={styles.inner}>
+        {/* H1 lives here so search engines index it — first content section after the hero */}
+        <h1 className={styles.seoHeading}>
+          The Pitch Deck Agency That <em>Raises Funding.</em>
+        </h1>
+        <p className={styles.seoSub}>
+          We design investor pitch decks for seed, Series A and Series B startups.
+          Trusted by BBC, Aston Martin, Cisco, Vodafone and 100+ tech founders.
+        </p>
         <p className={styles.eyebrow}>The numbers speak</p>
         <div className={styles.grid}>
           {STATS.map((s) => (

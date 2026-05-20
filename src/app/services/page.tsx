@@ -1,8 +1,8 @@
 import styles from "./services.module.css";
 
 export const metadata = {
-  title: "Pitch Deck Services — Scrub the Deck",
-  description: "From a rapid deck audit to a full investor-ready pitch pack. Choose the service that matches your raise.",
+  title: "Pitch Deck Services | Scrub the Deck | Investor Pitch Deck Design",
+  description: "Pitch deck design services for startups raising seed to Series B. Deck audits, full pitch packs, and investor-ready presentation design. 81% raise success rate.",
 };
 
 const SERVICES = [
@@ -11,7 +11,7 @@ const SERVICES = [
     name: "Full Pitch Pack",
     price: "From £[TBC]",
     description:
-      "Your full pitch deck built from scratch. Strategy, narrative, design, and financial storytelling — everything an investor needs to say yes.",
+      "Your full pitch deck built from scratch. Strategy, narrative, design, and financial storytelling. Everything an investor needs to say yes.",
     includes: [
       "Founder discovery session",
       "Narrative strategy framework",

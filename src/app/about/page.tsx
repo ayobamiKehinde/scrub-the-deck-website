@@ -1,8 +1,8 @@
 import styles from "./about.module.css";
 
 export const metadata = {
-  title: "About — Scrub the Deck",
-  description: "The story behind Scrub the Deck — the pitch deck agency with an 81% raise success rate.",
+  title: "About | Scrub the Deck | Pitch Deck Agency",
+  description: "The story behind Scrub the Deck, the pitch deck agency trusted by BBC, Aston Martin, Cisco and 100+ tech founders, with an 81% fundraising success rate.",
 };
 
 const STATS = [
@@ -55,13 +55,13 @@ export default function AboutPage() {
               From the boardroom to the pitch room.
             </h2>
             <p className={styles.bioPara}>
-              Scrub the Deck was built on years inside the investment world — advising founders, reviewing hundreds of decks, and sitting in the rooms where decisions get made. We know exactly what investors are looking for before a word is spoken.
+              Scrub the Deck was built on years inside the investment world: advising founders, reviewing hundreds of decks, and sitting in the rooms where decisions get made. We know exactly what investors are looking for before a word is spoken.
             </p>
             <p className={styles.bioPara}>
               The agency was born from a simple observation: most founders are brilliant at building, but struggle to translate that brilliance onto slides. The wrong narrative costs rounds. The right one closes them.
             </p>
             <p className={styles.bioPara}>
-              We work with a small number of founders each quarter — seed through Series B — helping them build decks that don't just look premium, but tell a story investors can't ignore.
+              We work with a small number of founders each quarter, seed through Series B, helping them build decks that don't just look premium but tell a story investors can't ignore.
             </p>
             <a href="/contact" className={styles.cta}>
               Work with us →

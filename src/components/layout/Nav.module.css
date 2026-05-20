@@ -1,9 +1,69 @@
+/* ─── Nav bar ─────────────────────────────────────────────────── */
 .nav {
   position: fixed;
   top: 0;
+  left: 0;
   right: 0;
   z-index: 100;
-  padding: var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Subtle fade so it doesn't fight the hero video */
+  background: linear-gradient(to bottom, rgba(7,10,15,0.7) 0%, transparent 100%);
+}
+
+/* ─── Logo ────────────────────────────────────────────────────── */
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 30px;
+  }
+}
+
+/* ─── Right cluster ───────────────────────────────────────────── */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* ─── Book a Call CTA — Collider-style pill ───────────────────── */
+.bookBtn {
+  display: inline-block;
+  padding: 10px var(--space-xl);
+  background: var(--colour-white);
+  color: var(--colour-bg);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.bookBtn:hover {
+  background: var(--colour-teal);
+  color: var(--colour-bg);
+  box-shadow: var(--glow-teal);
+}
+
+@media (max-width: 480px) {
+  .bookBtn {
+    padding: 8px var(--space-lg);
+    font-size: 0.82rem;
+  }
 }
 
 /* ─── Hamburger ───────────────────────────────────────────────── */
@@ -15,6 +75,9 @@
   width: 40px;
   height: 40px;
   padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .line {
@@ -27,18 +90,9 @@
               opacity  0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.lineTop {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.lineHide {
-  opacity: 0;
-  transform: scaleX(0);
-}
-
-.lineBottom {
-  transform: translateY(-8px) rotate(-45deg);
-}
+.lineTop    { transform: translateY(8px) rotate(45deg); }
+.lineHide   { opacity: 0; transform: scaleX(0); }
+.lineBottom { transform: translateY(-8px) rotate(-45deg); }
 
 /* ─── Overlay ─────────────────────────────────────────────────── */
 .overlay {
@@ -51,8 +105,6 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-2xl);
-
-  /* Hidden state */
   opacity: 0;
   pointer-events: none;
   transform: translateY(-8px);
@@ -66,7 +118,7 @@
   transform: translateY(0);
 }
 
-/* ─── Links ───────────────────────────────────────────────────── */
+/* ─── Overlay links ───────────────────────────────────────────── */
 .links {
   list-style: none;
   display: flex;
@@ -88,7 +140,7 @@
   color: var(--colour-teal);
 }
 
-/* Last link — CTA style */
+/* Last link (Book a Call) — teal CTA style */
 .links li:last-child .link {
   color: var(--colour-teal);
   border: 1px solid var(--colour-teal);
@@ -107,4 +159,15 @@
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   color: var(--colour-muted);
   text-align: center;
+}
+
+/* ─── Mobile: hide wordmark text if too tight ─────────────────── */
+@media (max-width: 400px) {
+  .wordmark {
+    font-size: 0.85rem;
+  }
+  .bookBtn {
+    padding: 8px var(--space-md);
+    font-size: 0.8rem;
+  }
 }
