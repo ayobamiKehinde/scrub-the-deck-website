@@ -45,11 +45,35 @@ const TESTIMONIALS = [
   },
 ];
 
-const BRANDS = [
-  "BBC Worldwide", "Mercedes-Benz", "O2", "Aston Martin",
-  "Cisco", "Vodafone", "Hilton", "MTV",
-  "Petronas", "Adidas", "100+ Tech Startups",
+const BRANDS: { name: string; domain: string | null }[] = [
+  { name: "BBC Worldwide",      domain: "bbc.com" },
+  { name: "Mercedes-Benz",      domain: "mercedes-benz.com" },
+  { name: "O2",                 domain: "o2.co.uk" },
+  { name: "Aston Martin",       domain: "astonmartin.com" },
+  { name: "Cisco",              domain: "cisco.com" },
+  { name: "Vodafone",           domain: "vodafone.com" },
+  { name: "Hilton",             domain: "hilton.com" },
+  { name: "MTV",                domain: "mtv.com" },
+  { name: "Petronas",           domain: "petronas.com" },
+  { name: "Adidas",             domain: "adidas.com" },
+  { name: "100+ Tech Startups", domain: null },
 ];
+
+function BrandLogo({ name, domain }: { name: string; domain: string | null }) {
+  const [imgFailed, setImgFailed] = useState(false);
+  if (!domain || imgFailed) {
+    return <span className={styles.brandText}>{name}</span>;
+  }
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={`https://logo.clearbit.com/${domain}`}
+      alt={name}
+      className={styles.brandLogo}
+      onError={() => setImgFailed(true)}
+    />
+  );
+}
 
 const INTERVAL_MS = 5000;
 
@@ -73,11 +97,16 @@ export default function Testimonials() {
     animatingRef.current = true;
     setAnimating(true);
 
+    // Safety: if GSAP callbacks never fire (e.g. hidden tab), unlock after max anim time
+    const unlock = () => { animatingRef.current = false; setAnimating(false); };
+    const safetyId = setTimeout(unlock, 1400);
+
     gsap.to(quoteRef.current, {
       opacity: 0,
       y: -20,
       duration: 0.35,
       ease: "power2.in",
+      onInterrupt: () => { clearTimeout(safetyId); unlock(); },
       onComplete: () => {
         activeRef.current = next;
         setActive(next);
@@ -89,10 +118,8 @@ export default function Testimonials() {
             y: 0,
             duration: 0.55,
             ease: "power3.out",
-            onComplete: () => {
-              animatingRef.current = false;
-              setAnimating(false);
-            },
+            onInterrupt: () => { clearTimeout(safetyId); unlock(); },
+            onComplete: () => { clearTimeout(safetyId); unlock(); },
           }
         );
       },
@@ -237,7 +264,7 @@ export default function Testimonials() {
           <div className={styles.marqueeTrack}>
             {[...BRANDS, ...BRANDS].map((brand, i) => (
               <span key={i} className={styles.brandItem}>
-                {brand}
+                <BrandLogo name={brand.name} domain={brand.domain} />
                 <span className={styles.brandDot}>✦</span>
               </span>
             ))}
