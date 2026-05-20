@@ -107,9 +107,8 @@
   margin: 0 auto;
   padding: var(--space-lg) var(--space-lg);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: var(--space-md);
 }
 
@@ -117,6 +116,16 @@
   font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--colour-muted);
+}
+
+.registration {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: var(--colour-muted);
+  opacity: 0.6;
+  max-width: 600px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .legal {

@@ -48,7 +48,11 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <p className={styles.copy}>
-          © {new Date().getFullYear()} Scrub the Deck. All rights reserved.
+          © {new Date().getFullYear()} Scrub the Deck Ltd. All rights reserved.
+        </p>
+        <p className={styles.registration}>
+          Scrub the Deck&reg; is a registered trademark of Scrub the Deck Ltd, founded by David Pugh.
+          167&ndash;169 Great Portland Street, 5th Floor, London, W1W 5PF. Company No. 8327365.
         </p>
         <p className={styles.legal}>
           <Link href="/privacy" className={styles.legalLink}>Privacy</Link>

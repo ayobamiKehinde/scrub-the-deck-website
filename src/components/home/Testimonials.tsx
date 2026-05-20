@@ -51,7 +51,6 @@ const BRANDS = [
   { name: "O2",                 file: "o2" },
   { name: "Aston Martin",       file: "aston-martin" },
   { name: "Cisco",              file: "cisco" },
-  { name: "100+ Tech Startups", file: "tech-startups" },
   { name: "Vodafone",           file: "vodafone" },
   { name: "Hilton",             file: "hilton" },
   { name: "MTV",                file: "mtv" },
