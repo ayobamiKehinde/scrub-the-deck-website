@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(screencapture -C -t png /tmp/site-live.png)"
+    ]
+  }
+}

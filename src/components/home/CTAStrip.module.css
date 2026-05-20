@@ -1,0 +1,75 @@
+/* ─── Section ─────────────────────────────────────────────────── */
+.section {
+  position: relative;
+  z-index: 3;
+  background: var(--colour-bg);
+  padding: var(--space-4xl) var(--space-lg);
+  border-top: 1px solid var(--colour-teal-dim);
+  border-bottom: 1px solid var(--colour-teal-dim);
+  text-align: center;
+}
+
+/* ─── Inner ───────────────────────────────────────────────────── */
+.inner {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+/* ─── Eyebrow ─────────────────────────────────────────────────── */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--colour-teal);
+}
+
+/* ─── Heading ─────────────────────────────────────────────────── */
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.05;
+  color: var(--colour-white);
+  text-transform: uppercase;
+}
+
+.heading em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.82em;
+  text-transform: none;
+  color: var(--colour-gold);
+}
+
+/* ─── Subtext ─────────────────────────────────────────────────── */
+.sub {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--colour-muted);
+  max-width: 520px;
+}
+
+/* ─── Button ──────────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: var(--space-md) var(--space-2xl);
+  background: var(--colour-teal);
+  color: var(--colour-bg);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  background: #00f0f0;
+  box-shadow: var(--glow-teal);
+}

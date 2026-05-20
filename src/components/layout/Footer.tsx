@@ -1,0 +1,61 @@
+import Link from "next/link";
+import styles from "./Footer.module.css";
+
+const NAV_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Get a Deck" },
+];
+
+export default function Footer() {
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.inner}>
+        <div className={styles.brand}>
+          <p className={styles.wordmark}>Scrub the Deck</p>
+          <p className={styles.tagline}>
+            Helping you navigate the rough seas of investment.
+          </p>
+        </div>
+
+        <nav className={styles.nav} aria-label="Footer navigation">
+          <ul className={styles.links}>
+            {NAV_LINKS.map(({ href, label }) => (
+              <li key={href}>
+                <Link href={href} className={styles.link}>{label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className={styles.contact}>
+          <p className={styles.contactLabel}>Get in touch</p>
+          <a href="mailto:hello@scrubthedeck.com" className={styles.email}>
+            hello@scrubthedeck.com
+          </a>
+          <a
+            href="https://linkedin.com/company/scrub-the-deck"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.social}
+          >
+            LinkedIn →
+          </a>
+        </div>
+      </div>
+
+      <div className={styles.bottom}>
+        <p className={styles.copy}>
+          © {new Date().getFullYear()} Scrub the Deck. All rights reserved.
+        </p>
+        <p className={styles.legal}>
+          <Link href="/privacy" className={styles.legalLink}>Privacy</Link>
+          <span className={styles.sep}>·</span>
+          <Link href="/terms" className={styles.legalLink}>Terms</Link>
+        </p>
+      </div>
+    </footer>
+  );
+}

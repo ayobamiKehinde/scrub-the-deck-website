@@ -1,0 +1,110 @@
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  padding: var(--space-lg);
+}
+
+/* ─── Hamburger ───────────────────────────────────────────────── */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--colour-white);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity  0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lineTop {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.lineHide {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.lineBottom {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ─── Overlay ─────────────────────────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: rgba(7, 10, 15, 0.97);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xl);
+
+  /* Hidden state */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+/* ─── Links ───────────────────────────────────────────────────── */
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.link {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--colour-white);
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--colour-teal);
+}
+
+/* Last link — CTA style */
+.links li:last-child .link {
+  color: var(--colour-teal);
+  border: 1px solid var(--colour-teal);
+  padding: var(--space-sm) var(--space-xl);
+}
+
+.links li:last-child .link:hover {
+  background: var(--colour-teal);
+  color: var(--colour-bg);
+}
+
+/* ─── Tagline ─────────────────────────────────────────────────── */
+.overlayTagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: var(--colour-muted);
+  text-align: center;
+}

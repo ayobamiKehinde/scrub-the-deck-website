@@ -1,0 +1,56 @@
+/* ─── Slot ────────────────────────────────────────────────────── */
+.slot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  /* starts off-screen left */
+  opacity: 0;
+  transform: translateX(-60px);
+  transition:
+    opacity  0.35s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── Phase states ───────────────────────────────────────────────── */
+/* .hidden matches the default .slot state — element is off-screen left */
+.hidden {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.entering,
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.exiting {
+  opacity: 0;
+  transform: translateX(60px);
+  transition:
+    opacity  0.28s ease,
+    transform 0.3s cubic-bezier(0.5, 0, 0.75, 0);
+}
+
+/* ─── Number ──────────────────────────────────────────────────── */
+.number {
+  font-family: var(--font-display);
+  font-weight: 700;
+  /* Match mockup: "81%" sits below the large logo, noticeable but not dominant */
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.65);
+}
+
+/* ─── Label ("success rate") ─────────────────────────────────── */
+.label {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(0.9rem, 1.8vw, 1.25rem);
+  color: #ffffff;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}

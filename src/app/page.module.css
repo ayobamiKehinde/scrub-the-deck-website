@@ -1,0 +1,12 @@
+/* ─── Scroll spacer ────────────────────────────────────────────── */
+/* Desktop: 300vh gives the scrub TV-rise animation room to play  */
+/* Mobile: 120vh — no scrub animation, just needs breathing room  */
+.spacer {
+  height: 300vh;
+}
+
+@media (max-width: 767px) {
+  .spacer {
+    height: 120vh;
+  }
+}

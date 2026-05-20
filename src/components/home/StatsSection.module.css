@@ -1,0 +1,69 @@
+/* ─── Section ─────────────────────────────────────────────────── */
+.section {
+  position: relative;
+  z-index: 3;
+  background: var(--colour-bg);
+  padding: var(--space-4xl) var(--space-lg);
+  border-top: 1px solid var(--colour-border);
+}
+
+/* ─── Inner ───────────────────────────────────────────────────── */
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ─── Eyebrow ─────────────────────────────────────────────────── */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--colour-teal);
+  margin-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+/* ─── Grid ────────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl) var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+/* ─── Card ────────────────────────────────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xl) var(--space-md);
+  border: 1px solid var(--colour-border);
+  background: var(--colour-surface);
+}
+
+/* ─── Number ──────────────────────────────────────────────────── */
+.number {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1;
+  color: var(--colour-white);
+  text-shadow: 0 0 40px rgba(0, 212, 212, 0.25);
+}
+
+/* ─── Label ───────────────────────────────────────────────────── */
+.label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--colour-muted);
+  text-align: center;
+}

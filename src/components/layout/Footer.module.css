@@ -1,0 +1,142 @@
+/* ─── Footer ──────────────────────────────────────────────────── */
+.footer {
+  position: relative;
+  z-index: 3;
+  background: var(--colour-bg);
+  border-top: 1px solid var(--colour-border);
+}
+
+/* ─── Inner grid ──────────────────────────────────────────────── */
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+}
+
+@media (min-width: 768px) {
+  .inner {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* ─── Brand ───────────────────────────────────────────────────── */
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--colour-white);
+  margin-bottom: var(--space-md);
+}
+
+.tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--colour-muted);
+  max-width: 260px;
+}
+
+/* ─── Nav ─────────────────────────────────────────────────────── */
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.link {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--colour-muted);
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--colour-teal);
+}
+
+/* ─── Contact column ──────────────────────────────────────────── */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contactLabel {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--colour-muted);
+}
+
+.email {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--colour-white);
+  transition: color 0.2s;
+}
+
+.email:hover {
+  color: var(--colour-teal);
+}
+
+.social {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--colour-teal);
+  transition: opacity 0.2s;
+}
+
+.social:hover {
+  opacity: 0.7;
+}
+
+/* ─── Bottom bar ──────────────────────────────────────────────── */
+.bottom {
+  border-top: 1px solid var(--colour-border);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.copy {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--colour-muted);
+}
+
+.legal {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.legalLink {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--colour-muted);
+  transition: color 0.2s;
+}
+
+.legalLink:hover {
+  color: var(--colour-white);
+}
+
+.sep {
+  color: var(--colour-border);
+  font-size: 0.78rem;
+}

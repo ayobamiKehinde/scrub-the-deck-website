@@ -1,0 +1,82 @@
+/* ─── Hero wrapper ────────────────────────────────────────────── */
+/* Fixed so it stays pinned as the TV section rises over it.     */
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--colour-bg);
+  z-index: 1;
+}
+
+/* ─── Background video ────────────────────────────────────────── */
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 1;
+}
+
+/* Secondary video — hidden until crossfade triggers */
+.videoSecondary {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.videoFadeOut {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.videoFadeIn {
+  opacity: 1;
+}
+
+/* ─── Dark gradient overlay ───────────────────────────────────── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(7, 10, 15, 0.15) 0%,
+      rgba(7, 10, 15, 0.05) 30%,
+      rgba(7, 10, 15, 0.45) 75%,
+      rgba(7, 10, 15, 0.85) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(7, 10, 15, 0.55) 0%,
+      rgba(7, 10, 15, 0) 50%
+    );
+  pointer-events: none;
+}
+
+/* ─── Stat slot ───────────────────────────────────────────────── */
+.statSlot {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 var(--space-lg);
+}
+
+@media (max-width: 767px) {
+  .statSlot {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    justify-content: center;
+  }
+}
