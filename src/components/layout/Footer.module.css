@@ -34,8 +34,7 @@
 }
 
 .tagline {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-caveat);
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--colour-muted);

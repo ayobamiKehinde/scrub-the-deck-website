@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter, Playfair_Display } from "next/font/google";
+import { Bebas_Neue, Inter, Playfair_Display, Caveat } from "next/font/google";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
@@ -22,6 +22,12 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   style: ["normal", "italic"],
   weight: ["400", "700"],
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -56,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bebasNeue.variable} ${inter.variable} ${playfair.variable}`}
+      className={`${bebasNeue.variable} ${inter.variable} ${playfair.variable} ${caveat.variable}`}
       suppressHydrationWarning
     >
       <body>

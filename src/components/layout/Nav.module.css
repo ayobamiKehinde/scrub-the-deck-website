@@ -24,8 +24,6 @@
 .navLeft {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-right: var(--space-xl);
 }
 
 /* ─── Centre: logo ────────────────────────────────────────────── */
@@ -51,8 +49,7 @@
 .navRight {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: var(--space-xl);
+  justify-content: flex-end;
 }
 
 /* ─── Book a Call — outlined pill ────────────────────────────── */
@@ -173,8 +170,7 @@
 
 /* ─── Tagline ─────────────────────────────────────────────────── */
 .overlayTagline {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-caveat);
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   color: var(--colour-muted);
   text-align: center;

@@ -25,8 +25,7 @@
 }
 
 .seoHeading em {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-caveat);
   font-size: 0.88em;
   text-transform: none;
   color: var(--colour-gold);

@@ -46,7 +46,6 @@ const TESTIMONIALS = [
 ];
 
 const BRANDS = [
-  { name: "BBC Worldwide",      file: "bbc" },
   { name: "Mercedes-Benz",      file: "mercedes" },
   { name: "O2",                 file: "o2" },
   { name: "Aston Martin",       file: "aston-martin" },
