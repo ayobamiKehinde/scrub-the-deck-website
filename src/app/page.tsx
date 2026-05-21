@@ -1,6 +1,7 @@
 import HeroSection from "@/components/home/HeroSection";
 import StatsSection from "@/components/home/StatsSection";
 import Testimonials from "@/components/home/Testimonials";
+import MeetFounder from "@/components/home/MeetFounder";
 import CTAStrip from "@/components/home/CTAStrip";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <Testimonials />
+      <MeetFounder />
       <CTAStrip />
     </main>
   );
