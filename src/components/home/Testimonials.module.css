@@ -42,10 +42,10 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 6px;
-  max-width: 860px;
+  gap: 16px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 var(--space-lg) 6px;
+  padding: 0 var(--space-xl) var(--space-xl);
 }
 
 @media (min-width: 640px) {
@@ -61,6 +61,15 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 0 1px var(--colour-teal-dim);
 }
 
 /* ─── Thumbnail — square ──────────────────────────────────────── */
@@ -69,6 +78,7 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: #000;
+  border-radius: 12px 12px 0 0;
 }
 
 .card:hover .cardVideo {
@@ -111,12 +121,11 @@
 
 /* ─── Info strip below video ──────────────────────────────────── */
 .cardInfo {
-  padding: var(--space-md);
+  padding: var(--space-md) var(--space-md) var(--space-lg);
   background: var(--colour-surface);
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  border-top: 1px solid var(--colour-border);
+  gap: 3px;
 }
 
 .cardName {
