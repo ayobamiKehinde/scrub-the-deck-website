@@ -31,7 +31,14 @@ export default function Nav() {
   return (
     <>
       <nav className={styles.nav} aria-label="Main navigation">
-        {/* Logo — top left */}
+        {/* Left: Book a Call */}
+        <div className={styles.navLeft}>
+          <Link href="/contact" className={styles.bookBtn}>
+            Book a Call
+          </Link>
+        </div>
+
+        {/* Centre: logo */}
         <Link href="/" className={styles.logoLink} aria-label="Scrub the Deck — home">
           <Image
             src={LOGO}
@@ -44,11 +51,8 @@ export default function Nav() {
           />
         </Link>
 
-        {/* Right side: Book a Call + hamburger */}
+        {/* Right: hamburger */}
         <div className={styles.navRight}>
-          <Link href="/contact" className={styles.bookBtn}>
-            Book a Call
-          </Link>
           <button
             className={styles.hamburger}
             aria-label={open ? "Close menu" : "Open menu"}
