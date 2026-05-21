@@ -16,6 +16,7 @@ const NAV_LINKS = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -28,9 +29,15 @@ export default function Nav() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
-      <nav className={styles.nav} aria-label="Main navigation">
+      <nav className={`${styles.nav} ${scrolled ? styles.navVisible : ""}`} aria-label="Main navigation">
         {/* Left: Book a Call */}
         <div className={styles.navLeft}>
           <Link href="/contact" className={styles.bookBtn}>
