@@ -47,33 +47,49 @@ function BrandLogo({ name, file }: { name: string; file: string }) {
 function VideoCard({ name, company, result }: { name: string; company: string; result: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  // Show first frame on mount
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.load();
+    const show = () => { v.currentTime = 0.001; };
+    v.addEventListener("loadedmetadata", show, { once: true });
+    return () => v.removeEventListener("loadedmetadata", show);
+  }, []);
+
   const handleMouseEnter = () => { videoRef.current?.play(); };
   const handleMouseLeave = () => {
-    if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; }
+    const v = videoRef.current;
+    if (v) { v.pause(); v.currentTime = 0.001; }
   };
 
   return (
     <article className={styles.card} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <video
-        ref={videoRef}
-        className={styles.cardVideo}
-        src="/media/boat-rocks.mp4"
-        muted
-        playsInline
-        loop
-        preload="none"
-        aria-hidden="true"
-      />
-      <div className={styles.cardGradient} aria-hidden="true" />
+      {/* Video thumbnail */}
+      <div className={styles.cardThumb}>
+        <video
+          ref={videoRef}
+          className={styles.cardVideo}
+          src="/media/boat-rocks.mp4"
+          muted
+          playsInline
+          loop
+          preload="metadata"
+          aria-hidden="true"
+        />
+        {/* Play button */}
+        <div className={styles.playBtn} aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 18 18" fill="currentColor">
+            <path d="M5 3l11 6-11 6V3z" />
+          </svg>
+        </div>
+      </div>
+
+      {/* Info below video */}
       <div className={styles.cardInfo}>
         <p className={styles.cardName}>{name}</p>
         <p className={styles.cardCompany}>{company}</p>
         <p className={styles.cardResult}>{result}</p>
-      </div>
-      <div className={styles.playBtn} aria-hidden="true">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
-          <path d="M5 3l11 6-11 6V3z" />
-        </svg>
       </div>
     </article>
   );
