@@ -46,6 +46,7 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 0 var(--space-xl) var(--space-xl);
+  align-items: start;
 }
 
 @media (min-width: 640px) {
@@ -151,6 +152,9 @@
   color: var(--colour-teal);
   margin: 4px 0 0;
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ─── Brands section ──────────────────────────────────────────── */

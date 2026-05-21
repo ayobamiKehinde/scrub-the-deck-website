@@ -8,9 +8,9 @@ import styles from "./Testimonials.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const RESULTS = [
-  { name: "Matt",   company: "SaaS Founder",          result: "Seed round closed in 5 weeks"   },
+  { name: "Matt",   company: "SaaS Founder",          result: "Seed round in 5 weeks"   },
   { name: "Werner", company: "Deep Tech Co-Founder",   result: "£3.2M raised"                  },
-  { name: "Anna",   company: "CEO & Founder",          result: "8 investor meetings, week one"  },
+  { name: "Anna",   company: "CEO & Founder",          result: "8 investor meetings"  },
   { name: "Kara",   company: "FinTech Founder",        result: "Pre-seed oversubscribed"        },
   { name: "James",  company: "PropTech Founder",       result: "Over £900K raised"              },
   { name: "Philip", company: "Marketing SaaS",         result: "£650K raised so far"            },
