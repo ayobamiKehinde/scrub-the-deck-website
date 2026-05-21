@@ -43,18 +43,14 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 6px;
-  padding: 0 6px 6px;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg) 6px;
 }
 
 @media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 
