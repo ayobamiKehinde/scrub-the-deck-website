@@ -24,6 +24,8 @@
 .navLeft {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  padding-right: var(--space-xl);
 }
 
 /* ─── Centre: logo ────────────────────────────────────────────── */
@@ -49,7 +51,8 @@
 .navRight {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding-left: var(--space-xl);
 }
 
 /* ─── Book a Call — outlined pill ────────────────────────────── */
