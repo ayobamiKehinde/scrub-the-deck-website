@@ -5,8 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Nav.module.css";
 
-const LOGO = "https://images.squarespace-cdn.com/content/v1/60ae0541a77da37fa06bf963/8a1e4ae1-498f-4f74-94bb-f5111442f074/logo-on-trans-PNG2.png?format=300w";
-
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
@@ -38,22 +36,21 @@ export default function Nav() {
   return (
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.navVisible : ""}`} aria-label="Main navigation">
-        {/* Left: Book a Call */}
+        {/* Left: gold Book a Call button */}
         <div className={styles.navLeft}>
           <Link href="/contact" className={styles.bookBtn}>
-            Book a Call
+            <span className={styles.bookLabel}>Book a Call</span>
           </Link>
         </div>
 
-        {/* Centre: logo */}
+        {/* Centre: silver logo */}
         <Link href="/" className={styles.logoLink} aria-label="Scrub the Deck — home">
           <Image
-            src={LOGO}
+            src="/images/logo-silver.png"
             alt="Scrub the Deck"
-            width={140}
-            height={48}
+            width={200}
+            height={52}
             className={styles.logo}
-            unoptimized
             priority
           />
         </Link>

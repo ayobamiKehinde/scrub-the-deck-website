@@ -1,17 +1,15 @@
 "use client";
 
-import { useState } from "react";
-import StatCycler from "./StatCycler";
+import Image from "next/image";
+import GoldButton from "@/components/ui/GoldButton";
+import RopeDivider from "@/components/ui/RopeDivider";
 import styles from "./HeroSection.module.css";
 
 export default function HeroSection() {
-  const [switched, setSwitched] = useState(false);
-
   return (
     <section className={styles.hero} aria-label="Hero">
-      {/* Primary video — fades out after stats finish */}
       <video
-        className={`${styles.video} ${switched ? styles.videoFadeOut : ""}`}
+        className={styles.video}
         src="/media/hero-bg.mp4"
         autoPlay
         loop
@@ -21,22 +19,28 @@ export default function HeroSection() {
         aria-hidden="true"
       />
 
-      {/* Secondary video — fades in as primary fades out */}
-      <video
-        className={`${styles.video} ${styles.videoSecondary} ${switched ? styles.videoFadeIn : ""}`}
-        src="/media/boat-rocks.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="none"
-        aria-hidden="true"
-      />
-
       <div className={styles.overlay} aria-hidden="true" />
 
-      <div className={styles.statSlot}>
-        <StatCycler onDone={() => setSwitched(true)} />
+      {/* Centered logo over video */}
+      <div className={styles.logoWrap}>
+        <Image
+          src="/images/logo-silver.png"
+          alt="Scrub the Deck"
+          width={600}
+          height={156}
+          className={styles.heroLogo}
+          priority
+        />
+      </div>
+
+      {/* Gold CTA button */}
+      <div className={styles.ctaWrap}>
+        <GoldButton label="Book a Call" href="/contact" size="lg" />
+      </div>
+
+      {/* Rope divider at bottom */}
+      <div className={styles.ropeWrap}>
+        <RopeDivider />
       </div>
     </section>
   );

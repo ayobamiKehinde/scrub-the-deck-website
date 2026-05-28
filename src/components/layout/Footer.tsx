@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 const NAV_LINKS = [
@@ -14,7 +15,13 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.brand}>
-          <p className={styles.wordmark}>Scrub the Deck</p>
+          <Image
+            src="/images/logo-silver.png"
+            alt="Scrub the Deck"
+            width={180}
+            height={46}
+            className={styles.footerLogo}
+          />
           <p className={styles.tagline}>
             Helping you navigate the rough seas of investment.
           </p>

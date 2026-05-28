@@ -52,34 +52,49 @@
   justify-content: flex-end;
 }
 
-/* ─── Book a Call — outlined pill ────────────────────────────── */
+/* ─── Book a Call — gold button ───────────────────────────────── */
 .bookBtn {
-  display: inline-block;
-  padding: 9px var(--space-xl);
-  background: transparent;
-  color: var(--colour-white);
-  font-family: var(--font-display);
-  font-size: 0.88rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border: 2px solid var(--colour-white);
-  border-radius: 100px;
-  white-space: nowrap;
-  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/images/btn-gold-sm.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  padding: 7px 18px;
+  min-width: 110px;
+  height: 34px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
 }
 
 .bookBtn:hover {
-  background: var(--colour-teal);
-  border-color: var(--colour-teal);
-  color: #000;
-  box-shadow: var(--glow-teal);
+  opacity: 0.88;
+}
+
+.bookLabel {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3a2000;
+  white-space: nowrap;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 480px) {
   .bookBtn {
-    padding: 7px var(--space-lg);
-    font-size: 0.78rem;
+    min-width: 90px;
+    padding: 6px 12px;
   }
+  .bookLabel { font-size: 0.68rem; }
+  .logo { height: 30px; }
 }
 
 /* ─── Hamburger ───────────────────────────────────────────────── */

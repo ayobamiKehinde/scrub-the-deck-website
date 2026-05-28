@@ -24,41 +24,25 @@ export default function StatsSection() {
 
       const resetNumbers = () => {
         numbers.forEach((el) => {
-          const prefix = el.dataset.prefix ?? "";
-          const suffix = el.dataset.suffix ?? "";
-          el.textContent = `${prefix}0${suffix}`;
+          el.textContent = `${el.dataset.prefix ?? ""}0${el.dataset.suffix ?? ""}`;
         });
       };
-
-      // Initialise all to zero on mount
       resetNumbers();
 
-      // Cards entrance — paused, replayed on each enter
       const cardsTl = gsap.timeline({ paused: true });
-      cardsTl.from(cards, {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.12,
-        ease: "power3.out",
+      cardsTl.from([`.${styles.eyebrow}`, `.${styles.heading}`, `.${styles.sub}`], {
+        y: 24, opacity: 0, duration: 0.7, stagger: 0.1, ease: "power3.out",
       });
+      cardsTl.from(cards, { y: 40, opacity: 0, duration: 0.7, stagger: 0.1, ease: "power3.out" }, "-=0.4");
 
-      // Count-up tweens — paused, replayed on each enter
       const countTweens = numbers.map((el, i) => {
-        const end    = Number(el.dataset.end ?? 0);
+        const end = Number(el.dataset.end ?? 0);
         const prefix = el.dataset.prefix ?? "";
         const suffix = el.dataset.suffix ?? "";
-        const obj    = { val: 0 };
-
+        const obj = { val: 0 };
         return gsap.to(obj, {
-          val: end,
-          duration: 2.4,
-          delay: 0.1 + i * 0.12,
-          ease: "power2.out",
-          paused: true,
-          onUpdate() {
-            el.textContent = prefix + Math.round(obj.val) + suffix;
-          },
+          val: end, duration: 2.4, delay: 0.3 + i * 0.12, ease: "power2.out", paused: true,
+          onUpdate() { el.textContent = prefix + Math.round(obj.val) + suffix; },
         });
       });
 
@@ -71,22 +55,20 @@ export default function StatsSection() {
         onLeaveBack: () => { cardsTl.progress(0).pause(); resetNumbers(); countTweens.forEach(t => t.progress(0).pause()); },
       });
     }, sectionRef);
-
     return () => ctx.revert();
   }, []);
 
   return (
     <section ref={sectionRef} className={styles.section}>
+      {/* Hidden SEO heading */}
+      <h1 className={styles.seoHeading}>
+        The Pitch Deck Agency That Raises Funding — Scrub the Deck
+      </h1>
+
       <div className={styles.inner}>
-        {/* H1 lives here so search engines index it — first content section after the hero */}
-        <h1 className={styles.seoHeading}>
-          The Pitch Deck Agency That <em>Raises Funding.</em>
-        </h1>
-        <p className={styles.seoSub}>
-          We design investor pitch decks for seed, Series A and Series B startups.
-          Trusted by BBC, Aston Martin, Cisco, Vodafone and 100+ tech founders.
-        </p>
-        <p className={styles.eyebrow}>The numbers speak</p>
+        <p className={styles.eyebrow}>WHAT THE STATS SAY</p>
+        <p className={styles.sub}>in real numbers</p>
+
         <div className={styles.grid}>
           {STATS.map((s) => (
             <div key={s.label} className={styles.card}>

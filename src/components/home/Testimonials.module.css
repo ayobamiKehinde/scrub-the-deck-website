@@ -2,44 +2,48 @@
 .section {
   position: relative;
   z-index: 3;
-  background: var(--colour-bg);
+  background-image: url('/images/waves-bg.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
   overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  pointer-events: none;
 }
 
 /* ─── Header ──────────────────────────────────────────────────── */
 .header {
+  position: relative;
   max-width: 1100px;
   margin: 0 auto;
   padding: var(--space-4xl) var(--space-lg) var(--space-2xl);
-}
-
-.eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--colour-teal);
-  margin-bottom: var(--space-md);
+  text-align: center;
 }
 
 .heading {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 1.05;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  letter-spacing: 0.08em;
   color: var(--colour-white);
-  text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 var(--space-xs);
 }
 
-.heading em {
+.sub {
   font-family: var(--font-caveat);
-  font-size: 1.05em;
-  text-transform: none;
+  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
   color: var(--colour-gold);
+  margin: 0;
 }
 
 /* ─── Grid ────────────────────────────────────────────────────── */
 .grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
@@ -300,13 +304,7 @@
 .brandItem {
   display: flex;
   align-items: center;
-  padding: 0 var(--space-xl);
-}
-
-.brandDot {
-  margin-left: var(--space-xl);
-  color: var(--colour-teal-dim);
-  font-size: 0.5rem;
+  padding: 0 var(--space-md);
 }
 
 .brandLogo {

@@ -86,7 +86,7 @@ function VideoCard({ name, company, result, quote, onOpen }: CardProps) {
         <video
           ref={videoRef}
           className={styles.cardVideo}
-          src="/media/boat-rocks.mp4"
+          src="/media/hero-bg.mp4"
           muted
           playsInline
           loop
@@ -140,7 +140,7 @@ function VideoModal({ onClose }: { onClose: () => void }) {
         </button>
         <video
           className={styles.modalVideo}
-          src="/media/boat-rocks.mp4"
+          src="/media/hero-bg.mp4"
           autoPlay
           controls
           playsInline
@@ -183,10 +183,8 @@ export default function Testimonials() {
 
       {/* Header */}
       <div className={styles.header}>
-        <p className={styles.eyebrow}>Founder results</p>
-        <h2 className={styles.heading}>
-          A wall of <em>results.</em>
-        </h2>
+        <h2 className={styles.heading}>WHAT OUR CLIENTS SAY</h2>
+        <p className={styles.sub}>in real interviews</p>
       </div>
 
       {/* Grid */}
@@ -204,7 +202,6 @@ export default function Testimonials() {
             {[...BRANDS, ...BRANDS].map((brand, i) => (
               <span key={i} className={styles.brandItem}>
                 <BrandLogo name={brand.name} file={brand.file} />
-                <span className={styles.brandDot}>✦</span>
               </span>
             ))}
           </div>

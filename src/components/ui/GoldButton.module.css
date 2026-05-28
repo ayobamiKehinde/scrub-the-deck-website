@@ -1,0 +1,47 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/images/btn-gold.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.sm {
+  background-image: url('/images/btn-gold-sm.png');
+  padding: 8px 20px;
+  min-width: 120px;
+  height: 36px;
+}
+
+.lg {
+  padding: 16px 52px;
+  min-width: 220px;
+  height: 60px;
+}
+
+.label {
+  font-family: var(--font-display);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3a2000;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.sm .label {
+  font-size: 0.75rem;
+}
+
+.lg .label {
+  font-size: 1rem;
+}
+
+.btn:hover .label {
+  color: #1a0e00;
+}

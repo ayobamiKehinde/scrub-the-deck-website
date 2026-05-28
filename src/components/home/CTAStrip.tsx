@@ -1,21 +1,22 @@
+import GoldButton from "@/components/ui/GoldButton";
 import styles from "./CTAStrip.module.css";
 
 export default function CTAStrip() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <p className={styles.eyebrow}>Ready to raise?</p>
-        <h2 className={styles.heading}>
-          Stop losing rounds.<br />
-          <em>Start closing them.</em>
-        </h2>
-        <p className={styles.sub}>
-          We work with a small number of founders each quarter.<br />
-          Book a free strategy session before the next cohort fills.
-        </p>
-        <a href="/contact" className={styles.btn}>
-          Book a Free Strategy Session
-        </a>
+        <div className={styles.textCol}>
+          <h2 className={styles.heading}>RISE UP WITH INVESTMENT</h2>
+          <p className={styles.sub}>Spread your wings</p>
+          <p className={styles.body}>
+            Before I created this brand, I saw that founders were really struggling to grab
+            an investor&rsquo;s attention. They were constantly rejected — or worse, ignored.
+            I made it my goal to speak directly to investors in my network and extract the
+            formula they define. After several years of trial-and-error, testing everything
+            the hard way — I&rsquo;ve finally cracked it.
+          </p>
+          <GoldButton label="Book a Call" href="/contact" size="lg" />
+        </div>
       </div>
     </section>
   );
