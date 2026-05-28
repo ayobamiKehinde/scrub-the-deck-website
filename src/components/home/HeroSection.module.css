@@ -6,10 +6,6 @@
   min-height: 560px;
   overflow: hidden;
   background: var(--colour-bg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 /* ─── Background video ────────────────────────────────────────── */
@@ -36,29 +32,14 @@
   pointer-events: none;
 }
 
-/* ─── Logo ────────────────────────────────────────────────────── */
-.logoWrap {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 var(--space-lg);
-  flex: 1;
-}
-
-.heroLogo {
-  width: clamp(240px, 52vw, 560px);
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 40px rgba(0,0,0,0.8));
-}
 
 /* ─── CTA button ──────────────────────────────────────────────── */
 .ctaWrap {
-  position: relative;
+  position: absolute;
+  bottom: var(--space-3xl);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
-  margin-bottom: var(--space-3xl);
 }
 
 /* ─── Rope at bottom ──────────────────────────────────────────── */

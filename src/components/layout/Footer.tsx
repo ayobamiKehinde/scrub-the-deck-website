@@ -39,9 +39,6 @@ export default function Footer() {
 
         <div className={styles.contact}>
           <p className={styles.contactLabel}>Get in touch</p>
-          <a href="mailto:hello@scrubthedeck.com" className={styles.email}>
-            hello@scrubthedeck.com
-          </a>
           <a
             href="https://linkedin.com/company/scrub-the-deck"
             target="_blank"

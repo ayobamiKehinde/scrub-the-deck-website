@@ -1,9 +1,23 @@
 .section {
+  position: relative;
   background-image: url('/images/wood-bg.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
   text-align: center;
-  padding: var(--space-4xl) var(--space-lg);
+  padding: var(--space-xl) var(--space-lg) var(--space-4xl);
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
 }
 
 .inner {
@@ -12,7 +26,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-lg);
+  gap: var(--space-md);
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
 }
 
 .heading {
@@ -20,22 +41,25 @@
   font-size: clamp(1.6rem, 3.5vw, 2.8rem);
   letter-spacing: 0.06em;
   color: var(--colour-white);
-  margin: 0;
+  margin: 0 0 -0.18em;
+  line-height: 1;
   text-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
 
 .sub {
-  font-family: var(--font-caveat);
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
-  color: var(--colour-gold);
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+  color: #e8a800;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .body {
   font-family: var(--font-body);
   font-size: clamp(0.85rem, 1.2vw, 0.95rem);
-  color: rgba(240, 244, 248, 0.80);
+  font-weight: 600;
+  color: rgba(240, 244, 248, 0.95);
   line-height: 1.75;
   margin: 0;
   max-width: 520px;
@@ -51,11 +75,11 @@
 }
 
 .playBtn {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.12);
-  border: 2px solid rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.18);
+  border: 3px solid rgba(255,255,255,0.95);
   color: #fff;
   display: flex;
   align-items: center;
@@ -65,17 +89,18 @@
 }
 
 .playBtn:hover {
-  background: rgba(201,168,76,0.35);
-  border-color: var(--colour-gold);
+  background: rgba(232,168,0,0.4);
+  border-color: #e8a800;
   transform: scale(1.1);
 }
 
 .playLabel {
   font-family: var(--font-body);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--colour-muted);
+  color: #fff;
   margin: 0;
 }
 

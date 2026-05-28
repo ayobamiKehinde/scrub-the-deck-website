@@ -1,4 +1,5 @@
 import GoldButton from "@/components/ui/GoldButton";
+import RopeDivider from "@/components/ui/RopeDivider";
 import styles from "./CTAStrip.module.css";
 
 export default function CTAStrip() {
@@ -6,8 +7,10 @@ export default function CTAStrip() {
     <section className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.textCol}>
-          <h2 className={styles.heading}>RISE UP WITH INVESTMENT</h2>
-          <p className={styles.sub}>Spread your wings</p>
+          <div className={styles.titleGroup}>
+            <h2 className={styles.heading}>RISE UP WITH INVESTMENT</h2>
+            <p className={styles.sub}>Spread your wings</p>
+          </div>
           <p className={styles.body}>
             Before I created this brand, I saw that founders were really struggling to grab
             an investor&rsquo;s attention. They were constantly rejected — or worse, ignored.
@@ -18,6 +21,7 @@ export default function CTAStrip() {
           <GoldButton label="Book a Call" href="/contact" size="lg" />
         </div>
       </div>
+      <div className={styles.rope}><RopeDivider /></div>
     </section>
   );
 }

@@ -1,12 +1,8 @@
-/* ─── Scroll spacer ────────────────────────────────────────────── */
-/* Desktop: 300vh gives the scrub TV-rise animation room to play  */
-/* Mobile: 120vh — no scrub animation, just needs breathing room  */
-.spacer {
-  height: 300vh;
-}
-
-@media (max-width: 767px) {
-  .spacer {
-    height: 120vh;
-  }
+/* ─── Shared waves section (Stats + Testimonials) ─────────────── */
+.wavesSection {
+  background-image: url('/images/waves-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
 }

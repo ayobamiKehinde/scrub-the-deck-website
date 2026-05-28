@@ -1,13 +1,39 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import RopeDivider from "@/components/ui/RopeDivider";
 import styles from "./MeetFounder.module.css";
+import RopeDivider from "@/components/ui/RopeDivider";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const BRANDS = [
+  { name: "Mercedes-Benz",      file: "mercedes"     },
+  { name: "O2",                 file: "o2"           },
+  { name: "Aston Martin",       file: "aston-martin" },
+  { name: "Cisco",              file: "cisco"        },
+  { name: "Vodafone",           file: "vodafone"     },
+  { name: "Hilton",             file: "hilton"       },
+  { name: "MTV",                file: "mtv"          },
+  { name: "Petronas",           file: "petronas"     },
+  { name: "Adidas",             file: "adidas"       },
+];
+
+function BrandLogo({ name, file }: { name: string; file: string }) {
+  const [imgFailed, setImgFailed] = useState(false);
+  if (imgFailed) return <span className={styles.brandText}>{name}</span>;
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={`/images/brands/${file}.jpg`}
+      alt={name}
+      className={styles.brandLogo}
+      onError={() => setImgFailed(true)}
+    />
+  );
+}
 
 export default function MeetFounder() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -18,7 +44,7 @@ export default function MeetFounder() {
       tl.from(`.${styles.eyebrow}`, { y: 24, opacity: 0, duration: 0.7, ease: "power3.out" });
       tl.from(`.${styles.heading}`, { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.5");
       tl.from(`.${styles.bio}`,     { y: 20, opacity: 0, duration: 0.7, stagger: 0.1, ease: "power3.out" }, "-=0.4");
-      tl.from(`.${styles.porthole}`,{ x: 40, opacity: 0, duration: 1, ease: "power3.out" }, "-=1.2");
+      tl.from(`.${styles.porthole}`,{ x: 40, opacity: 0, duration: 1,   ease: "power3.out" }, "-=1.2");
 
       ScrollTrigger.create({
         trigger: sectionRef.current,
@@ -35,15 +61,16 @@ export default function MeetFounder() {
   return (
     <>
       <RopeDivider />
+
       <section ref={sectionRef} className={styles.section}>
         <div className={styles.inner}>
 
           {/* Left — text */}
           <div className={styles.textCol}>
-            <p className={styles.eyebrow}>STEERING THE SHIP</p>
-            <h2 className={styles.heading}>
-              Captain David Pugh
-            </h2>
+            <div className={styles.titleGroup}>
+              <p className={styles.eyebrow}>STEERING THE SHIP</p>
+              <h2 className={styles.heading}>Captain David Pugh</h2>
+            </div>
 
             <p className={styles.bio}>
               Before I created this brand, I saw that founders were really struggling to grab an
@@ -75,6 +102,21 @@ export default function MeetFounder() {
 
         </div>
       </section>
+
+      {/* Brand logos bar — wood background, flush with section above */}
+      <div className={styles.brandsWrap}>
+        <div className={styles.marqueeOuter} aria-hidden="true">
+          <div className={styles.marqueeTrack}>
+            {[...BRANDS, ...BRANDS].map((brand, i) => (
+              <span key={i} className={styles.brandItem}>
+                <BrandLogo name={brand.name} file={brand.file} />
+              </span>
+            ))}
+          </div>
+        </div>
+        <p className={styles.brandsLabel}>Billions generated creating decks for global brands</p>
+      </div>
+
       <RopeDivider />
     </>
   );

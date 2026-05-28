@@ -3,7 +3,6 @@
 import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import RopeDivider from "@/components/ui/RopeDivider";
 import styles from "./PitchSection.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -34,11 +33,12 @@ export default function PitchSection() {
 
   return (
     <>
-      <RopeDivider />
       <section ref={sectionRef} className={styles.section}>
         <div className={styles.inner}>
-          <h2 className={styles.heading}>FUNDRAISING SHOULDN&rsquo;T BE A STRESS</h2>
-          <p className={styles.sub}>We&rsquo;ll make it plain sailing</p>
+          <div className={styles.titleGroup}>
+            <h2 className={styles.heading}>FUNDRAISING SHOULDN&rsquo;T BE A STRESS</h2>
+            <p className={styles.sub}>We&rsquo;ll make it plain sailing</p>
+          </div>
           <p className={styles.body}>
             We will take you through the full 6-step raising process, creating the pitch deck
             that gives what investors need to hear — and we will put it in the inboxes of
@@ -59,7 +59,6 @@ export default function PitchSection() {
           </div>
         </div>
       </section>
-      <RopeDivider />
 
       {/* Video modal */}
       {playing && (

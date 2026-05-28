@@ -1,8 +1,9 @@
 .section {
   position: relative;
   background-image: url('/images/wood-bg.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
   overflow: hidden;
 }
 
@@ -10,7 +11,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.18);
   pointer-events: none;
 }
 
@@ -32,34 +33,45 @@
   }
 }
 
-/* ─── Text column ─────────────────────────────────────────────── */
 .textCol {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
 }
 
-.eyebrow {
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
-  letter-spacing: 0.1em;
-  color: var(--colour-white);
-  margin: 0;
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1;
 }
 
+/* "STEERING THE SHIP" — Bebas Neue uppercase */
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  letter-spacing: 0.08em;
+  /* compensate for half letter-spacing added before first glyph */
+  margin: 0 0 -0.18em -0.04em;
+  line-height: 1;
+  color: var(--colour-white);
+}
+
+/* "Captain David Pugh" — Caveat bold */
 .heading {
-  font-family: var(--font-caveat);
+  font-family: var(--font-script);
   font-size: clamp(2rem, 4vw, 3.2rem);
   color: var(--colour-gold);
-  margin: 0;
-  line-height: 1.1;
+  margin: 0 0 0 -0.1em;
+  line-height: 1;
+  font-weight: 700;
 }
 
 .bio {
   font-family: var(--font-body);
   font-size: clamp(0.85rem, 1.2vw, 0.95rem);
   line-height: 1.75;
-  color: rgba(240,244,248,0.82);
+  color: rgba(240,244,248,0.9);
   margin: 0;
 }
 
@@ -69,9 +81,10 @@
 }
 
 .attribution {
-  font-family: var(--font-caveat);
-  font-size: clamp(1rem, 1.4vw, 1.15rem);
-  color: var(--colour-teal);
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  color: var(--colour-white);
   margin-top: var(--space-sm);
 }
 
@@ -85,7 +98,67 @@
 .portholeImg {
   width: 100%;
   height: auto;
-  max-width: 460px;
+  max-width: 480px;
   display: block;
-  filter: drop-shadow(0 8px 40px rgba(0,0,0,0.7));
+  filter: drop-shadow(0 8px 48px rgba(0,0,0,0.5));
+}
+
+/* ─── Brand logos bar ─────────────────────────────────────────── */
+.brandsWrap {
+  background-image: url('/images/wood-bg.jpg');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+  padding-bottom: var(--space-2xl);
+}
+
+.brandsLabel {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--colour-white);
+  text-align: center;
+  margin: var(--space-md) 0 0;
+}
+
+.marqueeOuter {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marqueeTrack {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.brandItem {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 4px;
+}
+
+.brandLogo {
+  height: 88px;
+  width: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.brandText {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--colour-muted);
+  padding: 0 var(--space-md);
 }

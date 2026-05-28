@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import GoldButton from "@/components/ui/GoldButton";
 import RopeDivider from "@/components/ui/RopeDivider";
 import styles from "./HeroSection.module.css";
@@ -20,18 +19,6 @@ export default function HeroSection() {
       />
 
       <div className={styles.overlay} aria-hidden="true" />
-
-      {/* Centered logo over video */}
-      <div className={styles.logoWrap}>
-        <Image
-          src="/images/logo-silver.png"
-          alt="Scrub the Deck"
-          width={600}
-          height={156}
-          className={styles.heroLogo}
-          priority
-        />
-      </div>
 
       {/* Gold CTA button */}
       <div className={styles.ctaWrap}>

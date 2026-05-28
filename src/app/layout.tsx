@@ -30,6 +30,7 @@ const caveat = Caveat({
   weight: ["400", "600", "700"],
 });
 
+
 export const metadata: Metadata = {
   title: "Scrub the Deck | Pitch Deck Agency | Investor Pitch Decks That Raise",
   description:
