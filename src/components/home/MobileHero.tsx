@@ -1,8 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./MobileHero.module.css";
+
+function VideoModal({ onClose }: { onClose: () => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
+  return (
+    <div className={styles.modalBackdrop} onClick={onClose}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+        <button className={styles.modalClose} onClick={onClose} aria-label="Close">✕</button>
+        <iframe
+          className={styles.modalVideo}
+          src="https://www.youtube.com/embed/LQ4SXep3zOs?autoplay=1&rel=0&modestbranding=1"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          title="Scrub the Deck intro"
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function MobileHero() {
   const [playing, setPlaying] = useState(false);
@@ -26,31 +53,21 @@ export default function MobileHero() {
         <p className={styles.sub}>...you&rsquo;re in the <em>RIGHT</em> place!</p>
       </div>
 
-      {/* TV */}
+      {/* TV — clicking opens fullscreen modal */}
       <div className={styles.tvWrap}>
         <Image
           src="/images/dave-tv.png"
           alt="Scrub the Deck TV"
-          width={560}
-          height={480}
+          width={1165}
+          height={787}
           className={styles.tvImage}
           priority
         />
-        {!playing ? (
-          <button className={styles.playBtn} onClick={() => setPlaying(true)} aria-label="Play video">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="44" height="44">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </button>
-        ) : (
-          <iframe
-            className={styles.tvIframe}
-            src="https://www.youtube.com/embed/LQ4SXep3zOs?autoplay=1&rel=0&modestbranding=1"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            title="Scrub the Deck intro"
-          />
-        )}
+        <button className={styles.playBtn} onClick={() => setPlaying(true)} aria-label="Play video">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="44" height="44">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
       </div>
 
       {/* CTA button */}
@@ -58,6 +75,7 @@ export default function MobileHero() {
         <span className={styles.ctaLabel}>BOOK A CALL</span>
       </a>
 
+      {playing && <VideoModal onClose={() => setPlaying(false)} />}
     </section>
   );
 }
