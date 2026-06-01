@@ -53,8 +53,15 @@ export default function MobileHero() {
         <p className={styles.sub}>...you&rsquo;re in the <em>RIGHT</em> place!</p>
       </div>
 
-      {/* TV — clicking opens fullscreen modal */}
-      <div className={styles.tvWrap}>
+      {/* TV — tap anywhere to open fullscreen modal */}
+      <div
+        className={styles.tvWrap}
+        onClick={() => setPlaying(true)}
+        role="button"
+        tabIndex={0}
+        aria-label="Play intro video"
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setPlaying(true); }}
+      >
         <Image
           src="/images/dave-tv.png"
           alt="Scrub the Deck TV"
@@ -63,11 +70,6 @@ export default function MobileHero() {
           className={styles.tvImage}
           priority
         />
-        <button className={styles.playBtn} onClick={() => setPlaying(true)} aria-label="Play video">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="44" height="44">
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        </button>
       </div>
 
       {/* CTA button */}
