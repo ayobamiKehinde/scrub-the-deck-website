@@ -54,9 +54,24 @@
   object-fit: contain;
 }
 
+@media (max-width: 767px) {
+  .bookBtn {
+    width: 110px;
+    height: 28px;
+  }
+
+  .bookLabel {
+    font-size: 0.62rem;
+  }
+
+  .logo {
+    height: 36px;
+  }
+}
+
 @media (max-width: 480px) {
   .logo {
-    height: 28px;
+    height: 30px;
   }
 }
 

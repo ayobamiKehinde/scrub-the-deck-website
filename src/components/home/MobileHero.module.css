@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     background: var(--colour-bg);
-    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+    padding: calc(72px + var(--space-md)) var(--space-md) var(--space-2xl);
     gap: var(--space-md);
   }
 
