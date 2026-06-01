@@ -7,27 +7,27 @@ import styles from "./Testimonials.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// image:   filename in /public/images/testimonials/ e.g. "matt.jpg"
-// videoId: YouTube video ID e.g. "ydSV_XjxReM"
+// image:   filename in /public/images/testimonials/
+// videoId: YouTube video ID — fill in as received
 const RESULTS = [
-  { name: "Matt",    company: "SaaS Founder",            result: "Seed round in 5 weeks",        quote: "David completely transformed how we told our story. Investors finally got it.",   image: "matt.jpg",    videoId: "ydSV_XjxReM" },
-  { name: "Werner",  company: "Deep Tech Co-Founder",    result: "£3.2M raised",                 quote: "The deck opened doors we'd been knocking on for months. Worth every penny.",       image: "werner.jpg",  videoId: "" },
-  { name: "Anna",    company: "CEO & Founder",           result: "8 investor meetings",           quote: "We went from ignored to oversubscribed after one deck revision.",                 image: "anna.jpg",    videoId: "" },
-  { name: "Kara",    company: "FinTech Founder",         result: "Pre-seed oversubscribed",       quote: "Every slide had a purpose. Investors told us it was the clearest deck they'd seen.", image: "kara.jpg", videoId: "" },
-  { name: "James",   company: "PropTech Founder",        result: "Over £900K raised",             quote: "The narrative arc David built made our numbers actually land with investors.",     image: "james.jpg",   videoId: "" },
-  { name: "Philip",  company: "Marketing SaaS",          result: "£650K raised so far",           quote: "We'd tried three other agencies. David was the first one who really got our vision.", image: "philip.jpg", videoId: "" },
-  { name: "Sam",     company: "B2B Founder",             result: "Investor meetings secured",     quote: "From zero traction to a packed calendar of investor calls in three weeks.",        image: "sam.jpg",     videoId: "" },
-  { name: "Chris",   company: "E-Commerce Founder",      result: "£1.28M raised",                quote: "David challenged our assumptions and the deck was better for it. Game changer.",   image: "chris.jpg",   videoId: "" },
-  { name: "Rachel",  company: "HealthTech Founder",      result: "Series A closed",              quote: "The storytelling in our deck was on another level. Investors were hooked.",        image: "rachel.jpg",  videoId: "" },
-  { name: "Tom",     company: "CleanTech CEO",           result: "£2.1M raised",                 quote: "We had the product, David gave us the narrative. Night and day difference.",       image: "tom.jpg",     videoId: "" },
-  { name: "Sophie",  company: "EdTech Founder",          result: "£500K pre-seed",               quote: "I was nervous about fundraising. After the deck, I felt unstoppable.",             image: "sophie.jpg",  videoId: "" },
-  { name: "Daniel",  company: "AI Startup Founder",      result: "VC term sheet in 3 weeks",     quote: "The deck was so good we had competing offers. Never expected that.",               image: "daniel.jpg",  videoId: "" },
-  { name: "Laura",   company: "FashionTech Founder",     result: "Oversubscribed round",         quote: "Investors said ours was one of the best decks they'd ever seen. That's David.",    image: "laura.jpg",   videoId: "" },
-  { name: "Marcus",  company: "CyberSec Founder",        result: "£4.5M Series A",               quote: "Six months of failed pitches ended in one week after the rebrand.",                image: "marcus.jpg",  videoId: "" },
-  { name: "Priya",   company: "Biotech Co-Founder",      result: "Grant + equity raise",         quote: "David understood our science and made it accessible to non-technical investors.",  image: "priya.jpg",   videoId: "" },
-  { name: "Oliver",  company: "SportsTech Founder",      result: "£750K raised",                 quote: "From first call to signed term sheet was 4 weeks. David made that happen.",        image: "oliver.jpg",  videoId: "" },
-  { name: "Zara",    company: "InsurTech Founder",       result: "Pre-seed closed fast",         quote: "The confidence I got from having a world-class deck was priceless.",               image: "zara.jpg",    videoId: "" },
-  { name: "Ben",     company: "Logistics SaaS Founder",  result: "£1.8M raised",                 quote: "David told our story better than we could ourselves. Investors felt it.",          image: "ben.jpg",     videoId: "" },
+  { name: "Matt Wilson",        company: "",                   result: "", quote: "", image: "matt-wilson.jpg",    videoId: "e5v0kEtz5wU" },
+  { name: "Anna Burns",         company: "",                   result: "", quote: "", image: "anna-burns.jpg",     videoId: "A_DOYcBJzpU" },
+  { name: "Kara Stanford",      company: "Insight Delivered",  result: "", quote: "", image: "kara-stanford.jpg",  videoId: "PJYiTuin8Yk" },
+  { name: "James Dyer",         company: "At Last",            result: "", quote: "", image: "james-dyer.jpg",     videoId: "hfOEN_HIdfk" },
+  { name: "Philip Werner",      company: "",                   result: "", quote: "", image: "philip-werner.jpg",  videoId: "Xu9UHAzF8Ns" },
+  { name: "Sam Holden",         company: "",                   result: "", quote: "", image: "sam-holden.jpg",     videoId: "uAiGtsAQ5RA" },
+  { name: "Chris Porter",       company: "Nexbotix",           result: "", quote: "", image: "chris-porter.jpg",   videoId: "zN-9jjFPQeI" },
+  { name: "David Bacon",        company: "Boomtime",           result: "", quote: "", image: "david-bacon.jpg",    videoId: "CBQ7UC3UgQo" },
+  { name: "Ian Humphreys",      company: "Brickflow",          result: "", quote: "", image: "ian-humphreys.jpg",  videoId: "q3O4s3LBLvc" },
+  { name: "Achim",              company: "Ellis",              result: "", quote: "", image: "achim.jpg",          videoId: "ydSV_XjxReM" },
+  { name: "Elliott Myers",      company: "Roto",               result: "", quote: "", image: "elliott-myers.jpg",  videoId: "T09LioATiWM" },
+  { name: "Aaron Pheatan",      company: "",                   result: "", quote: "", image: "aaron-pheatan.jpg",  videoId: "ESsuPMNoWU8" },
+  { name: "Aramide",            company: "",                   result: "", quote: "", image: "aramide.jpg",        videoId: "z1Lahe7qq-I" },
+  { name: "Garry Martin",       company: "BBC",                result: "", quote: "", image: "garry-martin.jpg",   videoId: "QSOgcwYQr3Q" },
+  { name: "Julia MacMillan",    company: "",                   result: "", quote: "", image: "julia-macmillan.jpg",videoId: "eAWkrr6tEqU" },
+  { name: "Nick van Dijk-Oort", company: "",                   result: "", quote: "", image: "nick.jpg",           videoId: "AXW3JaEdP7o" },
+  { name: "Manoli Yanaghas",    company: "VoltVision",         result: "", quote: "", image: "manoli.jpg",         videoId: "WeemMI5dk8Q" },
+  { name: "Yule",               company: "",                   result: "", quote: "", image: "yule.jpg",           videoId: "n-6O9QP5uls" },
 ];
 
 const INITIAL_COUNT = 8;

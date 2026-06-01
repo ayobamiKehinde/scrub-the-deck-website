@@ -1,4 +1,4 @@
-/* Mobile-only — hidden on desktop */
+/* Desktop: hidden */
 .section {
   display: none;
 }
@@ -16,7 +16,7 @@
 
   /* ─── Logo ──────────────────────────────────────────────────── */
   .logo {
-    width: clamp(200px, 75vw, 320px);
+    width: clamp(200px, 78vw, 320px);
     height: auto;
   }
 
@@ -25,37 +25,38 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
   }
 
   .headline {
     font-family: var(--font-body);
-    font-size: clamp(1.1rem, 4.5vw, 1.4rem);
-    font-weight: 600;
+    font-size: clamp(1.05rem, 4.2vw, 1.3rem);
+    font-weight: 500;
     color: var(--colour-white);
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
   .sub {
     font-family: var(--font-body);
-    font-size: clamp(1.1rem, 4.5vw, 1.4rem);
-    font-weight: 600;
+    font-size: clamp(1.05rem, 4.2vw, 1.3rem);
+    font-weight: 500;
     color: var(--colour-white);
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
   .sub em {
     font-style: italic;
     color: var(--colour-gold);
+    font-weight: 700;
   }
 
   /* ─── TV ────────────────────────────────────────────────────── */
   .tvWrap {
     position: relative;
     width: 100%;
-    max-width: 380px;
+    max-width: 360px;
   }
 
   .tvImage {
@@ -64,17 +65,16 @@
     display: block;
   }
 
-  /* Play button sits over the TV screen area (~centre of image) */
   .playBtn {
     position: absolute;
     top: 42%;
-    left: 38%;
+    left: 36%;
     transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.55);
-    border: 2.5px solid rgba(255,255,255,0.85);
+    background: rgba(0, 0, 0, 0.5);
+    border: 2.5px solid rgba(255, 255, 255, 0.9);
     color: #fff;
     display: flex;
     align-items: center;
@@ -83,23 +83,23 @@
     transition: background 0.2s, transform 0.2s;
   }
 
-  .playBtn:hover {
-    background: rgba(0,0,0,0.75);
-    transform: translate(-50%, -50%) scale(1.1);
+  .playBtn:hover,
+  .playBtn:active {
+    background: rgba(0, 0, 0, 0.75);
+    transform: translate(-50%, -50%) scale(1.08);
   }
 
-  /* YouTube iframe positioned over the TV screen */
   .tvIframe {
     position: absolute;
-    top: 12%;
-    left: 10%;
-    width: 58%;
-    height: 62%;
+    top: 11%;
+    left: 9%;
+    width: 57%;
+    height: 60%;
     border: none;
-    border-radius: 4px;
+    border-radius: 3px;
   }
 
-  /* ─── CTA Button ────────────────────────────────────────────── */
+  /* ─── CTA button ────────────────────────────────────────────── */
   .ctaBtn {
     display: flex;
     align-items: center;
@@ -107,10 +107,9 @@
     background-image: url('/images/btn-gold.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    width: 90%;
-    max-width: 340px;
-    min-height: 72px;
-    padding: 12px 24px;
+    width: min(340px, 92vw);
+    min-height: 80px;
+    padding: 14px 20px;
     text-decoration: none;
     transition: filter 0.2s, transform 0.2s;
   }
@@ -123,7 +122,7 @@
   .ctaLabel {
     font-family: var(--font-display);
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #3a2000;
