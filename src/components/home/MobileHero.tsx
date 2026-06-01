@@ -55,7 +55,7 @@ export default function MobileHero() {
 
       {/* CTA button */}
       <a href="/contact" className={styles.ctaBtn}>
-        <span className={styles.ctaLabel}>BOOK A 1 on 1 CALL WITH FOUNDER DAVID PUGH</span>
+        <span className={styles.ctaLabel}>BOOK A CALL</span>
       </a>
 
     </section>
