@@ -36,6 +36,7 @@ export default function MobileHero() {
   const [playing, setPlaying] = useState(false);
 
   return (
+    <>
     <section className={styles.section}>
 
       {/* Logo */}
@@ -81,5 +82,6 @@ export default function MobileHero() {
       {playing && <VideoModal onClose={() => setPlaying(false)} />}
     </section>
     <div className={styles.ropeWrap}><RopeDivider /></div>
+    </>
   );
 }

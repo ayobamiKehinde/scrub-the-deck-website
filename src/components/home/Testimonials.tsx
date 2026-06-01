@@ -10,9 +10,9 @@ gsap.registerPlugin(ScrollTrigger);
 // image:   filename in /public/images/testimonials/
 // videoId: YouTube video ID — fill in as received
 const RESULTS = [
-  { name: "Matt Wilson",        company: "",                   result: "", quote: "", image: "matt-wilson.jpg",    videoId: "e5v0kEtz5wU" },
-  { name: "Anna Burns",         company: "",                   result: "", quote: "", image: "anna-burns.jpg",     videoId: "A_DOYcBJzpU" },
-  { name: "Kara Stanford",      company: "Insight Delivered",  result: "", quote: "", image: "kara-stanford.jpg",  videoId: "PJYiTuin8Yk" },
+  { name: "Matt Wilson",        company: "",                   result: "Raising 6 figures pre revenue", quote: "", image: "matt-wilson.jpg",    videoId: "e5v0kEtz5wU" },
+  { name: "Anna Burns",         company: "",                   result: "Success with luxury launch", quote: "", image: "anna-burns.jpg",     videoId: "A_DOYcBJzpU" },
+  { name: "Kara Stanford",      company: "Insight Delivered",  result: "Raised $300,000", quote: "", image: "kara-stanford.jpg",  videoId: "PJYiTuin8Yk" },
   { name: "James Dyer",         company: "At Last",            result: "", quote: "", image: "james-dyer.jpg",     videoId: "hfOEN_HIdfk" },
   { name: "Philip Werner",      company: "",                   result: "", quote: "", image: "philip-werner.jpg",  videoId: "Xu9UHAzF8Ns" },
   { name: "Sam Holden",         company: "",                   result: "", quote: "", image: "sam-holden.jpg",     videoId: "uAiGtsAQ5RA" },
