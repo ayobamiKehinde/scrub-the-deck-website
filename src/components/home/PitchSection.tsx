@@ -65,12 +65,12 @@ export default function PitchSection() {
         <div className={styles.modalBackdrop} onClick={() => setPlaying(false)}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <button className={styles.modalClose} onClick={() => setPlaying(false)} aria-label="Close">✕</button>
-            <video
+            <iframe
               className={styles.modalVideo}
-              src="/media/hero-bg.mp4"
-              autoPlay
-              controls
-              playsInline
+              src="https://www.youtube.com/embed/LQ4SXep3zOs?autoplay=1&rel=0&modestbranding=1"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+              title="Find out how we do it"
             />
           </div>
         </div>

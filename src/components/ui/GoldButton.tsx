@@ -5,10 +5,11 @@ interface GoldButtonProps {
   href?: string;
   size?: "sm" | "lg";
   onClick?: () => void;
+  className?: string;
 }
 
-export default function GoldButton({ label, href, size = "lg", onClick }: GoldButtonProps) {
-  const cls = `${styles.btn} ${size === "sm" ? styles.sm : styles.lg}`;
+export default function GoldButton({ label, href, size = "lg", onClick, className }: GoldButtonProps) {
+  const cls = `${styles.btn} ${size === "sm" ? styles.sm : styles.lg}${className ? ` ${className}` : ""}`;
 
   if (href) {
     return (

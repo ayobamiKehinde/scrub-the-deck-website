@@ -5,7 +5,7 @@
   background-position: top center;
   background-repeat: repeat-y;
   text-align: center;
-  padding: var(--space-xl) var(--space-lg) var(--space-4xl);
+  padding: var(--space-xl) var(--space-lg) var(--space-2xl);
 }
 
 .section::before {
@@ -38,12 +38,12 @@
 
 .heading {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-  letter-spacing: 0.06em;
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: 0;
   color: var(--colour-white);
   margin: 0 0 -0.18em;
   line-height: 1;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
 
 .sub {
@@ -58,7 +58,7 @@
 .body {
   font-family: var(--font-body);
   font-size: clamp(0.85rem, 1.2vw, 0.95rem);
-  font-weight: 600;
+  font-weight: 400;
   color: rgba(240, 244, 248, 0.95);
   line-height: 1.75;
   margin: 0;
@@ -71,14 +71,14 @@
   flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
-  margin-top: var(--space-sm);
+  margin-top: 0;
 }
 
 .playBtn {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.18);
+  background: #120b0a;
   border: 3px solid rgba(255,255,255,0.95);
   color: #fff;
   display: flex;
@@ -134,8 +134,9 @@
 .modalVideo {
   display: block;
   width: 100%;
-  max-height: 80vh;
+  aspect-ratio: 16 / 9;
   background: #000;
+  border: none;
 }
 
 .modalClose {

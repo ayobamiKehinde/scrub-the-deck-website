@@ -22,7 +22,7 @@
 .eyebrow {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3.2rem);
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   color: var(--colour-white);
   margin: 0 0 -0.3em;
   line-height: 1;
@@ -31,7 +31,7 @@
 .sub {
   font-family: var(--font-script);
   font-weight: 700;
-  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+  font-size: clamp(1.8rem, 3.8vw, 2.8rem);
   color: var(--colour-teal);
   margin: 0 0 var(--space-3xl);
   line-height: 1;
