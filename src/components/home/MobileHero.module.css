@@ -55,9 +55,8 @@
   /* ─── TV ────────────────────────────────────────────────────── */
   .tvWrap {
     position: relative;
-    width: 100%;
-    max-width: 100%;
-    align-self: stretch;
+    width: 85%;
+    max-width: 360px;
   }
 
   .tvImage {
