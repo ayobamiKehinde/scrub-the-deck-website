@@ -1,9 +1,13 @@
 /* Desktop: hidden */
-.section {
+.section, .ropeWrap {
   display: none;
 }
 
 @media (max-width: 767px) {
+  .ropeWrap {
+    display: block;
+  }
+
   .section {
     display: flex;
     flex-direction: column;
