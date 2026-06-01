@@ -79,10 +79,6 @@ function VideoCard({ name, company, result, quote, image, videoId, onOpen }: Car
           </div>
         )}
       </div>
-      <div className={styles.cardInfo}>
-        <p className={styles.cardResult}>{result}</p>
-        <p className={styles.cardQuote}>&ldquo;{quote}&rdquo;</p>
-      </div>
     </article>
   );
 }
