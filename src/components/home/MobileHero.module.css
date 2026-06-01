@@ -1,0 +1,134 @@
+/* Mobile-only — hidden on desktop */
+.section {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--colour-bg);
+    padding: var(--space-2xl) var(--space-lg) var(--space-3xl);
+    gap: var(--space-lg);
+    min-height: 100svh;
+  }
+
+  /* ─── Logo ──────────────────────────────────────────────────── */
+  .logo {
+    width: clamp(200px, 75vw, 320px);
+    height: auto;
+  }
+
+  /* ─── Text ──────────────────────────────────────────────────── */
+  .textBlock {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .headline {
+    font-family: var(--font-body);
+    font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+    font-weight: 600;
+    color: var(--colour-white);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .sub {
+    font-family: var(--font-body);
+    font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+    font-weight: 600;
+    color: var(--colour-white);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .sub em {
+    font-style: italic;
+    color: var(--colour-gold);
+  }
+
+  /* ─── TV ────────────────────────────────────────────────────── */
+  .tvWrap {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .tvImage {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Play button sits over the TV screen area (~centre of image) */
+  .playBtn {
+    position: absolute;
+    top: 42%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.55);
+    border: 2.5px solid rgba(255,255,255,0.85);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .playBtn:hover {
+    background: rgba(0,0,0,0.75);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  /* YouTube iframe positioned over the TV screen */
+  .tvIframe {
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    width: 58%;
+    height: 62%;
+    border: none;
+    border-radius: 4px;
+  }
+
+  /* ─── CTA Button ────────────────────────────────────────────── */
+  .ctaBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/images/btn-gold.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 90%;
+    max-width: 340px;
+    min-height: 72px;
+    padding: 12px 24px;
+    text-decoration: none;
+    transition: filter 0.2s, transform 0.2s;
+  }
+
+  .ctaBtn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+
+  .ctaLabel {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #3a2000;
+    text-align: center;
+    line-height: 1.2;
+    white-space: normal;
+  }
+}

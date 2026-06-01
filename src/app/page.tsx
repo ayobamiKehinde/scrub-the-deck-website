@@ -1,4 +1,5 @@
 import HeroSection  from "@/components/home/HeroSection";
+import MobileHero   from "@/components/home/MobileHero";
 import PitchSection from "@/components/home/PitchSection";
 import RopeDivider  from "@/components/ui/RopeDivider";
 import StatsSection from "@/components/home/StatsSection";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <MobileHero />
       <PitchSection />
       <RopeDivider />
       {/* Stats + Testimonials share the same waves background */}

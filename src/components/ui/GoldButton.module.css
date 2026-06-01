@@ -18,25 +18,25 @@
   transform: translateY(-1px);
 }
 
-/* Large — hero + CTA — natural image size: 632×149, displayed at ~50% */
+/* Large — matches logo height 52px, width proportional to 632×149 */
 .lg {
-  width: 316px;
-  height: 75px;
+  width: 220px;
+  height: 52px;
   padding: 0;
 }
 
-/* Small — nav — natural image size: 342×81, displayed at ~55% */
+/* Small — nav — naturally smaller, btn-gold-sm.png 342×81 */
 .sm {
   background-image: url('/images/btn-gold-sm.png');
-  width: 190px;
-  height: 45px;
+  width: 120px;
+  height: 28px;
   padding: 0;
 }
 
 .label {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 1.9rem;
+  font-size: 1.85rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #3a2000;
@@ -44,6 +44,8 @@
   z-index: 1;
   white-space: nowrap;
   line-height: 1;
+  /* sit on the white decorative stripes of the button image */
+  margin-top: -2px;
 }
 
-.sm .label { font-size: 1rem; }
+.sm .label { font-size: 0.72rem; margin-top: 0; }

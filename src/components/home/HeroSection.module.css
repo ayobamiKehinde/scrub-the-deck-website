@@ -52,18 +52,9 @@
 }
 
 @media (max-width: 767px) {
-  /* swap video for still image on mobile */
-  .video {
+  .hero {
     display: none;
   }
-
-  .hero {
-    background-image: url('/images/hero-mobile.jpg');
-    background-size: cover;
-    background-position: center center;
-  }
-
-  .ctaWrap { margin-bottom: var(--space-2xl); }
 }
 
 @media (max-width: 480px) {
