@@ -13,21 +13,21 @@ const RESULTS = [
   { name: "Matt Wilson",        company: "",                   result: "Raising 6 figures pre revenue", quote: "", image: "matt-wilson.jpg",    videoId: "e5v0kEtz5wU" },
   { name: "Anna Burns",         company: "",                   result: "Success with luxury launch", quote: "", image: "anna-burns.jpg",     videoId: "A_DOYcBJzpU" },
   { name: "Kara Stanford",      company: "Insight Delivered",  result: "Raised $300,000", quote: "", image: "kara-stanford.jpg",  videoId: "PJYiTuin8Yk" },
-  { name: "James Dyer",         company: "At Last",            result: "", quote: "", image: "james-dyer.jpg",     videoId: "hfOEN_HIdfk" },
-  { name: "Philip Werner",      company: "",                   result: "", quote: "", image: "philip-werner.jpg",  videoId: "Xu9UHAzF8Ns" },
-  { name: "Sam Holden",         company: "",                   result: "", quote: "", image: "sam-holden.jpg",     videoId: "uAiGtsAQ5RA" },
-  { name: "Chris Porter",       company: "Nexbotix",           result: "", quote: "", image: "chris-porter.jpg",   videoId: "zN-9jjFPQeI" },
-  { name: "David Bacon",        company: "Boomtime",           result: "", quote: "", image: "david-bacon.jpg",    videoId: "CBQ7UC3UgQo" },
-  { name: "Ian Humphreys",      company: "Brickflow",          result: "", quote: "", image: "ian-humphreys.jpg",  videoId: "q3O4s3LBLvc" },
-  { name: "Achim",              company: "Ellis",              result: "", quote: "", image: "achim.jpg",          videoId: "ydSV_XjxReM" },
-  { name: "Elliott Myers",      company: "Roto",               result: "", quote: "", image: "elliott-myers.jpg",  videoId: "T09LioATiWM" },
-  { name: "Aaron Pheatan",      company: "",                   result: "", quote: "", image: "aaron-pheatan.jpg",  videoId: "ESsuPMNoWU8" },
-  { name: "Aramide",            company: "",                   result: "", quote: "", image: "aramide.jpg",        videoId: "z1Lahe7qq-I" },
-  { name: "Garry Martin",       company: "BBC",                result: "", quote: "", image: "garry-martin.jpg",   videoId: "QSOgcwYQr3Q" },
-  { name: "Julia MacMillan",    company: "",                   result: "", quote: "", image: "julia-macmillan.jpg",videoId: "eAWkrr6tEqU" },
-  { name: "Nick van Dijk-Oort", company: "",                   result: "", quote: "", image: "nick.jpg",           videoId: "AXW3JaEdP7o" },
-  { name: "Manoli Yanaghas",    company: "VoltVision",         result: "", quote: "", image: "manoli.jpg",         videoId: "WeemMI5dk8Q" },
-  { name: "Yule",               company: "",                   result: "", quote: "", image: "yule.jpg",           videoId: "n-6O9QP5uls" },
+  { name: "James Dyer",         company: "At Last",            result: "Over £900,000 raised", quote: "", image: "james-dyer.jpg",     videoId: "hfOEN_HIdfk" },
+  { name: "Philip Werner",      company: "",                   result: "Over £900,000 raised over two rounds", quote: "", image: "philip-werner.jpg",  videoId: "Xu9UHAzF8Ns" },
+  { name: "Sam Holden",         company: "",                   result: "Investor meetings secured", quote: "", image: "sam-holden.jpg",     videoId: "uAiGtsAQ5RA" },
+  { name: "Chris Porter",       company: "Nexbotix",           result: "£1.28M raised", quote: "", image: "chris-porter.jpg",   videoId: "zN-9jjFPQeI" },
+  { name: "David Bacon",        company: "Boomtime",           result: "Over £160,000 raised", quote: "", image: "david-bacon.jpg",    videoId: "CBQ7UC3UgQo" },
+  { name: "Ian Humphreys",      company: "Brickflow",          result: "Over £2M raised", quote: "", image: "ian-humphreys.jpg",  videoId: "q3O4s3LBLvc" },
+  { name: "Achim",              company: "Ellis",              result: "Pre-seed funding secured", quote: "", image: "achim.jpg",          videoId: "ydSV_XjxReM" },
+  { name: "Elliott Myers",      company: "Roto",               result: "£7M raised to date", quote: "", image: "elliott-myers.jpg",  videoId: "T09LioATiWM" },
+  { name: "Aaron Pheatan",      company: "",                   result: "Over £500,000 raised", quote: "", image: "aaron-pheatan.jpg",  videoId: "ESsuPMNoWU8" },
+  { name: "Aramide",            company: "",                   result: "Raising £500,000 on a budget", quote: "", image: "aramide.jpg",        videoId: "z1Lahe7qq-I" },
+  { name: "Garry Martin",       company: "BBC",                result: "Decks that made Billions!", quote: "", image: "garry-martin.jpg",   videoId: "QSOgcwYQr3Q" },
+  { name: "Julia MacMillan",    company: "",                   result: "Deck is investor ready", quote: "", image: "julia-macmillan.jpg",videoId: "eAWkrr6tEqU" },
+  { name: "Nick van Dijk-Oort", company: "",                   result: "Over $10M raised so far", quote: "", image: "nick.jpg",           videoId: "AXW3JaEdP7o" },
+  { name: "Manoli Yanaghas",    company: "VoltVision",         result: "Raised £1.2M", quote: "", image: "manoli.jpg",         videoId: "WeemMI5dk8Q" },
+  { name: "Yule",               company: "",                   result: "I definitely recommend you", quote: "", image: "yule.jpg",           videoId: "n-6O9QP5uls" },
 ];
 
 const INITIAL_COUNT = 8;
@@ -79,6 +79,11 @@ function VideoCard({ name, company, result, quote, image, videoId, onOpen }: Car
           </div>
         )}
       </div>
+      {result && (
+        <div className={styles.cardInfo}>
+          <p className={styles.cardResult}>{result}</p>
+        </div>
+      )}
     </article>
   );
 }
