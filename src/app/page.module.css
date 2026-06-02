@@ -17,3 +17,11 @@
   background-attachment: fixed;
   position: relative;
 }
+
+/* background-attachment: fixed breaks on iOS/Android — use scroll on mobile */
+@media (max-width: 767px) {
+  .wavesSection {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+}
