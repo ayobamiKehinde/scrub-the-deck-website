@@ -55,12 +55,8 @@
 }
 
 @media (max-width: 767px) {
-  .navBtn {
-    width: 120px !important;
-  }
-
   .navBtn span {
-    font-size: 1.1rem !important;
+    font-size: 1.6rem !important;
   }
 
   .logo {
