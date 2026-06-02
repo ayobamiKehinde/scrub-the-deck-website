@@ -107,7 +107,7 @@ export default function MeetFounder() {
       <div className={styles.brandsWrap}>
         <div className={styles.marqueeOuter} aria-hidden="true">
           <div className={styles.marqueeTrack}>
-            {[...BRANDS, ...BRANDS].map((brand, i) => (
+            {[...BRANDS, ...BRANDS, ...BRANDS, ...BRANDS].map((brand, i) => (
               <span key={i} className={styles.brandItem}>
                 <BrandLogo name={brand.name} file={brand.file} />
               </span>
