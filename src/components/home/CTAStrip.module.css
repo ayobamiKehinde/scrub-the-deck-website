@@ -68,16 +68,6 @@
   line-height: 1;
 }
 
-/* 40% smaller than the default lg button */
-.ctaBtn {
-  padding: 0 26px !important;
-  min-width: 120px !important;
-  height: 35px !important;
-}
-
-.ctaBtn span {
-  font-size: 1rem !important;
-}
 
 .body {
   font-family: var(--font-body);

@@ -55,7 +55,7 @@
 }
 
 @media (max-width: 767px) {
-  .bookBtn {
+  .navBtn {
     display: none;
   }
 
@@ -94,51 +94,16 @@
   justify-content: flex-end;
 }
 
-/* ─── Book a Call — gold button ───────────────────────────────── */
-.bookBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('/images/btn-gold.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  border: none;
-  padding: 0;
-  width: 160px;
-  aspect-ratio: 632 / 149;
-  height: auto;
-  cursor: pointer;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-
-.bookBtn:hover {
-  opacity: 0.88;
-}
-
-.bookLabel {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #3a2000;
-  white-space: nowrap;
+/* ─── Nav Book a Call — same GoldButton, smaller width ─────────── */
+.navBtn {
+  width: 160px !important;
+  align-self: center !important;
 }
 
 .logo {
   height: 52px;
   width: auto;
   object-fit: contain;
-}
-
-@media (max-width: 480px) {
-  .bookBtn {
-    min-width: 90px;
-    padding: 6px 12px;
-  }
-  .bookLabel { font-size: 0.68rem; }
-  .logo { height: 30px; }
 }
 
 /* ─── Floating hamburger — always visible, merges into navbar on scroll ── */

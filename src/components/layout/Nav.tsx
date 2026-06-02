@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import GoldButton from "@/components/ui/GoldButton";
 import styles from "./Nav.module.css";
 
 const NAV_LINKS = [
@@ -43,7 +44,7 @@ export default function Nav() {
 
   return (
     <>
-      {/* Mobile-only: floating hamburger visible from page load */}
+      {/* Floating hamburger — always visible, merges into navbar on scroll */}
       <button
         className={styles.floatingHamburger}
         aria-label={open ? "Close menu" : "Open menu"}
@@ -55,11 +56,9 @@ export default function Nav() {
       </button>
 
       <nav className={`${styles.nav} ${scrolled ? styles.navVisible : ""}`} aria-label="Main navigation">
-        {/* Left: gold Book a Call button */}
+        {/* Left: same GoldButton as hero, smaller */}
         <div className={styles.navLeft}>
-          <Link href="/contact" className={styles.bookBtn}>
-            <span className={styles.bookLabel}>Book a Call</span>
-          </Link>
+          <GoldButton label="Book a Call" href="/contact" size="lg" className={styles.navBtn} />
         </div>
 
         {/* Centre: silver logo */}
@@ -74,18 +73,8 @@ export default function Nav() {
           />
         </Link>
 
-        {/* Right: hamburger — desktop only, mobile uses floatingHamburger */}
-        <div className={styles.navRight}>
-          <button
-            className={styles.hamburger}
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            aria-controls="mobile-nav"
-            onClick={() => setOpen((v) => !v)}
-          >
-            {hamburgerLines}
-          </button>
-        </div>
+        {/* Right: placeholder keeps grid balanced */}
+        <div className={styles.navRight} />
       </nav>
 
       {/* Full-screen overlay */}
