@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import RopeDivider from "@/components/ui/RopeDivider";
 import styles from "./MobileHero.module.css";
 
 function VideoModal({ onClose }: { onClose: () => void }) {
@@ -81,7 +80,6 @@ export default function MobileHero() {
 
       {playing && <VideoModal onClose={() => setPlaying(false)} />}
     </section>
-    <div className={styles.ropeWrap}><RopeDivider /></div>
     </>
   );
 }

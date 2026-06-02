@@ -13,6 +13,8 @@ export default function Home() {
     <main>
       <HeroSection />
       <MobileHero />
+      {/* Rope between MobileHero and PitchSection — mobile only */}
+      <div className={styles.mobileRope}><RopeDivider /></div>
       <PitchSection />
       <RopeDivider />
       {/* Stats + Testimonials share the same waves background */}

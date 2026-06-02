@@ -1,3 +1,14 @@
+/* Mobile-only rope before PitchSection (replaces HeroSection's bottom rope which is hidden on mobile) */
+.mobileRope {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobileRope {
+    display: block;
+  }
+}
+
 /* ─── Shared waves section (Stats + Testimonials) ─────────────── */
 .wavesSection {
   background-image: url('/images/waves-bg.jpg');
