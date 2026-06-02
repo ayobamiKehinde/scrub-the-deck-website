@@ -214,16 +214,29 @@
   color: var(--colour-teal);
 }
 
-/* Last link (Book a Call) — teal CTA style */
+/* Last link (Book a Call) — gold button */
 .links li:last-child .link {
-  color: var(--colour-teal);
-  border: 1px solid var(--colour-teal);
-  padding: var(--space-sm) var(--space-xl);
+  background-image: url('/images/btn-gold.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  width: 220px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a2000;
+  padding: 0;
+  font-size: 2.4rem;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  transition: filter 0.2s, transform 0.2s;
 }
 
 .links li:last-child .link:hover {
-  background: var(--colour-teal);
-  color: var(--colour-bg);
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  color: #3a2000;
 }
 
 /* ─── Tagline ─────────────────────────────────────────────────── */
