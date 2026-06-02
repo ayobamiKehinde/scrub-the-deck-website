@@ -33,8 +33,27 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const hamburgerLines = (
+    <>
+      <span className={`${styles.line} ${open ? styles.lineTop : ""}`} />
+      <span className={`${styles.line} ${open ? styles.lineHide : ""}`} />
+      <span className={`${styles.line} ${open ? styles.lineBottom : ""}`} />
+    </>
+  );
+
   return (
     <>
+      {/* Mobile-only: floating hamburger visible from page load */}
+      <button
+        className={styles.floatingHamburger}
+        aria-label={open ? "Close menu" : "Open menu"}
+        aria-expanded={open}
+        aria-controls="mobile-nav"
+        onClick={() => setOpen((v) => !v)}
+      >
+        {hamburgerLines}
+      </button>
+
       <nav className={`${styles.nav} ${scrolled ? styles.navVisible : ""}`} aria-label="Main navigation">
         {/* Left: gold Book a Call button */}
         <div className={styles.navLeft}>
@@ -55,7 +74,7 @@ export default function Nav() {
           />
         </Link>
 
-        {/* Right: hamburger */}
+        {/* Right: hamburger — desktop only, mobile uses floatingHamburger */}
         <div className={styles.navRight}>
           <button
             className={styles.hamburger}
@@ -64,9 +83,7 @@ export default function Nav() {
             aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
           >
-            <span className={`${styles.line} ${open ? styles.lineTop : ""}`} />
-            <span className={`${styles.line} ${open ? styles.lineHide : ""}`} />
-            <span className={`${styles.line} ${open ? styles.lineBottom : ""}`} />
+            {hamburgerLines}
           </button>
         </div>
       </nav>
