@@ -8,6 +8,13 @@
   padding: var(--space-xl) var(--space-lg) var(--space-2xl);
 }
 
+@media (max-width: 767px) {
+  .section {
+    background-image: none;
+    background-color: var(--colour-surface);
+  }
+}
+
 .section::before {
   content: '';
   position: absolute;
