@@ -99,13 +99,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/images/btn-gold-sm.png');
+  background-image: url('/images/btn-gold.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border: none;
   padding: 0;
-  width: 169px;
-  height: 40px;
+  width: 160px;
+  aspect-ratio: 632 / 149;
+  height: auto;
   cursor: pointer;
   text-decoration: none;
   transition: opacity 0.2s;
@@ -221,7 +222,8 @@
   background-repeat: no-repeat;
   border: none;
   width: 220px;
-  height: 52px;
+  aspect-ratio: 632 / 149;
+  height: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -229,7 +231,6 @@
   padding: 0;
   font-size: 2rem;
   letter-spacing: 0.04em;
-  border-radius: 4px;
   transition: filter 0.2s, transform 0.2s;
 }
 
