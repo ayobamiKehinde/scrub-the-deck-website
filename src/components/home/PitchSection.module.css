@@ -1,7 +1,7 @@
 .section {
   position: relative;
   background-image: url('/images/wood-bg.jpg');
-  background-size: 650% auto;
+  background-size: 100% auto;
   background-position: top center;
   background-repeat: repeat-y;
   text-align: center;
@@ -63,14 +63,6 @@
   line-height: 1.75;
   margin: 0;
   max-width: 520px;
-}
-
-@media (min-width: 768px) {
-  .section {
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: repeat-y;
-  }
 }
 
 /* ─── Play button ─────────────────────────────────────────────── */

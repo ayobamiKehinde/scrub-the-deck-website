@@ -1,7 +1,7 @@
 .section {
   position: relative;
   background-image: url('/images/wood-bg.jpg');
-  background-size: 650% auto;
+  background-size: 325% auto;
   background-position: top center;
   background-repeat: repeat-y;
   overflow: hidden;
@@ -113,7 +113,7 @@
 /* ─── Brand logos bar ─────────────────────────────────────────── */
 .brandsWrap {
   background-image: url('/images/wood-bg.jpg');
-  background-size: 650% auto;
+  background-size: 325% auto;
   background-position: top center;
   background-repeat: repeat-y;
   padding-bottom: var(--space-2xl);
