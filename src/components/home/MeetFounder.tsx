@@ -95,7 +95,7 @@ export default function MeetFounder() {
           {/* Right — porthole */}
           <div className={styles.porthole}>
             <Image
-              src="/images/david-porthole-2.png"
+              src="/images/founder-image-new.png"
               alt="David Pugh — Captain of Scrub the Deck"
               width={560}
               height={560}
