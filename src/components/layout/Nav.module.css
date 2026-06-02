@@ -55,25 +55,33 @@
 }
 
 @media (max-width: 767px) {
-  .navBtn span {
-    font-size: 1.6rem !important;
+  .nav {
+    height: 60px;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  /* Logo absolutely centred — unaffected by button width */
+  .logoLink {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .logo {
-    height: 32px;
+    height: 28px;
   }
 
-  .nav {
-    height: 60px;
-    grid-template-columns: auto 1fr 40px;
+  /* Button sized to fit left side comfortably */
+  .navBtn {
+    width: 100px !important;
+  }
+
+  .navBtn span {
+    font-size: 0.9rem !important;
   }
 
   .navLeft {
     justify-content: flex-start;
-  }
-
-  .logoLink {
-    justify-content: center;
   }
 
   .navRight {
