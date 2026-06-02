@@ -64,10 +64,10 @@ export default function MobileHero() {
         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setPlaying(true); }}
       >
         <Image
-          src="/images/dave-tv.png"
+          src="/images/TV-high.jpg"
           alt="Scrub the Deck TV"
-          width={1165}
-          height={787}
+          width={2262}
+          height={1278}
           className={styles.tvImage}
           priority
         />
