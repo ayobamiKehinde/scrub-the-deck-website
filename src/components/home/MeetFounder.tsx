@@ -19,6 +19,9 @@ const BRANDS = [
   { name: "MTV",                file: "mtv"          },
   { name: "Petronas",           file: "petronas"     },
   { name: "Adidas",             file: "adidas"       },
+  { name: "TBT",                file: "tbt"          },
+  { name: "Golf Breaks",        file: "golf-breaks"  },
+  { name: "Lego",               file: "lego"         },
 ];
 
 function BrandLogo({ name, file }: { name: string; file: string }) {
@@ -92,7 +95,7 @@ export default function MeetFounder() {
           {/* Right — porthole */}
           <div className={styles.porthole}>
             <Image
-              src="/images/david-porthole.png"
+              src="/images/david-porthole-2.png"
               alt="David Pugh — Captain of Scrub the Deck"
               width={560}
               height={560}
