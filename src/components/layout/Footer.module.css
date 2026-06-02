@@ -33,7 +33,7 @@
 
 .tagline {
   font-family: var(--font-script);
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: var(--colour-muted);
   max-width: 260px;
