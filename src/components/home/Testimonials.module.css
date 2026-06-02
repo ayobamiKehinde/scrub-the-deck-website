@@ -136,20 +136,20 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--colour-white);
-  margin: 0 0 1px;
-  line-height: 1;
+  margin: 0;
+  line-height: 0.9;
 }
 
 .cardCompany {
   font-family: var(--font-script);
-  font-size: clamp(0.8rem, 1.4vw, 1rem);
+  font-size: clamp(0.95rem, 1.7vw, 1.2rem);
   font-weight: 600;
   font-style: italic;
   color: rgba(240, 244, 248, 0.75);
   margin: 0;
   letter-spacing: 0;
   text-transform: none;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 /* ─── Play button ─────────────────────────────────────────────── */
