@@ -10,8 +10,9 @@
 
 @media (max-width: 767px) {
   .section {
-    background-image: none;
-    background-color: var(--colour-surface);
+    background-size: 325% auto;
+    background-position: top center;
+    background-repeat: repeat-y;
   }
 }
 
