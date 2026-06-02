@@ -10,10 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 // image:   filename in /public/images/testimonials/
 // videoId: YouTube video ID — fill in as received
 const RESULTS = [
-  { name: "Ian Humphreys",      company: "Brickflow",          result: "Over £2M raised",                    quote: "", image: "ian-humphreys.jpg",  videoId: "q3O4s3LBLvc" },
-  { name: "Philip Werner",      company: "Maekersuite",        result: "Over £900,000 raised over two rounds",quote: "", image: "philip-werner.jpg",  videoId: "Xu9UHAzF8Ns" },
-  { name: "Nick van Dijk",      company: "Oort",               result: "Over $10M raised so far",            quote: "", image: "nick.jpg",           videoId: "AXW3JaEdP7o" },
-  { name: "Aaron Phethean",     company: "Matatika",           result: "Over £500,000 raised",               quote: "", image: "aaron-pheatan.jpg",  videoId: "ESsuPMNoWU8" },
+  { name: "Ian Humphreys",      company: "CEO of Brickflow",       result: "Over £2M raised",               quote: "", image: "ian-humphreys.jpg",  videoId: "q3O4s3LBLvc" },
+  { name: "Philip Werner",      company: "Founder of Maekersuite", result: "Over £900,000 raised",          quote: "", image: "philip-werner.jpg",  videoId: "Xu9UHAzF8Ns" },
+  { name: "Nick van Dijk",      company: "CEO of Oort",            result: "Over $10M raised so far",       quote: "", image: "nick.jpg",           videoId: "AXW3JaEdP7o" },
+  { name: "Aaron Phethean",     company: "Founder of Meltano",     result: "Over £500,000 raised",          quote: "", image: "aaron-pheatan.jpg",  videoId: "ESsuPMNoWU8" },
   { name: "Elliott Myers",      company: "Roto",               result: "£7M raised to date",                 quote: "", image: "elliott-myers.jpg",  videoId: "T09LioATiWM" },
   { name: "James Dyer",         company: "At Last",            result: "Over £900,000 raised",               quote: "", image: "james-dyer.jpg",     videoId: "hfOEN_HIdfk" },
   { name: "Achim Ellis",         company: "Bioflow",            result: "Pre-seed funding secured",           quote: "", image: "achim.jpg",          videoId: "ydSV_XjxReM" },
