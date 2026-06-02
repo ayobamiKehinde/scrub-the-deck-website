@@ -141,37 +141,12 @@
   .logo { height: 30px; }
 }
 
-/* ─── Floating hamburger — mobile only, visible from page load ── */
+/* ─── Floating hamburger — always visible, merges into navbar on scroll ── */
 .floatingHamburger {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .floatingHamburger {
-    position: fixed;
-    top: 10px;
-    right: var(--space-lg);
-    z-index: 200;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6px;
-    width: 40px;
-    height: 40px;
-    padding: 4px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  /* hide the in-nav hamburger on mobile — floating one takes over */
-  .hamburger {
-    display: none;
-  }
-}
-
-/* ─── Hamburger (desktop in-nav) ──────────────────────────────── */
-.hamburger {
+  position: fixed;
+  top: 16px; /* centred in 72px desktop nav */
+  right: var(--space-lg);
+  z-index: 200;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -182,6 +157,17 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .floatingHamburger {
+    top: 10px; /* centred in 60px mobile nav */
+  }
+}
+
+/* ─── Hamburger (in-nav slot — hidden everywhere, floating one used) ── */
+.hamburger {
+  display: none;
 }
 
 .line {
