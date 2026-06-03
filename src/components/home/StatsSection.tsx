@@ -8,9 +8,9 @@ import styles from "./StatsSection.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
-  { end: 81,   prefix: "",  suffix: "%",  label: "Success Rate"         },
-  { end: 47,   prefix: "£", suffix: "M+", label: "Raised for Clients"   },
-  { end: 200,  prefix: "",  suffix: "+",  label: "Decks Crafted"        },
+  { end: 82,   prefix: "",  suffix: "%",  label: "Success Rate"         },
+  { end: 30,   prefix: "£", suffix: "M+", label: "Raised for Clients"   },
+  { end: 100,  prefix: "",  suffix: "+",  label: "Decks Crafted"        },
   { end: 1500, prefix: "",  suffix: "+",  label: "Investor Connections" },
 ];
 

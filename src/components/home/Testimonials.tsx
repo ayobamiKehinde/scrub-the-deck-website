@@ -20,7 +20,7 @@ const RESULTS = [
   { name: "Manoli Yanaghas",    company: "CEO of VoltVision",      result: "Raised £1.2M",                       quote: "", image: "manoli.jpg",         videoId: "WeemMI5dk8Q" },
   { name: "James Dyer",         company: "CEO of At Last",         result: "Over £900,000 raised",               quote: "", image: "james-dyer.jpg",     videoId: "hfOEN_HIdfk" },
   { name: "Achim Ellis",        company: "Founder of Bioflow",     result: "Pre-seed funding secured",           quote: "", image: "achim.jpg",          videoId: "ydSV_XjxReM" },
-  { name: "Matt Wilson",        company: "Founder of Aniballers",   result: "Raising 6 figures pre revenue",      quote: "", image: "matt-wilson.jpg",    videoId: "e5v0kEtz5wU" },
+  { name: "Darren Sloof",       company: "CEO of AirPurity",        result: "Multiple new investor & sales meetings", quote: "", image: "darren-sloof.jpg",   videoId: "LwQ9SIxlZX8" },
   { name: "David Bacon",        company: "CEO of Boomtime",         result: "Over £160K raised pre product",      quote: "", image: "david-bacon.jpg",    videoId: "CBQ7UC3UgQo" },
   { name: "Chris Porter",       company: "CEO of Nexbotix",         result: "New deck for a £1.28M raise",        quote: "", image: "chris-porter.jpg",   videoId: "zN-9jjFPQeI" },
   { name: "Sam Holden",         company: "Founder of Ebb",          result: "Investor meetings secured",          quote: "", image: "sam-holden.jpg",     videoId: "uAiGtsAQ5RA" },
@@ -28,6 +28,7 @@ const RESULTS = [
   { name: "Julia MacMillan",    company: "Founder of Where2 App",   result: "Deck is investor ready",             quote: "", image: "julia-macmillan.jpg",videoId: "eAWkrr6tEqU" },
   { name: "Yule Van Opstal",    company: "Solo founder",            result: "I definitely recommend you",         quote: "", image: "yule.jpg",           videoId: "n-6O9QP5uls" },
   { name: "Anna Burns",         company: "Yonder Consulting",       result: "Success with luxury launch",         quote: "", image: "anna-burns.jpg",     videoId: "A_DOYcBJzpU" },
+  { name: "Matt Wilson",        company: "Founder of Aniballers",   result: "Raising 6 figures pre revenue",      quote: "", image: "matt-wilson.jpg",    videoId: "e5v0kEtz5wU" },
 ];
 
 const INITIAL_COUNT = 8;

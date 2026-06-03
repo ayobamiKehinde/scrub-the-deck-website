@@ -17,20 +17,20 @@ interface Stat {
 // Stat slides in 0.4s before each reaction so it fully lands right as the bird reacts.
 const STATS: Stat[] = [
   {
-    value: "81%",
+    value: "82%",
     label: "success rate",
     showAt: 4.6,    // lands ~1s before bird reacts
     hideAt: 6.6,
   },
   {
-    value: "200+",
-    label: "decks crafted",       // placeholder — confirm with David
+    value: "100+",
+    label: "decks crafted",
     showAt: 7.1,
     hideAt: 9.3,
   },
   {
-    value: "£47M+",
-    label: "raised for clients",  // placeholder — confirm with David
+    value: "£30M+",
+    label: "raised for clients",
     showAt: 9.9,    // fully visible by 10.3s → bird reacts
     hideAt: 11.5,
   },
