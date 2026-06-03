@@ -133,6 +133,13 @@ export default function Testimonials() {
 
   const visible = showAll ? RESULTS : RESULTS.slice(0, INITIAL_COUNT);
 
+  // After the grid expands/collapses, recalculate all ScrollTrigger positions.
+  // Without this, sibling sections (e.g. MeetFounder) stay at opacity:0 because
+  // their stale trigger coordinates no longer match the new page height.
+  useEffect(() => {
+    ScrollTrigger.refresh();
+  }, [showAll]);
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ paused: true });
