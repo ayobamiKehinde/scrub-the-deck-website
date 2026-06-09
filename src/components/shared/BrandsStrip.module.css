@@ -1,0 +1,62 @@
+.wrap {
+  background: var(--colour-surface);
+  padding: var(--space-xl) 0;
+}
+
+.marqueeOuter {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marqueeTrack {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 18s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
+}
+
+.brandItem {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 4px;
+}
+
+.brandLogo {
+  height: 88px;
+  width: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .brandLogo {
+    height: 56px;
+  }
+}
+
+.brandText {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--colour-muted);
+  padding: 0 var(--space-md);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--colour-white);
+  text-align: center;
+  margin: var(--space-md) 0 0;
+}

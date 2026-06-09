@@ -1,0 +1,203 @@
+/* ─── Content article ──────────────────────────────────────────── */
+.content {
+  background: var(--colour-bg);
+  padding: var(--space-4xl) 0 var(--space-5xl);
+}
+
+.inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* ─── Byline ───────────────────────────────────────────────────── */
+.byline {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--colour-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--colour-border);
+}
+
+/* ─── TL;DR box ────────────────────────────────────────────────── */
+.tldr {
+  background: rgba(0, 212, 212, 0.05);
+  border: 1px solid rgba(0, 212, 212, 0.22);
+  border-radius: 4px;
+  padding: var(--space-xl) var(--space-xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.tldrTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: var(--colour-teal);
+  margin-bottom: var(--space-md);
+}
+
+.tldrList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.tldrList li {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--colour-white);
+  line-height: 1.55;
+  padding-left: var(--space-lg);
+  position: relative;
+}
+
+.tldrList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--colour-teal);
+  font-size: 0.8rem;
+  top: 3px;
+}
+
+/* ─── Semantic H1 ──────────────────────────────────────────────── */
+.pageH1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  color: var(--colour-white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  margin-bottom: var(--space-lg);
+}
+
+.intro {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--colour-muted);
+  line-height: 1.75;
+  margin-bottom: var(--space-4xl);
+}
+
+/* ─── Step sections ────────────────────────────────────────────── */
+.step {
+  padding: var(--space-3xl) 0;
+  border-top: 1px solid var(--colour-border);
+}
+
+.step:last-of-type {
+  border-bottom: 1px solid var(--colour-border);
+}
+
+.step p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--colour-muted);
+  line-height: 1.75;
+  margin-bottom: var(--space-md);
+}
+
+.step p:last-child {
+  margin-bottom: 0;
+}
+
+.stepNumber {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--colour-teal);
+  margin-bottom: var(--space-sm);
+}
+
+.stepH2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.8vw, 2rem);
+  color: var(--colour-white);
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+}
+
+.bridgeLink {
+  color: var(--colour-white) !important;
+  font-size: 0.95rem !important;
+}
+
+.bridgeLink a {
+  color: var(--colour-teal);
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 212, 212, 0.35);
+  text-underline-offset: 3px;
+}
+
+.bridgeLink a:hover {
+  color: var(--colour-white);
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+}
+
+.bridgeLink em {
+  color: var(--colour-muted);
+}
+
+/* ─── Waves section — stats bar, no overlay ────────────────────── */
+.wavesSection {
+  background-image: url('/images/waves-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: var(--space-lg) 0;
+}
+
+@media (max-width: 767px) {
+  .wavesSection {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+}
+
+/* ─── FAQ section ──────────────────────────────────────────────── */
+.faqSection {
+  padding-top: var(--space-4xl);
+  border-top: 1px solid var(--colour-border);
+}
+
+.faqH2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.8vw, 2rem);
+  color: var(--colour-white);
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  margin-bottom: var(--space-3xl);
+}
+
+/* ─── Final CTA ────────────────────────────────────────────────── */
+.finalCta {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-4xl);
+}
+
+/* ─── Mobile ───────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .content {
+    padding: var(--space-3xl) 0 var(--space-4xl);
+  }
+
+  .inner {
+    padding: 0 var(--space-md);
+  }
+
+  .tldr {
+    padding: var(--space-lg);
+  }
+
+  .step {
+    padding: var(--space-2xl) 0;
+  }
+}

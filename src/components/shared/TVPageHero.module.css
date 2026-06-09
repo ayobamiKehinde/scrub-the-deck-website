@@ -1,0 +1,180 @@
+/* ─── Hero section ─────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url('/images/sea-tesxture-high.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: calc(80px + var(--space-2xl)) var(--space-lg) var(--space-3xl);
+  gap: var(--space-md);
+  width: 100%;
+}
+
+/* ─── Text ─────────────────────────────────────────────────────── */
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 4.5vw, 5rem);
+  color: var(--colour-white);
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 3.6rem);
+  color: var(--colour-gold);
+  margin-top: -32px;
+  line-height: 1.2;
+}
+
+/* ─── TV ───────────────────────────────────────────────────────── */
+.tvWrap {
+  position: relative;
+  width: min(640px, 90vw);
+  margin: var(--space-sm) 0;
+}
+
+.tvImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Screen blend removes the black JPEG background, letting the hero show through */
+  mix-blend-mode: screen;
+}
+
+/* Play button sits over the TV screen area.
+   Offset slightly left of centre to account for the TV's right-side dial panel. */
+.playBtn {
+  position: absolute;
+  top: 40%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.playBtn:hover {
+  background: rgba(0, 212, 212, 0.45);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ─── CTA ──────────────────────────────────────────────────────── */
+.ctaWrap {
+  margin-top: var(--space-md);
+}
+
+.ctaWrap a,
+.ctaWrap button {
+  width: 280px;
+}
+
+/* ─── Video modal ──────────────────────────────────────────────── */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modalContent {
+  position: relative;
+  width: min(900px, 96vw);
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.9);
+  animation: scaleIn 0.28s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.88); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.modalClose {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+  background: none;
+  border: none;
+}
+
+.modalClose:hover { opacity: 1; }
+
+.modalIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ─── Mobile ───────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .inner {
+    padding: calc(70px + var(--space-lg)) var(--space-md) var(--space-2xl);
+    gap: var(--space-md);
+  }
+
+  .headline {
+    white-space: normal;
+    font-size: clamp(2rem, 7.5vw, 3rem);
+  }
+
+  .subtitle {
+    margin-top: -12px;
+  }
+
+  .tvWrap {
+    width: min(360px, 94vw);
+  }
+
+  .playBtn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .ctaWrap a,
+  .ctaWrap button {
+    width: 220px;
+  }
+}

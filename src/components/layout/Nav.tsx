@@ -8,8 +8,8 @@ import styles from "./Nav.module.css";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
+  { href: "/welcome", label: "About" },
+  { href: "/process", label: "Process" },
   { href: "/blog", label: "Blog" },
 ];
 
