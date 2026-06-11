@@ -1,7 +1,7 @@
 /* ─── Content article ──────────────────────────────────────────── */
 .content {
   background: var(--colour-bg);
-  padding: var(--space-4xl) 0 var(--space-5xl);
+  padding: 0 0 var(--space-5xl);
 }
 
 .inner {
@@ -146,6 +146,37 @@
 }
 
 
+/* ─── Wood intro panel ─────────────────────────────────────────── */
+.woodPanel {
+  position: relative;
+  background-image: url('/images/wood-bg.jpg');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+  overflow: hidden;
+}
+
+.woodPanel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+
+.woodPanelInner {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+@media (max-width: 767px) {
+  .woodPanel { background-size: 325% auto; }
+  .woodPanelInner { padding: var(--space-2xl) var(--space-md); }
+}
+
 /* ─── Mid-page wood break ──────────────────────────────────────── */
 .woodBreak {
   position: relative;
@@ -238,7 +269,7 @@
 /* ─── Mobile ───────────────────────────────────────────────────── */
 @media (max-width: 767px) {
   .content {
-    padding: var(--space-3xl) 0 var(--space-4xl);
+    padding: 0 0 var(--space-4xl);
   }
 
   .inner {

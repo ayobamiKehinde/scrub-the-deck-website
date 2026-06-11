@@ -87,27 +87,19 @@ export default function ProcessPage() {
 
         <article className={styles.content}>
 
-          {/* ── Intro ── */}
-          <div className={styles.inner}>
-            <p className={styles.byline}>By David Pugh · Last updated: June 2026</p>
-
-            <aside className={styles.tldr} aria-label="Page summary">
-              <p className={styles.tldrTitle}>TL;DR</p>
-              <ul className={styles.tldrList}>
-                <li>Scrub the Deck uses a 6-step process to take startups from raw idea to funded company</li>
-                <li>David Pugh personally writes and designs every pitch deck using an 18-point structure proven with investors</li>
-                <li>Clients get direct access to a warm investor network of 1,500+ connections, not a cold email list</li>
-                <li>The process ends only when you have investment terms on the table</li>
-              </ul>
-            </aside>
-
-            <h1 className={styles.pageH1}>How Does Scrub the Deck Get You Funded?</h1>
-            <p className={styles.intro}>
-              Scrub the Deck is an investment consulting service founded by David Pugh that takes
-              startups through a structured 6-step process, from initial strategy session to
-              negotiating final investment terms. Every stage is designed to get founders
-              investor-ready, pitch-perfect, and in front of the right people at the right moment.
-            </p>
+          {/* ── Intro on wood board ── */}
+          <div className={styles.woodPanel}>
+            <RopeDivider />
+            <div className={styles.woodPanelInner}>
+              <h1 className={styles.pageH1}>How Does Scrub the Deck Get You Funded?</h1>
+              <p className={styles.intro}>
+                Scrub the Deck is an investment consulting service founded by David Pugh that takes
+                startups through a structured 6-step process, from initial strategy session to
+                negotiating final investment terms. Every stage is designed to get founders
+                investor-ready, pitch-perfect, and in front of the right people at the right moment.
+              </p>
+            </div>
+            <RopeDivider />
           </div>
 
           {/* ── Steps 1–3 ── */}
