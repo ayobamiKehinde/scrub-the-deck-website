@@ -21,7 +21,7 @@ export default function Nav() {
   // Welcome page has no nav at all — only a logo + Book a Call
   const hideNav = pathname === "/welcome";
   // Pages with their own logo header don't need the scrolled nav
-  const alwaysVisible = pathname !== "/" && pathname !== "/process" && !hideNav;
+  const alwaysVisible = pathname !== "/" && !hideNav;
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";

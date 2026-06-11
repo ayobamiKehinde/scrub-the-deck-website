@@ -1,22 +1,3 @@
-/* ─── Logo header bar ──────────────────────────────────────────── */
-.logoHeader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-lg);
-  background: var(--colour-bg);
-}
-
-.logoImg {
-  height: 52px;
-  width: auto;
-  object-fit: contain;
-}
-
-@media (max-width: 767px) {
-  .logoImg { height: 36px; }
-}
-
 /* ─── Content article ──────────────────────────────────────────── */
 .content {
   background: var(--colour-bg);
@@ -165,17 +146,89 @@
 }
 
 
+/* ─── Mid-page wood break ──────────────────────────────────────── */
+.woodBreak {
+  position: relative;
+  background-image: url('/images/wood-bg.jpg');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+  overflow: hidden;
+}
+
+.woodBreak::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+
+.woodBreakInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-3xl) var(--space-lg);
+  gap: var(--space-md);
+}
+
+.woodBreakText {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--colour-white);
+  margin: 0;
+  letter-spacing: 0.08em;
+}
+
+.woodBreakSub {
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: var(--colour-gold);
+  margin: 0;
+}
+
 @media (max-width: 767px) {
-  .wavesSection {
-    background-attachment: scroll;
-    background-position: center top;
-  }
+  .woodBreak { background-size: 325% auto; }
+}
+
+/* ─── Wood FAQ section ─────────────────────────────────────────── */
+.woodFaq {
+  position: relative;
+  background-image: url('/images/wood-bg.jpg');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+  overflow: hidden;
+}
+
+.woodFaq::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+
+.woodFaqInner {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--space-lg) var(--space-3xl);
+}
+
+@media (max-width: 767px) {
+  .woodFaq { background-size: 325% auto; }
+  .woodFaqInner { padding: var(--space-3xl) var(--space-md); }
 }
 
 /* ─── FAQ section ──────────────────────────────────────────────── */
 .faqSection {
-  padding-top: var(--space-4xl);
-  border-top: 1px solid var(--colour-border);
+  padding-top: 0;
 }
 
 .faqH2 {
@@ -191,7 +244,7 @@
 .finalCta {
   display: flex;
   justify-content: center;
-  padding-top: var(--space-4xl);
+  padding-top: var(--space-3xl);
 }
 
 /* ─── Mobile ───────────────────────────────────────────────────── */

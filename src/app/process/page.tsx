@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import TVPageHero from "@/components/shared/TVPageHero";
-import StatsSection from "@/components/home/StatsSection";
 import FAQAccordion from "@/components/shared/FAQAccordion";
 import GoldButton from "@/components/ui/GoldButton";
+import RopeDivider from "@/components/ui/RopeDivider";
 import styles from "./process.module.css";
 
 export const metadata: Metadata = {
@@ -16,24 +15,40 @@ const BOOK_URL = "https://www.scrubthedeck.com/bookacall-t-form";
 
 const FAQ = [
   {
-    q: "How long does the Scrub the Deck process take?",
-    a: "The full process from strategy session to investment agreement typically takes several months, depending on the complexity of the pitch deck build and investor response times. The traction spike and deck phases are the most time-intensive.",
+    q: "How long does it take to raise investment?",
+    a: "The pitch deck can be completed in as little as a week, but the full process from strategy session to money in your account typically takes around three months. This varies depending on how investor-ready you are at the start, and how quickly momentum builds. It is important not to rush. Investors can sense desperation — and it weakens your negotiating position significantly.",
   },
   {
-    q: "Does David Pugh work with every startup that contacts him?",
-    a: "No. David personally selects clients he believes in and can genuinely help. The free strategy session is how both sides assess fit; founders get real value from it regardless of the outcome.",
+    q: "What is Scrub the Deck's success rate?",
+    a: "As of early 2025, 82% of completed Scrub the Deck projects resulted in the client receiving investment — one of the highest rates in the industry. This is partly because David is selective about who he works with and only takes on founders he genuinely believes have a strong chance of raising.",
   },
   {
-    q: "What kind of startups does Scrub the Deck work with?",
-    a: "Scrub the Deck works with early-stage and growth-stage companies across sectors. The common thread is founders who are serious about raising investment and committed to the process.",
+    q: "Who are the investors in David's network?",
+    a: "The network currently has over 1,500 connections. Roughly half are high-net-worth individuals and angel investors. The other half are individuals from VC firms, family offices, and institutional investors. These are warm connections, not a database — David is not a broker and makes no guarantees about introductions, but the network is an active part of the outreach process.",
   },
   {
-    q: "What is an 18-point pitch deck structure?",
-    a: "David Pugh's 18-point structure is a proprietary framework for pitch deck creation, developed and refined through years of work with investors. It covers narrative, team, market, traction, financials, and more, structured in the exact order investors expect. Details are covered in the Scrub the Deck e-book.",
+    q: "What if I already have a pitch deck?",
+    a: "Most clients come to David with an existing deck. If it is not getting results, or you are not fully confident in it, David can audit it, revamp it, and get it in front of his investor network. The strategy session is the best place to assess whether a full rebuild or a targeted revamp is the right call.",
+  },
+  {
+    q: "How much does Scrub the Deck cost?",
+    a: "There are three packages ranging from £2,000 to £12,000. The right package depends on your stage, what you need, and what you are trying to raise. This is determined during the free strategy session so you are never committed before you know exactly what you are getting.",
+  },
+  {
+    q: "Is there a guarantee?",
+    a: "There are no guarantees of receiving investment — no one can ethically promise that. What David does guarantee is a full refund of any payment made if you are not 100% satisfied after the very first consultation. If it is not the right fit, you will not be out of pocket.",
+  },
+  {
+    q: "Does David Pugh work with every startup that approaches him?",
+    a: "No. David personally selects the clients he works with and only takes on founders he believes have a genuine chance of raising. The free strategy session is how both parties assess fit. You will get real value from the session regardless of whether you move forward together.",
+  },
+  {
+    q: "What is the 18-point pitch deck structure?",
+    a: "It is David's proprietary framework for building pitch decks — developed and refined through years of direct feedback from investors. It covers everything from the opening hook and problem statement through to financials, team storytelling, and the ask — structured in the exact order that keeps investors engaged. The full framework is covered in the Scrub the Deck e-book.",
   },
   {
     q: "Is the strategy session really free?",
-    a: "Yes. The initial 30-minute strategy session with David is completely free with no obligation. It is a genuine working session, not a sales pitch.",
+    a: "Yes — completely free, no obligation. It is a genuine 30-minute working session with David personally, not a sales call. You will leave with real insights and a clearer picture of your fundraising position, whether you decide to work together or not.",
   },
 ];
 
@@ -62,30 +77,18 @@ export default function ProcessPage() {
       />
 
       <main>
-        {/* Centered logo header — replaces fixed nav on this page */}
-        <div className={styles.logoHeader}>
-          <Image
-            src="/images/logo-silver.png"
-            alt="Scrub the Deck"
-            width={240}
-            height={62}
-            className={styles.logoImg}
-            priority
-          />
-        </div>
-
         <TVPageHero
           headline="THE PROCESS"
           subtitle="How we get you funded!"
           tvSrc="/images/Process-TV.png"
           tvAlt="The Scrub the Deck 6-step road to investment process"
           ctaHref={BOOK_URL}
-          compact
         />
 
         <article className={styles.content}>
-          <div className={styles.inner}>
 
+          {/* ── Intro ── */}
+          <div className={styles.inner}>
             <p className={styles.byline}>By David Pugh · Last updated: June 2026</p>
 
             <aside className={styles.tldr} aria-label="Page summary">
@@ -105,14 +108,11 @@ export default function ProcessPage() {
               negotiating final investment terms. Every stage is designed to get founders
               investor-ready, pitch-perfect, and in front of the right people at the right moment.
             </p>
-
           </div>
 
-          <StatsSection />
-
+          {/* ── Steps 1–3 ── */}
           <div className={styles.inner}>
 
-            {/* ── Step 1 ── */}
             <section className={styles.step}>
               <p className={styles.stepNumber}>01</p>
               <h2 className={styles.stepH2}>What Happens in the Free Strategy Session?</h2>
@@ -133,7 +133,6 @@ export default function ProcessPage() {
               </p>
             </section>
 
-            {/* ── Step 2 ── */}
             <section className={styles.step}>
               <p className={styles.stepNumber}>02</p>
               <h2 className={styles.stepH2}>Why Do You Need a Traction Spike Before Approaching Investors?</h2>
@@ -151,7 +150,6 @@ export default function ProcessPage() {
               </p>
             </section>
 
-            {/* ── Step 3 ── */}
             <section className={styles.step}>
               <p className={styles.stepNumber}>03</p>
               <h2 className={styles.stepH2}>What Makes a Pitch Deck Actually Get You Meetings?</h2>
@@ -175,7 +173,21 @@ export default function ProcessPage() {
               </p>
             </section>
 
-            {/* ── Step 4 ── */}
+          </div>
+
+          {/* ── Mid-page wood break ── */}
+          <div className={styles.woodBreak}>
+            <RopeDivider />
+            <div className={styles.woodBreakInner}>
+              <p className={styles.woodBreakText}>THREE STEPS COMPLETE</p>
+              <p className={styles.woodBreakSub}>Now we take you from investor-ready to investment received.</p>
+            </div>
+            <RopeDivider />
+          </div>
+
+          {/* ── Steps 4–6 ── */}
+          <div className={styles.inner}>
+
             <section className={styles.step}>
               <p className={styles.stepNumber}>04</p>
               <h2 className={styles.stepH2}>How Does Scrub the Deck Get Your Pitch Deck in Front of Investors?</h2>
@@ -197,7 +209,6 @@ export default function ProcessPage() {
               </p>
             </section>
 
-            {/* ── Step 5 ── */}
             <section className={styles.step}>
               <p className={styles.stepNumber}>05</p>
               <h2 className={styles.stepH2}>How Does Scrub the Deck Prepare You for Investor Due Diligence?</h2>
@@ -214,7 +225,6 @@ export default function ProcessPage() {
               </p>
             </section>
 
-            {/* ── Step 6 ── */}
             <section className={styles.step}>
               <p className={styles.stepNumber}>06</p>
               <h2 className={styles.stepH2}>How Do You Negotiate the Best Investment Terms?</h2>
@@ -234,19 +244,23 @@ export default function ProcessPage() {
               </p>
             </section>
 
-            {/* ── FAQ ── */}
-            <section className={styles.faqSection}>
+          </div>
+
+          {/* ── Wood FAQ + CTA ── */}
+          <div className={styles.woodFaq}>
+            <RopeDivider />
+            <div className={styles.woodFaqInner}>
               <h2 className={styles.faqH2}>
                 Frequently Asked Questions About Getting Startup Investment
               </h2>
               <FAQAccordion items={FAQ} />
-            </section>
-
-            <div className={styles.finalCta}>
-              <GoldButton href={BOOK_URL} label="BOOK A CALL" size="lg" />
+              <div className={styles.finalCta}>
+                <GoldButton href={BOOK_URL} label="BOOK A CALL" size="lg" />
+              </div>
             </div>
-
+            <RopeDivider />
           </div>
+
         </article>
       </main>
     </>
