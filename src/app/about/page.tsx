@@ -47,6 +47,9 @@ export default function AboutPage() {
       <main className={styles.page}>
         <section className={styles.content}>
           <div className={styles.inner}>
+            <p className={styles.eyebrow}>The Founder</p>
+            <h1 className={styles.heading}>David Pugh</h1>
+
             <Image
               src="/images/david-about.jpg"
               alt="David Pugh, Founder of Scrub the Deck"
@@ -57,9 +60,6 @@ export default function AboutPage() {
             />
 
             <div className={styles.textCol}>
-              <p className={styles.eyebrow}>The Founder</p>
-              <h1 className={styles.heading}>David Pugh</h1>
-
               <p className={styles.para}>
                 David Pugh holds a BA degree and boasts a 22-year career working with some of
                 the world&rsquo;s biggest brands as a senior designer, consultant, and communicator.

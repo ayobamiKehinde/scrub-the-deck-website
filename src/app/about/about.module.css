@@ -17,6 +17,7 @@
 /* ─── Photo ────────────────────────────────────────────────────── */
 .photo {
   width: 100%;
+  max-width: 720px;
   height: auto;
   display: block;
   border-radius: 4px;
@@ -44,7 +45,7 @@
   text-transform: uppercase;
   line-height: 1;
   color: var(--colour-white);
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-lg);
 }
 
 .para {
