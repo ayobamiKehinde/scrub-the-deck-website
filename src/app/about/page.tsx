@@ -50,15 +50,14 @@ export default function AboutPage() {
             <div className={styles.grid}>
 
               <div className={styles.portholeCol}>
-                <div className={styles.porthole}>
-                  <Image
-                    src="/images/david-about.jpg"
-                    alt="David Pugh, Founder of Scrub the Deck"
-                    fill
-                    className={styles.portholeImg}
-                    priority
-                  />
-                </div>
+                <Image
+                  src="/images/founder-image-new.png"
+                  alt="David Pugh, Founder of Scrub the Deck"
+                  width={520}
+                  height={520}
+                  className={styles.portholeImg}
+                  priority
+                />
               </div>
 
               <div className={styles.textCol}>
