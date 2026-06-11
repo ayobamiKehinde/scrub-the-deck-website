@@ -24,7 +24,7 @@
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: 1fr 1fr;
-    align-items: start;
+    align-items: stretch;
     gap: var(--space-4xl);
   }
 }
@@ -32,12 +32,12 @@
 /* ─── Photo ────────────────────────────────────────────────────── */
 .photoCol {
   position: relative;
+  min-height: 480px;
 }
 
 .photo {
-  width: 100%;
-  height: auto;
-  display: block;
+  object-fit: contain;
+  object-position: center top;
   border-radius: 4px;
 }
 
