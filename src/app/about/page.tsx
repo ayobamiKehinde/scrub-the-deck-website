@@ -53,7 +53,8 @@ export default function AboutPage() {
                 <Image
                   src="/images/david-about.jpg"
                   alt="David Pugh, Founder of Scrub the Deck"
-                  fill
+                  width={600}
+                  height={750}
                   className={styles.photo}
                   priority
                 />
