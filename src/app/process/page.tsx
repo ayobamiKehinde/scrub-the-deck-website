@@ -16,15 +16,15 @@ const BOOK_URL = "https://www.scrubthedeck.com/bookacall-t-form";
 const FAQ = [
   {
     q: "How long does it take to raise investment?",
-    a: "The pitch deck can be completed in as little as a week, but the full process from strategy session to money in your account typically takes around three months. This varies depending on how investor-ready you are at the start, and how quickly momentum builds. It is important not to rush. Investors can sense desperation — and it weakens your negotiating position significantly.",
+    a: "The pitch deck can be completed in as little as a week, but the full process from strategy session to money in your account typically takes around three months. This varies depending on how investor-ready you are at the start, and how quickly momentum builds. It is important not to rush. Investors can sense desperation, and it weakens your negotiating position significantly.",
   },
   {
     q: "What is Scrub the Deck's success rate?",
-    a: "As of early 2025, 82% of completed Scrub the Deck projects resulted in the client receiving investment — one of the highest rates in the industry. This is partly because David is selective about who he works with and only takes on founders he genuinely believes have a strong chance of raising.",
+    a: "As of early 2025, 82% of completed Scrub the Deck projects resulted in the client receiving investment, one of the highest rates in the industry. This is partly because David is selective about who he works with and only takes on founders he genuinely believes have a strong chance of raising.",
   },
   {
     q: "Who are the investors in David's network?",
-    a: "The network currently has over 1,500 connections. Roughly half are high-net-worth individuals and angel investors. The other half are individuals from VC firms, family offices, and institutional investors. These are warm connections, not a database — David is not a broker and makes no guarantees about introductions, but the network is an active part of the outreach process.",
+    a: "The network currently has over 1,500 connections. Roughly half are high-net-worth individuals and angel investors. The other half are individuals from VC firms, family offices, and institutional investors. These are warm connections, not a database. David is not a broker and makes no guarantees about introductions, but the network is an active part of the outreach process.",
   },
   {
     q: "What if I already have a pitch deck?",
@@ -36,7 +36,7 @@ const FAQ = [
   },
   {
     q: "Is there a guarantee?",
-    a: "There are no guarantees of receiving investment — no one can ethically promise that. What David does guarantee is a full refund of any payment made if you are not 100% satisfied after the very first consultation. If it is not the right fit, you will not be out of pocket.",
+    a: "There are no guarantees of receiving investment. No one can ethically promise that. What David does guarantee is a full refund of any payment made if you are not 100% satisfied after the very first consultation. If it is not the right fit, you will not be out of pocket.",
   },
   {
     q: "Does David Pugh work with every startup that approaches him?",
@@ -44,11 +44,11 @@ const FAQ = [
   },
   {
     q: "What is the 18-point pitch deck structure?",
-    a: "It is David's proprietary framework for building pitch decks — developed and refined through years of direct feedback from investors. It covers everything from the opening hook and problem statement through to financials, team storytelling, and the ask — structured in the exact order that keeps investors engaged. The full framework is covered in the Scrub the Deck e-book.",
+    a: "It is David's proprietary framework for building pitch decks, developed and refined through years of direct feedback from investors. It covers everything from the opening hook and problem statement through to financials, team storytelling, and the ask, structured in the exact order that keeps investors engaged. The full framework is covered in the Scrub the Deck e-book.",
   },
   {
     q: "Is the strategy session really free?",
-    a: "Yes — completely free, no obligation. It is a genuine 30-minute working session with David personally, not a sales call. You will leave with real insights and a clearer picture of your fundraising position, whether you decide to work together or not.",
+    a: "Yes, completely free, no obligation. It is a genuine 30-minute working session with David personally, not a sales call. You will leave with real insights and a clearer picture of your fundraising position, whether you decide to work together or not.",
   },
 ];
 
