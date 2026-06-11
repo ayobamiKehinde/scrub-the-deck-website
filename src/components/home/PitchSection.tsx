@@ -41,7 +41,7 @@ export default function PitchSection() {
           </div>
           <p className={styles.body}>
             We will take you through the full 6-step raising process, creating the pitch deck
-            that gives what investors need to hear — and we will put it in the inboxes of
+            that gives what investors need to hear, and we will put it in the inboxes of
             1500+ investors who trust us.
           </p>
 

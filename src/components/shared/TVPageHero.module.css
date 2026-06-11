@@ -22,6 +22,21 @@
   width: 100%;
 }
 
+/* ─── Optional logo above headline (replaces fixed nav on some pages) ── */
+.heroLogo {
+  height: 96px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: var(--space-2xl);
+}
+
+@media (max-width: 767px) {
+  .heroLogo {
+    height: 64px;
+    margin-bottom: var(--space-xl);
+  }
+}
+
 /* ─── Text ─────────────────────────────────────────────────────── */
 .headline {
   font-family: var(--font-display);
@@ -56,6 +71,12 @@
   display: block;
   /* Screen blend removes the black JPEG background, letting the hero show through */
   mix-blend-mode: screen;
+}
+
+.tvImgPlain {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Play button sits over the TV screen area.
@@ -146,6 +167,15 @@
   height: 100%;
   border: none;
   display: block;
+}
+
+/* ─── Compact mode (logo header in flow, no fixed nav offset) ──── */
+.heroCompact {
+  min-height: 80vh;
+}
+
+.innerCompact {
+  padding: var(--space-xl) var(--space-lg) var(--space-3xl);
 }
 
 /* ─── Mobile ───────────────────────────────────────────────────── */

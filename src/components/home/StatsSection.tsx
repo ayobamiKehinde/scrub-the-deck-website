@@ -3,6 +3,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import RopeDivider from "@/components/ui/RopeDivider";
 import styles from "./StatsSection.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -60,9 +61,11 @@ export default function StatsSection() {
 
   return (
     <section ref={sectionRef} className={styles.section}>
+      <div className={styles.ropeTop}><RopeDivider /></div>
+
       {/* Hidden SEO heading */}
       <h1 className={styles.seoHeading}>
-        The Pitch Deck Agency That Raises Funding — Scrub the Deck
+        The Pitch Deck Agency That Raises Funding: Scrub the Deck
       </h1>
 
       <div className={styles.inner}>
@@ -84,6 +87,8 @@ export default function StatsSection() {
           ))}
         </div>
       </div>
+
+      <div className={styles.ropeBottom}><RopeDivider /></div>
     </section>
   );
 }

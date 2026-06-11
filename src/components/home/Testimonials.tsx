@@ -59,7 +59,7 @@ function VideoCard({ name, company, result, quote, image, videoId, onOpen }: Car
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={founderSrc}
-          alt={`${name} — ${company}`}
+          alt={`${name}, ${company}`}
           className={styles.cardVideo}
           onError={(e) => {
             // fallback to YouTube thumbnail if founder photo missing
@@ -179,7 +179,7 @@ export default function Testimonials() {
           onClick={() => setShowAll((v) => !v)}
           aria-expanded={showAll}
         >
-          <span>{showAll ? "View less" : "View more"}</span>
+          <span>{showAll ? "View less" : "VIEW 11 MORE CLIENT TESTIMONIALS"}</span>
           <svg
             className={`${styles.viewMoreChevron} ${showAll ? styles.chevronUp : ""}`}
             width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2"

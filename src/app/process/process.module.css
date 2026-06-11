@@ -1,3 +1,22 @@
+/* ─── Logo header bar ──────────────────────────────────────────── */
+.logoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  background: var(--colour-bg);
+}
+
+.logoImg {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .logoImg { height: 36px; }
+}
+
 /* ─── Content article ──────────────────────────────────────────── */
 .content {
   background: var(--colour-bg);
@@ -145,14 +164,6 @@
   color: var(--colour-muted);
 }
 
-/* ─── Waves section — stats bar, no overlay ────────────────────── */
-.wavesSection {
-  background-image: url('/images/waves-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  margin: var(--space-lg) 0;
-}
 
 @media (max-width: 767px) {
   .wavesSection {

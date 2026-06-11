@@ -13,6 +13,9 @@ interface TVPageHeroProps {
   ctaHref: string;
   ctaLabel?: string;
   videoId?: string;
+  noBlend?: boolean;
+  compact?: boolean;
+  logoSrc?: string;
 }
 
 export default function TVPageHero({
@@ -23,13 +26,26 @@ export default function TVPageHero({
   ctaHref,
   ctaLabel = "BOOK A CALL",
   videoId,
+  noBlend = false,
+  compact = false,
+  logoSrc,
 }: TVPageHeroProps) {
   const [playing, setPlaying] = useState(false);
 
   return (
     <>
-      <section className={styles.hero} aria-label={headline}>
-        <div className={styles.inner}>
+      <section className={`${styles.hero} ${compact ? styles.heroCompact : ""}`} aria-label={headline}>
+        <div className={`${styles.inner} ${compact ? styles.innerCompact : ""}`}>
+          {logoSrc && (
+            <Image
+              src={logoSrc}
+              alt="Scrub the Deck"
+              width={280}
+              height={72}
+              className={styles.heroLogo}
+              priority
+            />
+          )}
           <p className={styles.headline}>{headline}</p>
           <p className={styles.subtitle}>{subtitle}</p>
 
@@ -39,7 +55,7 @@ export default function TVPageHero({
               alt={tvAlt}
               width={600}
               height={500}
-              className={styles.tvImg}
+              className={noBlend ? styles.tvImgPlain : styles.tvImg}
               priority
             />
             {videoId && (

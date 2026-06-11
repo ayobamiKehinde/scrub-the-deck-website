@@ -77,26 +77,25 @@ export default function MeetFounder() {
 
             <p className={styles.bio}>
               Before I created this brand, I saw that founders were really struggling to grab an
-              investor&rsquo;s attention. They were constantly rejected — or worse, <strong>ignored.</strong>
+              investor&rsquo;s attention. They were constantly rejected, or worse, <strong>ignored.</strong>
             </p>
             <p className={styles.bio}>
               I made it my goal to speak directly to investors in my network and extract the formula
-              they define. After several years of trial-and-error, testing everything the hard way —
-              with close guidance from investors and VC funds — I distilled it into one powerful process.
+              they define. After several years of trial-and-error, testing everything the hard way, with close guidance from investors and VC funds. I distilled it into one powerful process.
             </p>
             <p className={styles.bio}>
               By following this process, my clients have been able to raise <strong>tens of millions
               in funding</strong>, as well as securing powerful partners who bring the expertise, finance,
               connections and guidance they need to grow.
             </p>
-            <p className={styles.attribution}>— David Pugh, Founder of Scrub the Deck&reg;</p>
+            <p className={styles.attribution}>David Pugh, Founder of Scrub the Deck&reg;</p>
           </div>
 
           {/* Right — porthole */}
           <div className={styles.porthole}>
             <Image
               src="/images/founder-image-new.png"
-              alt="David Pugh — Captain of Scrub the Deck"
+              alt="David Pugh, Captain of Scrub the Deck"
               width={560}
               height={560}
               className={styles.portholeImg}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import GoldButton from "@/components/ui/GoldButton";
@@ -16,6 +17,11 @@ const NAV_LINKS = [
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  // Welcome page has no nav at all — only a logo + Book a Call
+  const hideNav = pathname === "/welcome";
+  // Pages with their own logo header don't need the scrolled nav
+  const alwaysVisible = pathname !== "/" && pathname !== "/process" && !hideNav;
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -42,6 +48,8 @@ export default function Nav() {
     </>
   );
 
+  if (hideNav) return null;
+
   return (
     <>
       {/* Floating hamburger — always visible, merges into navbar on scroll */}
@@ -55,14 +63,14 @@ export default function Nav() {
         {hamburgerLines}
       </button>
 
-      <nav className={`${styles.nav} ${scrolled ? styles.navVisible : ""}`} aria-label="Main navigation">
+      <nav className={`${styles.nav} ${(scrolled || alwaysVisible) ? styles.navVisible : ""}`} aria-label="Main navigation">
         {/* Left: same GoldButton as hero, smaller */}
         <div className={styles.navLeft}>
           <GoldButton label="Book a Call" href="/contact" size="lg" className={styles.navBtn} />
         </div>
 
         {/* Centre: silver logo */}
-        <Link href="/" className={styles.logoLink} aria-label="Scrub the Deck — home">
+        <Link href="/" className={styles.logoLink} aria-label="Scrub the Deck home">
           <Image
             src="/images/logo-silver.png"
             alt="Scrub the Deck"

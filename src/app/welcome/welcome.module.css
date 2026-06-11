@@ -1,191 +1,56 @@
-/* ─── Content article ──────────────────────────────────────────── */
-.content {
-  background: var(--colour-bg);
-  padding-bottom: var(--space-5xl);
+/* ─── Post-testimonials CTA ─────────────────────────────────────── */
+.bookCta {
+  position: relative;
+  background-image: url('/images/wood-bg.jpg');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+  overflow: hidden;
 }
 
-.inner {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: var(--space-4xl) var(--space-lg) 0;
+.bookCta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  pointer-events: none;
 }
 
-/* ─── Byline ───────────────────────────────────────────────────── */
-.byline {
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  color: var(--colour-muted);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: var(--space-xl);
-  padding-bottom: var(--space-md);
-  border-bottom: 1px solid var(--colour-border);
-}
-
-/* ─── TL;DR box ────────────────────────────────────────────────── */
-.tldr {
-  background: rgba(0, 212, 212, 0.05);
-  border: 1px solid rgba(0, 212, 212, 0.22);
-  border-radius: 4px;
-  padding: var(--space-xl);
-  margin-bottom: var(--space-3xl);
-}
-
-.tldrTitle {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  letter-spacing: 0.12em;
-  color: var(--colour-teal);
-  margin-bottom: var(--space-md);
-}
-
-.tldrList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.bookCtaContent {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.tldrList li {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  color: var(--colour-white);
-  line-height: 1.55;
-  padding-left: var(--space-lg);
-  position: relative;
-}
-
-.tldrList li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--colour-teal);
-  font-size: 0.8rem;
-  top: 3px;
-}
-
-/* ─── Semantic H1 ──────────────────────────────────────────────── */
-.pageH1 {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
-  color: var(--colour-white);
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  line-height: 1.15;
-  margin-bottom: var(--space-lg);
-}
-
-.intro {
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  color: var(--colour-muted);
-  line-height: 1.75;
-  margin-bottom: var(--space-4xl);
-}
-
-/* ─── GEO content sections ─────────────────────────────────────── */
-.geoSection {
-  padding: var(--space-3xl) 0;
-  border-top: 1px solid var(--colour-border);
-}
-
-.geoSection p {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--colour-muted);
-  line-height: 1.75;
-  margin-bottom: var(--space-md);
-}
-
-.geoSection p:last-child {
-  margin-bottom: 0;
-}
-
-.geoH2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.8vw, 2rem);
-  color: var(--colour-white);
-  letter-spacing: 0.01em;
-  line-height: 1.2;
-  margin-bottom: var(--space-lg);
-}
-
-.bridgeLink {
-  color: var(--colour-white) !important;
-  font-size: 0.95rem !important;
-}
-
-.bridgeLink a {
-  color: var(--colour-teal);
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 212, 212, 0.35);
-  text-underline-offset: 3px;
-}
-
-.bridgeLink a:hover {
-  color: var(--colour-white);
-  text-decoration-color: rgba(255, 255, 255, 0.4);
-}
-
-.bridgeLink em {
-  color: var(--colour-muted);
-}
-
-/* ─── Waves section — stats + testimonials, no overlay ─────────── */
-.wavesSection {
-  background-image: url('/images/waves-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  margin: var(--space-3xl) 0 0;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-2xl) var(--space-lg);
+  text-align: center;
 }
 
 @media (max-width: 767px) {
-  .wavesSection {
-    background-attachment: scroll;
-    background-position: center top;
+  .bookCta {
+    background-size: 325% auto;
   }
 }
 
-/* ─── FAQ section ──────────────────────────────────────────────── */
-.faqSection {
-  padding-top: var(--space-4xl);
-  border-top: 1px solid var(--colour-border);
-}
-
-.faqH2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.8vw, 2rem);
-  color: var(--colour-white);
-  letter-spacing: 0.01em;
-  line-height: 1.2;
-  margin-bottom: var(--space-3xl);
-}
-
-/* ─── Final CTA ────────────────────────────────────────────────── */
-.finalCta {
+.bookCtaBtnWrap {
   display: flex;
   justify-content: center;
-  padding: var(--space-4xl) 0 var(--space-2xl);
+  width: 100%;
 }
 
-/* ─── Mobile ───────────────────────────────────────────────────── */
-@media (max-width: 767px) {
-  .inner {
-    padding: var(--space-3xl) var(--space-md) 0;
-  }
+.bookCtaHeading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: var(--colour-white);
+  margin: 0;
+  line-height: 1.1;
+}
 
-  .tldr {
-    padding: var(--space-lg);
-  }
-
-  .geoSection {
-    padding: var(--space-2xl) 0;
-  }
-
-  .brandLogo {
-    height: 52px;
-  }
+.bookCtaSub {
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: var(--colour-gold);
+  margin-top: -20px;
 }
