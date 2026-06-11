@@ -217,7 +217,7 @@
   align-items: center;
   text-align: center;
   padding: var(--space-xl) var(--space-lg);
-  gap: var(--space-xs);
+  gap: 0;
 }
 
 .woodBreakText {
@@ -233,7 +233,7 @@
   font-weight: 700;
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   color: var(--colour-gold);
-  margin: 0;
+  margin: -0.15em 0 0;
 }
 
 @media (max-width: 767px) {
