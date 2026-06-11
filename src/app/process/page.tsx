@@ -103,6 +103,7 @@ export default function ProcessPage() {
           </div>
 
           {/* ── Steps 1–3 ── */}
+          <div className={styles.seaSection}>
           <div className={styles.inner}>
 
             <section className={styles.step}>
@@ -166,6 +167,7 @@ export default function ProcessPage() {
             </section>
 
           </div>
+          </div>
 
           {/* ── Mid-page wood break ── */}
           <div className={styles.woodBreak}>
@@ -178,6 +180,7 @@ export default function ProcessPage() {
           </div>
 
           {/* ── Steps 4–6 ── */}
+          <div className={styles.seaSection}>
           <div className={styles.inner}>
 
             <section className={styles.step}>
@@ -236,6 +239,7 @@ export default function ProcessPage() {
               </p>
             </section>
 
+          </div>
           </div>
 
           {/* ── Sea texture FAQ + CTA ── */}
