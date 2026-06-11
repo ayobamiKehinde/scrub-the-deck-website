@@ -13,7 +13,13 @@
 
 @media (max-width: 767px) {
   .hero {
-    padding: calc(var(--space-3xl) + 60px) var(--space-lg) var(--space-3xl);
+    padding: calc(var(--space-3xl) + 60px) var(--space-md) var(--space-2xl);
+  }
+  .heading {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+  .cards {
+    padding: var(--space-3xl) var(--space-md);
   }
 }
 

@@ -240,12 +240,9 @@
   .woodBreak { background-size: 325% auto; }
 }
 
-/* ─── Sea texture FAQ section ──────────────────────────────────── */
+/* ─── FAQ section ─────────────────────────────────────── (dark) ── */
 .woodFaq {
-  background-image: url('/images/sea-tesxture-high.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: var(--colour-bg);
 }
 
 .woodFaqInner {
@@ -255,7 +252,6 @@
 }
 
 @media (max-width: 767px) {
-  .woodFaq { background-attachment: scroll; }
   .woodFaqInner { padding: var(--space-3xl) var(--space-md); }
 }
 

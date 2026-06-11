@@ -1,20 +1,23 @@
 .section {
   position: relative;
+  text-align: center;
+}
+
+.sectionWooden {
   background-image: url('/images/wood-bg.jpg');
   background-size: 325% auto;
   background-position: top center;
   background-repeat: repeat-y;
-  text-align: center;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
-  .section {
+  .sectionWooden {
     background-size: 100% auto;
   }
 }
 
-.section::before {
+.sectionWooden::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -65,11 +68,14 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-lg);
+  gap: var(--space-md);
 }
 
 @media (min-width: 640px) {
-  .grid { grid-template-columns: repeat(4, 1fr); }
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
 }
 
 /* ─── Card ────────────────────────────────────────────────────── */

@@ -35,7 +35,7 @@ export default function WelcomePage() {
 
       <BrandsStrip />
 
-      <StatsSection />
+      <StatsSection wooden />
 
       {/* Video testimonials */}
       <Testimonials />

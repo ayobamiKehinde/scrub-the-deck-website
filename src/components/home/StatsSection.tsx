@@ -15,7 +15,9 @@ const STATS = [
   { end: 1500, prefix: "",  suffix: "+",  label: "Investor Connections" },
 ];
 
-export default function StatsSection() {
+interface Props { wooden?: boolean; }
+
+export default function StatsSection({ wooden }: Props) {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -60,8 +62,8 @@ export default function StatsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className={styles.section}>
-      <div className={styles.ropeTop}><RopeDivider /></div>
+    <section ref={sectionRef} className={`${styles.section}${wooden ? ` ${styles.sectionWooden}` : ""}`}>
+      {wooden && <div className={styles.ropeTop}><RopeDivider /></div>}
 
       {/* Hidden SEO heading */}
       <h1 className={styles.seoHeading}>
@@ -88,7 +90,7 @@ export default function StatsSection() {
         </div>
       </div>
 
-      <div className={styles.ropeBottom}><RopeDivider /></div>
+      {wooden && <div className={styles.ropeBottom}><RopeDivider /></div>}
     </section>
   );
 }
