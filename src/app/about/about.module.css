@@ -14,34 +14,18 @@
   margin: 0 auto;
 }
 
-/* ─── Two-column grid ──────────────────────────────────────────── */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-3xl);
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: var(--space-4xl);
-  }
-}
-
-/* ─── Porthole ─────────────────────────────────────────────────── */
-.portholeCol {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.portholeImg {
+/* ─── Photo ────────────────────────────────────────────────────── */
+.photo {
   width: 100%;
   height: auto;
-  max-width: 480px;
   display: block;
-  filter: drop-shadow(0 8px 48px rgba(0, 0, 0, 0.5));
+  border-radius: 4px;
+  margin-bottom: var(--space-3xl);
+}
+
+/* ─── Text col ─────────────────────────────────────────────────── */
+.textCol {
+  max-width: 760px;
 }
 
 /* ─── Text ─────────────────────────────────────────────────────── */

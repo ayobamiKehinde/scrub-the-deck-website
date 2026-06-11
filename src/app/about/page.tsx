@@ -47,56 +47,50 @@ export default function AboutPage() {
       <main className={styles.page}>
         <section className={styles.content}>
           <div className={styles.inner}>
-            <div className={styles.grid}>
+            <Image
+              src="/images/david-about.jpg"
+              alt="David Pugh, Founder of Scrub the Deck"
+              width={2500}
+              height={1667}
+              className={styles.photo}
+              priority
+            />
 
-              <div className={styles.portholeCol}>
-                <Image
-                  src="/images/founder-image-new.png"
-                  alt="David Pugh, Founder of Scrub the Deck"
-                  width={520}
-                  height={520}
-                  className={styles.portholeImg}
-                  priority
-                />
+            <div className={styles.textCol}>
+              <p className={styles.eyebrow}>The Founder</p>
+              <h1 className={styles.heading}>David Pugh</h1>
+
+              <p className={styles.para}>
+                David Pugh holds a BA degree and boasts a 22-year career working with some of
+                the world&rsquo;s biggest brands as a senior designer, consultant, and communicator.
+              </p>
+              <p className={styles.para}>
+                One of his biggest achievements was facilitating the BBC&rsquo;s international
+                franchise sales, including Strictly Come Dancing, Doctor Who, and Top Gear, to
+                the USA and multiple global territories, helping to secure billions of dollars
+                for the corporation.
+              </p>
+              <p className={styles.para}>
+                He has created pitch decks for global brands and corporations including Cisco
+                Systems, Adidas, Accenture, Aston Martin, Mercedes, O2, Vodafone, Hilton, MTV,
+                and Petronas, giving him a rare understanding of what investors and
+                decision-makers respond to.
+              </p>
+              <p className={styles.para}>
+                David founded Scrub the Deck&reg; after recognising that founders with great
+                businesses were failing to raise investment not because their ideas weren&rsquo;t
+                good enough, but because their pitch decks didn&rsquo;t communicate value clearly
+                and they had no route to the right investors.
+              </p>
+              <p className={styles.para}>
+                He created the Connect &amp; Convince methodology: an 18-point pitch deck
+                structure developed through direct feedback from investors, combined with warm
+                introductions to his personal network of over 1,500 angels, VCs, and family offices.
+              </p>
+
+              <div className={styles.cta}>
+                <GoldButton href={BOOK_URL} label="BOOK A CALL" size="lg" />
               </div>
-
-              <div className={styles.textCol}>
-                <p className={styles.eyebrow}>The Founder</p>
-                <h1 className={styles.heading}>David Pugh</h1>
-
-                <p className={styles.para}>
-                  David Pugh holds a BA degree and boasts a 22-year career working with some of
-                  the world&rsquo;s biggest brands as a senior designer, consultant, and communicator.
-                </p>
-                <p className={styles.para}>
-                  One of his biggest achievements was facilitating the BBC&rsquo;s international
-                  franchise sales, including Strictly Come Dancing, Doctor Who, and Top Gear, to
-                  the USA and multiple global territories, helping to secure billions of dollars
-                  for the corporation.
-                </p>
-                <p className={styles.para}>
-                  He has created pitch decks for global brands and corporations including Cisco
-                  Systems, Adidas, Accenture, Aston Martin, Mercedes, O2, Vodafone, Hilton, MTV,
-                  and Petronas, giving him a rare understanding of what investors and
-                  decision-makers respond to.
-                </p>
-                <p className={styles.para}>
-                  David founded Scrub the Deck&reg; after recognising that founders with great
-                  businesses were failing to raise investment not because their ideas weren&rsquo;t
-                  good enough, but because their pitch decks didn&rsquo;t communicate value clearly
-                  and they had no route to the right investors.
-                </p>
-                <p className={styles.para}>
-                  He created the Connect &amp; Convince methodology: an 18-point pitch deck
-                  structure developed through direct feedback from investors, combined with warm
-                  introductions to his personal network of over 1,500 angels, VCs, and family offices.
-                </p>
-
-                <div className={styles.cta}>
-                  <GoldButton href={BOOK_URL} label="BOOK A CALL" size="lg" />
-                </div>
-              </div>
-
             </div>
           </div>
         </section>
