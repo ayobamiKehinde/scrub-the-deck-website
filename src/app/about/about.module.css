@@ -4,24 +4,44 @@
   min-height: 100vh;
 }
 
-/* ─── Hero ────────────────────────────────────────────────────── */
-.hero {
-  background: var(--colour-surface);
-  border-bottom: 1px solid var(--colour-border);
-  padding: calc(var(--space-5xl) + 60px) var(--space-lg) var(--space-4xl);
+/* ─── Content section ──────────────────────────────────────────── */
+.content {
+  padding: calc(80px + var(--space-4xl)) var(--space-lg) var(--space-5xl);
 }
 
-@media (max-width: 767px) {
-  .hero {
-    padding: calc(var(--space-3xl) + 60px) var(--space-lg) var(--space-3xl);
-  }
-}
-
-.heroInner {
-  max-width: 800px;
+.inner {
+  max-width: 1100px;
   margin: 0 auto;
 }
 
+/* ─── Two-column grid ──────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1.5fr;
+    align-items: start;
+    gap: var(--space-4xl);
+  }
+}
+
+/* ─── Photo ────────────────────────────────────────────────────── */
+.photoCol {
+  position: relative;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* ─── Text ─────────────────────────────────────────────────────── */
 .eyebrow {
   font-family: var(--font-body);
   font-size: 0.75rem;
@@ -33,219 +53,33 @@
 
 .heading {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  text-transform: uppercase;
   line-height: 1;
-  text-transform: uppercase;
   color: var(--colour-white);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-2xl);
 }
 
-.heading em {
-  font-family: var(--font-script);
-  font-size: 0.88em;
-  text-transform: none;
-  color: var(--colour-gold);
-}
-
-.sub {
-  font-family: var(--font-script);
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
-  line-height: 1.6;
-  color: var(--colour-muted);
-  max-width: 560px;
-}
-
-/* ─── Stats bar ───────────────────────────────────────────────── */
-.statsBar {
-  background: var(--colour-bg);
-  border-bottom: 1px solid var(--colour-border);
-}
-
-.statsInner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: var(--space-3xl) var(--space-lg);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-2xl) var(--space-lg);
-}
-
-@media (min-width: 768px) {
-  .statsInner {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
-
-.statValue {
-  font-family: var(--font-display);
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
-  color: var(--colour-white);
-  line-height: 1;
-}
-
-.statLabel {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--colour-teal);
-}
-
-/* ─── Rope divider ────────────────────────────────────────────── */
-.rope {
-  position: relative;
-  z-index: 2;
-}
-
-/* ─── Bio ─────────────────────────────────────────────────────── */
-.bio {
-  background: var(--colour-bg);
-  padding: var(--space-4xl) var(--space-lg);
-}
-
-.bioInner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-3xl);
-}
-
-@media (min-width: 768px) {
-  .bioInner {
-    grid-template-columns: 1fr 1.6fr;
-    align-items: start;
-  }
-}
-
-.bioPhoto {
-  position: relative;
-}
-
-.bioPhotoImg {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-}
-
-.byline {
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  color: var(--colour-muted);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: var(--space-xl);
-  padding-bottom: var(--space-md);
-  border-bottom: 1px solid var(--colour-border);
-}
-
-.bioHeading {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  text-transform: uppercase;
-  line-height: 1.05;
-  color: var(--colour-white);
-  margin-bottom: var(--space-xl);
-}
-
-.bioPara {
+.para {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--colour-muted);
+  color: rgba(240, 244, 248, 0.82);
   margin-bottom: var(--space-lg);
 }
 
-/* ─── GEO content ──────────────────────────────────────────────── */
-.geoContent {
-  background: var(--colour-bg);
-}
-
-.geoInner {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: var(--space-4xl) var(--space-lg) 0;
-}
-
-.geoSection {
-  padding: var(--space-3xl) 0;
-  border-top: 1px solid var(--colour-border);
-}
-
-.geoSection p {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--colour-muted);
-  line-height: 1.75;
-  margin-bottom: var(--space-md);
-}
-
-.geoSection p:last-child {
+.para:last-of-type {
   margin-bottom: 0;
 }
 
-.geoSection a {
-  color: var(--colour-teal);
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 212, 212, 0.35);
-  text-underline-offset: 3px;
-}
-
-.geoSection a:hover {
-  color: var(--colour-white);
-  text-decoration-color: rgba(255, 255, 255, 0.4);
-}
-
-.geoH2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.8vw, 2rem);
-  color: var(--colour-white);
-  letter-spacing: 0.01em;
-  line-height: 1.2;
-  margin-bottom: var(--space-lg);
-}
-
-/* ─── FAQ ──────────────────────────────────────────────────────── */
-.faqSection {
-  padding-top: var(--space-4xl);
-  border-top: 1px solid var(--colour-border);
-  padding-bottom: var(--space-4xl);
-}
-
-.faqH2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.8vw, 2rem);
-  color: var(--colour-white);
-  letter-spacing: 0.01em;
-  line-height: 1.2;
-  margin-bottom: var(--space-3xl);
-}
-
-/* ─── Final CTA ────────────────────────────────────────────────── */
-.finalCta {
-  display: flex;
-  justify-content: center;
-  padding: var(--space-4xl) 0 var(--space-5xl);
+/* ─── CTA ──────────────────────────────────────────────────────── */
+.cta {
+  margin-top: var(--space-2xl);
 }
 
 /* ─── Mobile ───────────────────────────────────────────────────── */
 @media (max-width: 767px) {
-  .geoInner {
-    padding: var(--space-3xl) var(--space-md) 0;
-  }
-
-  .geoSection {
-    padding: var(--space-2xl) 0;
-  }
-
-  .bio {
-    padding: var(--space-3xl) var(--space-md);
+  .content {
+    padding: calc(80px + var(--space-3xl)) var(--space-md) var(--space-4xl);
   }
 }
