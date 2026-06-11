@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import GoldButton from "@/components/ui/GoldButton";
 import styles from "./TVPageHero.module.css";
@@ -16,7 +16,7 @@ interface TVPageHeroProps {
   noBlend?: boolean;
   compact?: boolean;
   logoSrc?: string;
-  note?: string;
+  note?: React.ReactNode;
 }
 
 export default function TVPageHero({

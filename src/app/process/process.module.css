@@ -83,11 +83,11 @@
 /* ─── Semantic H1 ──────────────────────────────────────────────── */
 .pageH1 {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
   color: var(--colour-white);
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  line-height: 1.15;
+  line-height: 1;
   margin-bottom: var(--space-md);
 }
 
