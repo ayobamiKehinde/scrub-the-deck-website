@@ -10,14 +10,13 @@
 }
 
 .inner {
-  max-width: 1100px;
+  max-width: 780px;
   margin: 0 auto;
 }
 
 /* ─── Photo ────────────────────────────────────────────────────── */
 .photo {
   width: 100%;
-  max-width: 720px;
   height: auto;
   display: block;
   border-radius: 4px;
@@ -26,7 +25,7 @@
 
 /* ─── Text col ─────────────────────────────────────────────────── */
 .textCol {
-  max-width: 760px;
+  width: 100%;
 }
 
 /* ─── Text ─────────────────────────────────────────────────────── */
