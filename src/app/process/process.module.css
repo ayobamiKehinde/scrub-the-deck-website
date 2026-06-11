@@ -74,15 +74,15 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
   line-height: 1.15;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .intro {
   font-family: var(--font-body);
   font-size: 1.05rem;
-  color: var(--colour-muted);
+  color: rgba(240, 244, 248, 0.82);
   line-height: 1.75;
-  margin-bottom: var(--space-4xl);
+  margin-bottom: 0;
 }
 
 /* ─── Step sections ────────────────────────────────────────────── */
@@ -169,7 +169,7 @@
   z-index: 1;
   max-width: 860px;
   margin: 0 auto;
-  padding: var(--space-3xl) var(--space-lg);
+  padding: var(--space-xl) var(--space-lg);
 }
 
 @media (max-width: 767px) {
