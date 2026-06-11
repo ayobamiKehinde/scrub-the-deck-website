@@ -83,6 +83,7 @@ export default function ProcessPage() {
           tvSrc="/images/Process-TV.png"
           tvAlt="The Scrub the Deck 6-step road to investment process"
           ctaHref={BOOK_URL}
+          videoId="LwQ9SIxlZX8"
         />
 
         <article className={styles.content}>
