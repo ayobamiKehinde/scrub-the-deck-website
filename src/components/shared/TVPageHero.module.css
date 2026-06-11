@@ -61,7 +61,7 @@
 /* ─── TV ───────────────────────────────────────────────────────── */
 .tvWrap {
   position: relative;
-  width: min(640px, 90vw);
+  width: min(720px, 90vw);
   margin: var(--space-sm) 0;
 }
 
@@ -102,6 +102,19 @@
 .playBtn:hover {
   background: rgba(0, 212, 212, 0.45);
   transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ─── Optional note below TV ───────────────────────────────────── */
+.note {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-style: italic;
+  color: rgba(240, 244, 248, 0.6);
+  max-width: min(720px, 90vw);
+  text-align: center;
+  margin: calc(-1 * var(--space-sm)) 0 0;
+  line-height: 1.5;
+  padding: 0 var(--space-sm);
 }
 
 /* ─── CTA ──────────────────────────────────────────────────────── */
@@ -195,7 +208,7 @@
   }
 
   .tvWrap {
-    width: min(360px, 94vw);
+    width: min(405px, 94vw);
   }
 
   .playBtn {

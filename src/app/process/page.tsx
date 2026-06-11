@@ -83,7 +83,8 @@ export default function ProcessPage() {
           tvSrc="/images/Process-TV.png"
           tvAlt="The Scrub the Deck 6-step road to investment process"
           ctaHref={BOOK_URL}
-          videoId="LwQ9SIxlZX8"
+          videoId="jq5sGYgDR1E"
+          note="*Since recording this video not only has my hair grown, but also the investor network has grown from 650 to over 1,500 investors."
         />
 
         <article className={styles.content}>

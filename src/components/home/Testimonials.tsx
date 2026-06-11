@@ -124,15 +124,15 @@ function VideoModal({ videoId, onClose }: { videoId: string; onClose: () => void
   );
 }
 
-export default function Testimonials() {
+export default function Testimonials({ alwaysShowAll }: { alwaysShowAll?: boolean }) {
   const sectionRef = useRef<HTMLElement>(null);
   const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(alwaysShowAll ?? false);
 
   const openModal  = useCallback((id: string) => setActiveVideoId(id ?? ""), []);
   const closeModal = useCallback(() => setActiveVideoId(null), []);
 
-  const visible = showAll ? RESULTS : RESULTS.slice(0, INITIAL_COUNT);
+  const visible = (alwaysShowAll || showAll) ? RESULTS : RESULTS.slice(0, INITIAL_COUNT);
 
   // After the grid expands/collapses, recalculate all ScrollTrigger positions.
   // Without this, sibling sections (e.g. MeetFounder) stay at opacity:0 because
@@ -173,21 +173,23 @@ export default function Testimonials() {
         ))}
       </div>
 
-      <div className={styles.viewMoreWrap}>
-        <button
-          className={styles.viewMoreBtn}
-          onClick={() => setShowAll((v) => !v)}
-          aria-expanded={showAll}
-        >
-          <span>{showAll ? "View less" : "VIEW 11 MORE CLIENT TESTIMONIALS"}</span>
-          <svg
-            className={`${styles.viewMoreChevron} ${showAll ? styles.chevronUp : ""}`}
-            width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2"
+      {!alwaysShowAll && (
+        <div className={styles.viewMoreWrap}>
+          <button
+            className={styles.viewMoreBtn}
+            onClick={() => setShowAll((v) => !v)}
+            aria-expanded={showAll}
           >
-            <path d="M3 6l6 6 6-6" />
-          </svg>
-        </button>
-      </div>
+            <span>{showAll ? "View less" : "VIEW 11 MORE CLIENT TESTIMONIALS"}</span>
+            <svg
+              className={`${styles.viewMoreChevron} ${showAll ? styles.chevronUp : ""}`}
+              width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2"
+            >
+              <path d="M3 6l6 6 6-6" />
+            </svg>
+          </button>
+        </div>
+      )}
 
       {activeVideoId !== null && (
         <VideoModal videoId={activeVideoId} onClose={closeModal} />

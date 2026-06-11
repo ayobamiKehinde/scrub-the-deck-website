@@ -58,5 +58,5 @@
   text-transform: uppercase;
   color: var(--colour-white);
   text-align: center;
-  margin: var(--space-md) 0 0;
+  margin: 0 0 var(--space-md);
 }

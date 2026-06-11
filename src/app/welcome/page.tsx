@@ -33,12 +33,12 @@ export default function WelcomePage() {
         logoSrc="/images/logo-silver.png"
       />
 
-      <BrandsStrip />
+      <BrandsStrip label="Some of the clients I've worked with in a 20 year career" />
 
       <StatsSection wooden />
 
-      {/* Video testimonials */}
-      <Testimonials />
+      {/* Video testimonials — show all on this page */}
+      <Testimonials alwaysShowAll />
 
       {/* Written/picture testimonials with scroll animation */}
       <PictureTestimonials />
@@ -48,7 +48,7 @@ export default function WelcomePage() {
         <RopeDivider />
         <div className={styles.bookCtaContent}>
           <p className={styles.bookCtaHeading}>READY TO RAISE INVESTMENT?</p>
-          <p className={styles.bookCtaSub}>Book a free call with us today</p>
+          <p className={styles.bookCtaSub}>Book a free call with founder Dave Pugh today</p>
           <div className={styles.bookCtaBtnWrap}>
             <GoldButton href={BOOK_URL} label="BOOK A CALL" size="lg" />
           </div>

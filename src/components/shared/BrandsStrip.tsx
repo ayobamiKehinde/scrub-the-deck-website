@@ -35,6 +35,7 @@ function BrandLogo({ name, file }: { name: string; file: string }) {
 export default function BrandsStrip({ label }: { label?: string }) {
   return (
     <div className={styles.wrap}>
+      {label && <p className={styles.label}>{label}</p>}
       <div className={styles.marqueeOuter} aria-hidden="true">
         <div className={styles.marqueeTrack}>
           {[...BRANDS, ...BRANDS, ...BRANDS, ...BRANDS].map((b, i) => (
@@ -44,7 +45,6 @@ export default function BrandsStrip({ label }: { label?: string }) {
           ))}
         </div>
       </div>
-      {label && <p className={styles.label}>{label}</p>}
     </div>
   );
 }

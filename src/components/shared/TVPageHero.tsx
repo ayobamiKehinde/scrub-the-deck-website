@@ -16,6 +16,7 @@ interface TVPageHeroProps {
   noBlend?: boolean;
   compact?: boolean;
   logoSrc?: string;
+  note?: string;
 }
 
 export default function TVPageHero({
@@ -29,6 +30,7 @@ export default function TVPageHero({
   noBlend = false,
   compact = false,
   logoSrc,
+  note,
 }: TVPageHeroProps) {
   const [playing, setPlaying] = useState(false);
 
@@ -70,6 +72,8 @@ export default function TVPageHero({
               </button>
             )}
           </div>
+
+          {note && <p className={styles.note}>{note}</p>}
 
           <div className={styles.ctaWrap}>
             <GoldButton href={ctaHref} label={ctaLabel} size="lg" />

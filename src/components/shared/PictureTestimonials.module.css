@@ -21,8 +21,10 @@
 
 .heading {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(2.4rem, 5vw, 4rem);
   color: var(--colour-white);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   margin: 0 0 -0.3em;
   line-height: 1;
 }
