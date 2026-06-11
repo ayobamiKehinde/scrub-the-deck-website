@@ -195,34 +195,22 @@
   .woodBreak { background-size: 325% auto; }
 }
 
-/* ─── Wood FAQ section ─────────────────────────────────────────── */
+/* ─── Sea texture FAQ section ──────────────────────────────────── */
 .woodFaq {
-  position: relative;
-  background-image: url('/images/wood-bg.jpg');
-  background-size: 100% auto;
-  background-position: top center;
-  background-repeat: repeat-y;
-  overflow: hidden;
-}
-
-.woodFaq::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.28);
-  pointer-events: none;
+  background-image: url('/images/sea-tesxture-high.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .woodFaqInner {
-  position: relative;
-  z-index: 1;
   max-width: 860px;
   margin: 0 auto;
   padding: var(--space-4xl) var(--space-lg) var(--space-3xl);
 }
 
 @media (max-width: 767px) {
-  .woodFaq { background-size: 325% auto; }
+  .woodFaq { background-attachment: scroll; }
   .woodFaqInner { padding: var(--space-3xl) var(--space-md); }
 }
 

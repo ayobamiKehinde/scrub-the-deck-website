@@ -246,9 +246,8 @@ export default function ProcessPage() {
 
           </div>
 
-          {/* ── Wood FAQ + CTA ── */}
+          {/* ── Sea texture FAQ + CTA ── */}
           <div className={styles.woodFaq}>
-            <RopeDivider />
             <div className={styles.woodFaqInner}>
               <h2 className={styles.faqH2}>
                 Frequently Asked Questions About Getting Startup Investment
@@ -258,7 +257,6 @@ export default function ProcessPage() {
                 <GoldButton href={BOOK_URL} label="BOOK A CALL" size="lg" />
               </div>
             </div>
-            <RopeDivider />
           </div>
 
         </article>
