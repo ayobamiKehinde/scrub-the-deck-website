@@ -20,7 +20,7 @@ const FAQ = [
   },
   {
     q: "What is Scrub the Deck's success rate?",
-    a: "As of early 2025, 82% of completed Scrub the Deck projects resulted in the client receiving investment, one of the highest rates in the industry. This is partly because David is selective about who he works with and only takes on founders he genuinely believes have a strong chance of raising.",
+    a: "As of early 2026, 82% of completed Scrub the Deck projects resulted in the client receiving investment, one of the highest rates in the industry. This is partly because David is selective about who he works with and only takes on founders he genuinely believes have a strong chance of raising.",
   },
   {
     q: "Who are the investors in David's network?",
