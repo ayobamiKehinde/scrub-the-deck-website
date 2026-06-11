@@ -27,7 +27,7 @@ export default function PictureTestimonials() {
           scrollTrigger: {
             trigger: item,
             start: "top 88%",
-            toggleActions: "play none none none",
+            toggleActions: "restart none none reset",
           },
         });
       });
