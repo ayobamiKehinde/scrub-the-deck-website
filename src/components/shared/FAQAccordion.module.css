@@ -70,8 +70,13 @@
   grid-template-rows: 1fr;
 }
 
-.answer {
+/* Direct grid child — overflow:hidden here is what makes 0fr actually collapse to 0.
+   No padding on this element; padding lives on .answer inside so it can't bleed out. */
+.answerWrap {
   overflow: hidden;
+}
+
+.answer {
   font-family: var(--font-body);
   font-size: 0.95rem;
   color: rgba(240, 244, 248, 0.82);

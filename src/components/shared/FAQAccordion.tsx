@@ -29,9 +29,12 @@ export default function FAQAccordion({ items }: { items: FAQItem[] }) {
                 </svg>
               </span>
             </button>
-            {/* grid-template-rows trick: 0fr → 1fr gives a smooth height transition */}
+            {/* grid-template-rows trick: 0fr → 1fr gives a smooth height transition.
+                The inner answerWrap has overflow:hidden so padding doesn't cause bleed. */}
             <div className={styles.panel}>
-              <p className={styles.answer}>{item.a}</p>
+              <div className={styles.answerWrap}>
+                <p className={styles.answer}>{item.a}</p>
+              </div>
             </div>
           </div>
         );
