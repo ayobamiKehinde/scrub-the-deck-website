@@ -18,7 +18,7 @@ export default function CTAStrip() {
             formula they define. After several years of trial-and-error, testing everything
             the hard way. I&rsquo;ve finally cracked it.
           </p>
-          <GoldButton label="Book a Call" href="/contact" size="lg" />
+          <GoldButton label="Book a Call" href="/davecall-q" size="lg" />
         </div>
       </div>
       <div className={styles.rope}><RopeDivider /></div>

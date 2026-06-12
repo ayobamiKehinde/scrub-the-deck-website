@@ -77,7 +77,7 @@ export default function BlogPage() {
           <p className={styles.ctaText}>
             More guides dropping each month. Want them in your inbox?
           </p>
-          <a href="/contact" className={styles.ctaBtn}>Get in touch</a>
+          <a href="/davecall-q" className={styles.ctaBtn}>Get in touch</a>
         </div>
       </section>
 

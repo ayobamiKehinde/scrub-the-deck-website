@@ -22,7 +22,7 @@ export default function HeroSection() {
 
       {/* Gold CTA button */}
       <div className={styles.ctaWrap}>
-        <GoldButton label="Book a Call" href="/contact" size="lg" />
+        <GoldButton label="Book a Call" href="/davecall-q" size="lg" />
       </div>
 
       {/* Rope divider at bottom */}

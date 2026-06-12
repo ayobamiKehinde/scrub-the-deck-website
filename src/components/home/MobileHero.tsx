@@ -80,7 +80,7 @@ export default function MobileHero() {
       </div>
 
       {/* CTA button */}
-      <a href="/contact" className={styles.ctaBtn}>
+      <a href="/davecall-q" className={styles.ctaBtn}>
         <span className={styles.ctaLabel}>BOOK A CALL</span>
       </a>
 

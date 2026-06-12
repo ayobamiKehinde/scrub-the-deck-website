@@ -1,13 +1,18 @@
 /* ─── Page ────────────────────────────────────────────────────── */
 .page {
-  background: var(--colour-bg);
+  background-image: url('/images/sea-tesxture-high.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   min-height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .page { background-attachment: scroll; }
 }
 
 /* ─── Hero ────────────────────────────────────────────────────── */
 .hero {
-  background: var(--colour-surface);
-  border-bottom: 1px solid var(--colour-border);
   padding: calc(var(--space-5xl) + 60px) var(--space-lg) var(--space-4xl);
 }
 
@@ -24,7 +29,7 @@
 }
 
 .heroInner {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -55,8 +60,8 @@
 
 .sub {
   font-family: var(--font-script);
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  line-height: 1.6;
+  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+  line-height: 1.5;
   color: var(--colour-muted);
 }
 

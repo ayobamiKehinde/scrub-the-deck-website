@@ -91,7 +91,7 @@ export default function ServicesPage() {
               </ul>
               <div className={styles.cardFooter}>
                 <span className={styles.turnaround}>⏱ {s.turnaround}</span>
-                <a href="/contact" className={styles.cta}>{s.cta}</a>
+                <a href="/davecall-q" className={styles.cta}>{s.cta}</a>
               </div>
             </article>
           ))}

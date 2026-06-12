@@ -66,7 +66,7 @@ export default function Nav() {
       <nav className={`${styles.nav} ${(scrolled || alwaysVisible) ? styles.navVisible : ""}`} aria-label="Main navigation">
         {/* Left: same GoldButton as hero, smaller */}
         <div className={styles.navLeft}>
-          <GoldButton label="Book a Call" href="/contact" size="lg" className={styles.navBtn} />
+          <GoldButton label="Book a Call" href="/davecall-q" size="lg" className={styles.navBtn} />
         </div>
 
         {/* Centre: silver logo */}
@@ -92,7 +92,7 @@ export default function Nav() {
         aria-hidden={!open}
       >
         <ul className={styles.links} role="list">
-          {[...NAV_LINKS, { href: "/contact", label: "Book a Call" }].map(({ href, label }) => (
+          {[...NAV_LINKS, { href: "/davecall-q", label: "Book a Call" }].map(({ href, label }) => (
             <li key={href + label}>
               <Link
                 href={href}

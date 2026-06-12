@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import styles from "../davecall/davecall.module.css";
 
 export const metadata: Metadata = {
@@ -15,10 +16,14 @@ export default function ConsultationPage() {
         <h1 className={styles.heading}>Book a Free Consultation</h1>
         <p className={styles.sub}>with David Pugh, Founder of Scrub the Deck</p>
 
-        {/* ── GoHighLevel calendar embed — paste iframe/script here ── */}
         <div className={styles.calendarWrap}>
-          {/* PLACEHOLDER — replace with GoHighLevel embed code */}
-          <p className={styles.placeholder}>Calendar embed coming soon</p>
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/booking/hMPscZkPh9yotIcxiIiD"
+            style={{ width: "100%", border: "none", outline: "none", display: "block", background: "transparent" }}
+            scrolling="no"
+            id="hMPscZkPh9yotIcxiIiD_1781191036166"
+          />
+          <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
         </div>
       </div>
     </main>

@@ -83,10 +83,11 @@
 /* ─── Semantic H1 ──────────────────────────────────────────────── */
 .pageH1 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4.5vw, 3.8rem);
-  color: var(--colour-white);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: 0;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  color: var(--colour-white);
   line-height: 1;
   margin-bottom: var(--space-md);
 }
@@ -233,7 +234,7 @@
 .woodBreakSub {
   font-family: var(--font-script);
   font-weight: 700;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-size: clamp(0.85rem, 1.4vw, 1.1rem);
   color: var(--colour-gold);
   margin: -0.1em 0 0;
   line-height: 1.2;
