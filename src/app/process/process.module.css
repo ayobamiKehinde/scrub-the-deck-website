@@ -234,7 +234,7 @@
 .woodBreakSub {
   font-family: var(--font-script);
   font-weight: 700;
-  font-size: clamp(0.85rem, 1.4vw, 1.1rem);
+  font-size: clamp(0.75rem, 1.1vw, 0.9rem);
   color: var(--colour-gold);
   margin: -0.1em 0 0;
   line-height: 1.2;

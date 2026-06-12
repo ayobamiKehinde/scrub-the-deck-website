@@ -175,7 +175,7 @@ export default function ProcessPage() {
           <div className={styles.woodBreak}>
             <RopeDivider />
             <div className={styles.woodBreakInner}>
-              <p className={styles.woodBreakText}>THREE STEPS COMPLETE</p>
+              <p className={styles.woodBreakText}>THREE STEPS DOWN, THREE TO GO</p>
               <p className={styles.woodBreakSub}>Now we take you from investor-ready to investment received.</p>
             </div>
             <RopeDivider />
