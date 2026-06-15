@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import GoldButton from "@/components/ui/GoldButton";
 import styles from "./branding.module.css";
 
 export const metadata: Metadata = {
@@ -21,7 +22,6 @@ export default function BrandingPage() {
       <div className={styles.inner}>
         <h1 className={styles.heading}>TALKS ON BRANDING</h1>
         <p className={styles.sub}>with David Pugh</p>
-        <a href="/davecall-q" className={styles.cta}>Speak to David</a>
 
         <div className={styles.videos}>
           {VIDEOS.map((id) => (
@@ -35,6 +35,10 @@ export default function BrandingPage() {
               />
             </div>
           ))}
+        </div>
+
+        <div className={styles.ctaWrap}>
+          <GoldButton href="/davecall-q" label="Book a Call" size="lg" />
         </div>
       </div>
     </main>

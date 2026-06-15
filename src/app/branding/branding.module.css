@@ -30,31 +30,16 @@
   line-height: 1;
 }
 
-.cta {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--colour-gold);
-  text-decoration: none;
-  border: 1px solid var(--colour-gold);
-  padding: 10px 24px;
-  border-radius: 4px;
-  margin-bottom: var(--space-3xl);
-  transition: background 0.2s, color 0.2s;
-}
-
-.cta:hover {
-  background: var(--colour-gold);
-  color: var(--colour-bg);
-}
-
 .videos {
   display: flex;
   flex-direction: column;
   gap: var(--space-xl);
+}
+
+.ctaWrap {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-3xl);
 }
 
 .videoWrap {
