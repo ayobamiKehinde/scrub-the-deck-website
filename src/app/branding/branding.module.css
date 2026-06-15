@@ -4,6 +4,11 @@
   padding: calc(80px + var(--space-3xl)) var(--space-lg) var(--space-5xl);
 }
 
+@media (max-width: 767px) {
+  .page { padding: calc(80px + var(--space-xl)) var(--space-md) var(--space-3xl); }
+  .inner { padding: 0; }
+}
+
 .inner {
   max-width: 860px;
   margin: 0 auto;

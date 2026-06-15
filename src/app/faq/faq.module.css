@@ -9,6 +9,7 @@
 
 @media (max-width: 767px) {
   .page { background-attachment: scroll; }
+  .header { padding: calc(var(--space-2xl) + 60px) var(--space-md) var(--space-xl); }
 }
 
 /* ─── Header ─────────────────────────────────────────────────────── */
