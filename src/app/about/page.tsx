@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "David Pugh is a pitch deck consultant and investment strategist with 22 years of experience. He helped facilitate the BBC's international franchise sale and founded Scrub the Deck to bring that expertise to startups.",
 };
 
-const BOOK_URL = "https://www.scrubthedeck.com/bookacall-t-form";
+const BOOK_URL = "/davecall-q";
 
 const jsonLd = {
   "@context": "https://schema.org",

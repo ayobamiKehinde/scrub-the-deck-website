@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "A 6-step investment consulting process used by David Pugh to help startups secure funding, from pitch deck creation to investor outreach across a network of 1,500+ investors.",
 };
 
-const BOOK_URL = "https://www.scrubthedeck.com/bookacall-t-form";
+const BOOK_URL = "/davecall-q";
 
 const FAQ = [
   {

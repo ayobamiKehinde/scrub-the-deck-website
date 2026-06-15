@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Scrub the Deck helps founders raise investment through expert pitch decks, fundraising strategy, and warm introductions to a personal network of 1,500+ angels, VCs and family offices. Founded by David Pugh.",
 };
 
-const BOOK_URL = "https://www.scrubthedeck.com/davecall-q";
+const BOOK_URL = "/davecall-q";
 const VIDEO_ID  = "LQ4SXep3zOs";
 
 export default function WelcomePage() {

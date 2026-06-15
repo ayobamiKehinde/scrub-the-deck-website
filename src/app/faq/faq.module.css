@@ -1,6 +1,6 @@
 /* ─── Page ─────────────────────────────────────────────────────── */
 .page {
-  background-image: url('/images/sea-tesxture-high.jpg');
+  background-image: url('/images/FAQ-background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -154,6 +154,15 @@
   color: var(--colour-white);
   margin: 0;
   line-height: 1.2;
+}
+
+.cardNote {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: var(--colour-muted);
+  margin: var(--space-xs) 0 0;
+  line-height: 1.4;
+  font-style: italic;
 }
 
 /* ─── Modal ───────────────────────────────────────────────────── */

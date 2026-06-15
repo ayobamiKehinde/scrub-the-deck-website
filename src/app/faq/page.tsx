@@ -4,23 +4,16 @@ import { useState, useEffect, useCallback } from "react";
 import styles from "./faq.module.css";
 
 const FAQ_VIDEOS = [
-  { id: "PLACEHOLDER_1", q: "How long does it take to raise investment?" },
-  { id: "PLACEHOLDER_2", q: "What is Scrub the Deck's success rate?" },
-  { id: "PLACEHOLDER_3", q: "Who are the investors in David's network?" },
-  { id: "PLACEHOLDER_4", q: "What if I already have a pitch deck?" },
-  { id: "PLACEHOLDER_5", q: "How much does Scrub the Deck cost?" },
-  { id: "PLACEHOLDER_6", q: "Is there a guarantee?" },
-  { id: "PLACEHOLDER_7", q: "Does David Pugh work with every startup?" },
-  { id: "PLACEHOLDER_8", q: "What is the 18-point pitch deck structure?" },
-  { id: "PLACEHOLDER_9", q: "Is the strategy session really free?" },
+  { id: "cz6UutwkTTM", image: "FAQ1.jpg", q: "Who are the investors in your network?" },
+  { id: "_d5T_3-nx5M", image: "FAQ2.jpg", q: "What is your success rate?", note: "*as of April 2026 the success rate has increased from 76% to 82%" },
+  { id: "8dlf98gHCqM", image: "FAQ3.jpg", q: "How long does the process take?" },
+  { id: "heYWZv3RZcE", image: "FAQ4.jpg", q: "Do you work on commission only?" },
+  { id: "uHAza5EN9Dw", image: "FAQ5.jpg", q: "What if I already have a pitch deck?" },
+  { id: "TuYyyUYMhhM", image: "FAQ6.jpg", q: "What is the price of your service?" },
+  { id: "exhMywwfC1M", image: "FAQ7.jpg", q: "What guarantees can you offer?" },
 ];
 
-function FAQCard({ id, q, onOpen }: { id: string; q: string; onOpen: (id: string) => void }) {
-  const isPlaceholder = id.startsWith("PLACEHOLDER");
-  const thumb = isPlaceholder
-    ? `/images/faq/faq-${id.replace("PLACEHOLDER_", "")}.png`
-    : `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
-
+function FAQCard({ id, image, q, note, onOpen }: { id: string; image: string; q: string; note?: string; onOpen: (id: string) => void }) {
   return (
     <article
       className={styles.card}
@@ -32,7 +25,7 @@ function FAQCard({ id, q, onOpen }: { id: string; q: string; onOpen: (id: string
     >
       <div className={styles.cardThumb}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={thumb} alt={q} className={styles.cardImg} loading="lazy" />
+        <img src={`/images/${image}`} alt={q} className={styles.cardImg} loading="lazy" />
         <div className={styles.cardOverlay} />
         <div className={styles.playBtn} aria-hidden="true">
           <svg width="16" height="16" viewBox="0 0 18 18" fill="currentColor">
@@ -42,6 +35,7 @@ function FAQCard({ id, q, onOpen }: { id: string; q: string; onOpen: (id: string
       </div>
       <div className={styles.cardInfo}>
         <p className={styles.cardQuestion}>{q}</p>
+        {note && <p className={styles.cardNote}>{note}</p>}
       </div>
     </article>
   );
@@ -92,11 +86,11 @@ export default function FAQPage() {
 
       <div className={styles.grid}>
         {FAQ_VIDEOS.map((v) => (
-          <FAQCard key={v.id} id={v.id} q={v.q} onOpen={openModal} />
+          <FAQCard key={v.id} {...v} onOpen={openModal} />
         ))}
       </div>
 
-      {activeId !== null && !activeId.startsWith("PLACEHOLDER") && (
+      {activeId !== null && (
         <VideoModal videoId={activeId} onClose={closeModal} />
       )}
     </main>
