@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(screencapture -C -t png /tmp/site-live.png)"
+      "Bash(screencapture -C -t png /tmp/site-live.png)",
+      "Bash(npm run *)"
     ]
   }
 }
