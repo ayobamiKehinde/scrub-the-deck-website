@@ -78,8 +78,8 @@
   }
 
   .calendarWrap iframe {
-    height: 900px;
-    margin-top: 0;
-    margin-bottom: 0;
+    height: 860px;
+    margin-top: -15px;
+    margin-bottom: -20px;
   }
 }
