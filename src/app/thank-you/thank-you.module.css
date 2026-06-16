@@ -55,23 +55,17 @@
 
 .faqLink {
   display: block;
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 600;
   color: var(--colour-teal);
-  text-decoration: none;
-  border: 2px solid var(--colour-teal);
-  border-radius: 4px;
-  padding: 0.55em 1.2em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   margin-bottom: var(--space-xl);
-  transition: background 0.2s, color 0.2s;
+  transition: opacity 0.2s;
 }
 
-.faqLink:hover {
-  background: var(--colour-teal);
-  color: var(--colour-bg);
-}
+.faqLink:hover { opacity: 0.75; }
 
 .signoff {
   font-family: var(--font-script);
