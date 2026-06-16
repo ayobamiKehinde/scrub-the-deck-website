@@ -22,13 +22,13 @@ export default function ThankYouPage() {
           />
         </div>
 
-        <p className={styles.body}>
-          Looking forward to our chat, in the meantime please have a look at the following link. As this will help us get the very most out of our time on the call.
-        </p>
-
         <a href="/faq" className={styles.faqLink}>
           Click Here for FAQ Videos (less than 10 mins total)
         </a>
+
+        <p className={styles.body}>
+          Looking forward to our chat, in the meantime please have a look at the following link. As this will help us get the very most out of our time on the call.
+        </p>
 
         <p className={styles.signoff}>Chat soon :)</p>
       </div>

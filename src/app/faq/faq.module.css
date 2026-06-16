@@ -9,7 +9,7 @@
 
 @media (max-width: 767px) {
   .page { background-attachment: scroll; }
-  .header { padding: calc(var(--space-2xl) + 60px) var(--space-md) var(--space-xl); }
+  .header { padding: calc(var(--space-lg) + 60px) var(--space-md) var(--space-xl); }
 }
 
 /* ─── Header ─────────────────────────────────────────────────────── */
@@ -155,6 +155,11 @@
   color: var(--colour-white);
   margin: 0;
   line-height: 1.2;
+}
+
+@media (max-width: 479px) {
+  .cardQuestion { font-size: 1.2rem; }
+  .cardInfo { padding: var(--space-md) var(--space-sm); }
 }
 
 .cardNote {

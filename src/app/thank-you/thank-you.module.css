@@ -47,7 +47,7 @@
 
 .body {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: clamp(1.05rem, 2vw, 1.15rem);
   color: rgba(240, 244, 248, 0.82);
   line-height: 1.75;
   margin: 0 0 var(--space-lg);
@@ -55,17 +55,23 @@
 
 .faqLink {
   display: block;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--colour-teal);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  margin-bottom: var(--space-lg);
-  transition: opacity 0.2s;
+  text-decoration: none;
+  border: 2px solid var(--colour-teal);
+  border-radius: 4px;
+  padding: 0.55em 1.2em;
+  margin-bottom: var(--space-xl);
+  transition: background 0.2s, color 0.2s;
 }
 
-.faqLink:hover { opacity: 0.75; }
+.faqLink:hover {
+  background: var(--colour-teal);
+  color: var(--colour-bg);
+}
 
 .signoff {
   font-family: var(--font-script);

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Inter, Playfair_Display, Caveat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
@@ -30,6 +31,40 @@ const caveat = Caveat({
   weight: ["400", "600", "700"],
 });
 
+
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://scrubthedeck.com/#org",
+      name: "Scrub the Deck",
+      url: "https://scrubthedeck.com",
+      logo: "https://scrubthedeck.com/images/og-default.jpg",
+      description:
+        "Specialist pitch deck agency with an 81% fundraising success rate. Founded by David Pugh.",
+      founder: {
+        "@type": "Person",
+        name: "David Pugh",
+        jobTitle: "Founder and Pitch Deck Consultant",
+      },
+      areaServed: "Worldwide",
+      knowsAbout: [
+        "pitch deck design",
+        "investor pitch decks",
+        "fundraising strategy",
+        "startup investment",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://scrubthedeck.com/#website",
+      url: "https://scrubthedeck.com",
+      name: "Scrub the Deck",
+      publisher: { "@id": "https://scrubthedeck.com/#org" },
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Scrub the Deck | Pitch Deck Agency | Investor Pitch Decks That Raise",
@@ -67,9 +102,14 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
         <Nav />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

@@ -35,8 +35,45 @@ const POSTS = [
   },
 ];
 
+const blogJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://scrubthedeck.com/blog/#blog",
+      name: "Pitch Deck Guides & Fundraising Tips",
+      url: "https://scrubthedeck.com/blog",
+      description:
+        "No-fluff guides on pitch strategy, investor psychology, and how to build a deck that closes rounds. Written by David Pugh, founder of Scrub the Deck.",
+      author: {
+        "@type": "Person",
+        name: "David Pugh",
+        url: "https://scrubthedeck.com/about",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Scrub the Deck",
+        url: "https://scrubthedeck.com",
+      },
+      blogPost: POSTS.map((p) => ({
+        "@type": "BlogPosting",
+        headline: p.title,
+        description: p.excerpt,
+        url: `https://scrubthedeck.com/blog/${p.slug}`,
+        author: { "@type": "Person", name: "David Pugh" },
+        publisher: { "@type": "Organization", name: "Scrub the Deck" },
+      })),
+    },
+  ],
+};
+
 export default function BlogPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
     <main className={styles.page}>
 
       {/* ── Hero ── */}
@@ -82,5 +119,6 @@ export default function BlogPage() {
       </section>
 
     </main>
+    </>
   );
 }
