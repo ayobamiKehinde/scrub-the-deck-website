@@ -1,14 +1,6 @@
 /* ─── Page ────────────────────────────────────────────────────── */
 .page {
-  background-image: url('/images/sea-tesxture-high.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   min-height: 100vh;
-}
-
-@media (max-width: 767px) {
-  .page { background-attachment: scroll; }
 }
 
 /* ─── Hero ────────────────────────────────────────────────────── */

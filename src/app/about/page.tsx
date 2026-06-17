@@ -61,8 +61,8 @@ export default function AboutPage() {
 
             <div className={styles.textCol}>
               <p className={styles.para}>
-                David Pugh holds a BA degree and boasts a 22-year career working with some of
-                the world&rsquo;s biggest brands as a senior designer, consultant, and communicator.
+                David Pugh has had a 22-year career working with some of the world&rsquo;s biggest
+                brands as a senior designer, consultant, and communicator.
               </p>
               <p className={styles.para}>
                 One of his biggest achievements was facilitating the BBC&rsquo;s international

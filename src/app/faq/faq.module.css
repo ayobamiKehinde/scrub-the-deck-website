@@ -1,14 +1,9 @@
 /* ─── Page ─────────────────────────────────────────────────────── */
 .page {
-  background-image: url('/images/FAQ-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   min-height: 100vh;
 }
 
 @media (max-width: 767px) {
-  .page { background-attachment: scroll; }
   .header { padding: calc(var(--space-sm) + 60px) var(--space-md) var(--space-lg); }
 }
 

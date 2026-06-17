@@ -1,14 +1,10 @@
 .page {
-  background-image: url('/images/FAQ-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   min-height: 100vh;
   padding: calc(80px + var(--space-3xl)) var(--space-lg) var(--space-5xl);
 }
 
 @media (max-width: 767px) {
-  .page { background-attachment: scroll; padding: calc(80px + var(--space-xl)) var(--space-md) var(--space-3xl); }
+  .page { padding: calc(80px + var(--space-xl)) var(--space-md) var(--space-3xl); }
 }
 
 .inner {

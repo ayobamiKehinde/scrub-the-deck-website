@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import VideoPageBg from "@/components/shared/VideoPageBg";
 import styles from "./faq.module.css";
 
 const FAQ_VIDEOS = [
@@ -79,6 +80,7 @@ export default function FAQPage() {
 
   return (
     <main className={styles.page}>
+      <VideoPageBg />
       <div className={styles.header}>
         <h1 className={styles.heading}>FREQUENTLY ASKED QUESTIONS</h1>
         <p className={styles.sub}>answered by David Pugh</p>

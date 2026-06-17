@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import VideoPageBg from "@/components/shared/VideoPageBg";
 import styles from "../davecall/davecall.module.css";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function DaveCallQPage() {
   return (
     <main className={styles.page}>
+      <VideoPageBg />
       <div className={styles.inner}>
         <p className={styles.eyebrow}>Free Strategy Session</p>
         <h1 className={styles.heading}>Book a Call with David Pugh</h1>

@@ -5,7 +5,6 @@ import styles from "./Footer.module.css";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
   { href: "/blog", label: "Blog" },
   { href: "/davecall-q", label: "Get a Deck" },
 ];

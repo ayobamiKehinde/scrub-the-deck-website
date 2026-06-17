@@ -1,6 +1,5 @@
 /* ─── Page ─────────────────────────────────────────────────────── */
 .page {
-  background: var(--colour-bg);
   min-height: 100vh;
   padding: calc(80px + var(--space-xl)) var(--space-lg) var(--space-2xl);
 }
