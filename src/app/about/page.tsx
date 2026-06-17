@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import GoldButton from "@/components/ui/GoldButton";
+import VideoPageBg from "@/components/shared/VideoPageBg";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
@@ -39,6 +40,7 @@ const jsonLd = {
 export default function AboutPage() {
   return (
     <>
+      <VideoPageBg />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
