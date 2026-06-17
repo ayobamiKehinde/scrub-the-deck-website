@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import GoldButton from "@/components/ui/GoldButton";
-import VideoPageBg from "@/components/shared/VideoPageBg";
 import styles from "./branding.module.css";
 
 export const metadata: Metadata = {
@@ -20,7 +19,6 @@ const VIDEOS = [
 export default function BrandingPage() {
   return (
     <main className={styles.page}>
-      <VideoPageBg />
       <div className={styles.inner}>
         <h1 className={styles.heading}>TALKS ON BRANDING</h1>
         <p className={styles.sub}>with David Pugh</p>

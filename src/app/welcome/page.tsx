@@ -6,7 +6,6 @@ import BrandsStrip from "@/components/shared/BrandsStrip";
 import GoldButton from "@/components/ui/GoldButton";
 import RopeDivider from "@/components/ui/RopeDivider";
 import PictureTestimonials from "@/components/shared/PictureTestimonials";
-import VideoPageBg from "@/components/shared/VideoPageBg";
 import styles from "./welcome.module.css";
 
 export const metadata: Metadata = {
@@ -21,7 +20,6 @@ const VIDEO_ID  = "LQ4SXep3zOs";
 export default function WelcomePage() {
   return (
     <main>
-      <VideoPageBg />
       {/* Logo lives inside the hero so it sits on the sea texture — no dark gap */}
       <TVPageHero
         headline="IF YOU WANT TO RAISE INVESTMENT IN 2026"

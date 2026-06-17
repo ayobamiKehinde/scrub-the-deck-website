@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Inter, Playfair_Display, Caveat } from "next/font/google";
 import Script from "next/script";
 import Nav from "@/components/layout/Nav";
+import VideoPageBg from "@/components/shared/VideoPageBg";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
@@ -102,6 +103,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
+        <VideoPageBg />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}

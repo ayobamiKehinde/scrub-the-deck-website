@@ -3,7 +3,6 @@ import TVPageHero from "@/components/shared/TVPageHero";
 import FAQAccordion from "@/components/shared/FAQAccordion";
 import GoldButton from "@/components/ui/GoldButton";
 import RopeDivider from "@/components/ui/RopeDivider";
-import VideoPageBg from "@/components/shared/VideoPageBg";
 import styles from "./process.module.css";
 
 export const metadata: Metadata = {
@@ -72,7 +71,6 @@ const jsonLd = {
 export default function ProcessPage() {
   return (
     <>
-      <VideoPageBg />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import VideoPageBg from "@/components/shared/VideoPageBg";
 import styles from "./thank-you.module.css";
 
 export const metadata: Metadata = {
@@ -10,7 +9,6 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <main className={styles.page}>
-      <VideoPageBg />
       <div className={styles.inner}>
         <h1 className={styles.heading}>Thank you for booking</h1>
 

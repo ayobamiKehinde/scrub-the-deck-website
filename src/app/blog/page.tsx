@@ -1,4 +1,3 @@
-import VideoPageBg from "@/components/shared/VideoPageBg";
 import styles from "./blog.module.css";
 
 export const metadata = {
@@ -71,7 +70,6 @@ const blogJsonLd = {
 export default function BlogPage() {
   return (
     <>
-      <VideoPageBg />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
