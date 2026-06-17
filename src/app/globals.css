@@ -47,6 +47,7 @@ html {
   height: 100%;
   scroll-behavior: smooth;
   color-scheme: dark;
+  background-color: var(--colour-bg); /* fallback if video doesn't load */
 }
 
 @media (max-width: 767px) {
@@ -60,7 +61,7 @@ html, body {
 
 body {
   min-height: 100%;
-  background-color: var(--colour-bg);
+  background-color: transparent;
   color: var(--colour-white);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;

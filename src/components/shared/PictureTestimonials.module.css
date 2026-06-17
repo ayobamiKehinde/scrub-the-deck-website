@@ -1,16 +1,7 @@
 .section {
   padding: var(--space-4xl) 0;
-  background-image: url('/images/sea-tesxture-high.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
-@media (max-width: 767px) {
-  .section {
-    background-attachment: scroll;
-  }
-}
 
 .inner {
   max-width: 780px;
