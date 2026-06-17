@@ -2,7 +2,6 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  background: url('/images/sea-tesxture-high.jpg') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
