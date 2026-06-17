@@ -1,20 +1,5 @@
-/* ─── Sea texture step sections ────────────────────────────────── */
-.seaSection {
-  background-image: url('/images/sea-tesxture-high.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-@media (max-width: 767px) {
-  .seaSection {
-    background-attachment: scroll;
-  }
-}
-
 /* ─── Content article ──────────────────────────────────────────── */
 .content {
-  background: var(--colour-bg);
   padding: 0;
 }
 
