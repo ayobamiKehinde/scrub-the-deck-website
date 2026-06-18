@@ -6,7 +6,6 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
-  { href: "/davecall-q", label: "Get a Deck" },
 ];
 
 export default function Footer() {
