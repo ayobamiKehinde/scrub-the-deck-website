@@ -12,11 +12,10 @@ export default function CTAStrip() {
             <p className={styles.sub}>Spread your wings</p>
           </div>
           <p className={styles.body}>
-            Before I created this brand, I saw that founders were really struggling to grab
-            an investor&rsquo;s attention. They were constantly rejected, or worse, ignored.
-            I made it my goal to speak directly to investors in my network and extract the
-            formula they define. After building over 100 pitch decks and several years of
-            trial-and-error, testing everything the hard way. I&rsquo;ve finally cracked it.
+            Investors don&rsquo;t fund ideas. They fund founders who speak their language.
+            After 22 years and 1,500+ investor relationships, we know exactly what goes into
+            a presentation that can convince an investor without you being in the room.
+            Scrub the Deck translates your business into the language that closes rounds.
           </p>
           <GoldButton label="Book a Call" href="/davecall-q" size="lg" />
         </div>
