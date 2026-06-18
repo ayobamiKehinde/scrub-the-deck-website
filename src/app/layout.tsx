@@ -84,10 +84,24 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Scrub the Deck | Pitch Deck Agency | 81% Raise Success Rate",
-    description: "Specialist pitch deck agency. We design investor decks that close rounds. Trusted by BBC, Aston Martin, Cisco and 100+ tech founders.",
+    description: "We design decks that close rounds, backed by 1500+ active investors.",
     url: "https://scrubthedeck.com",
     siteName: "Scrub the Deck",
     type: "website",
+    images: [
+      {
+        url: "/images/parrot-icon.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Scrub the Deck – Pitch Deck Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Scrub the Deck | Pitch Deck Agency | 81% Raise Success Rate",
+    description: "We design decks that close rounds, backed by 1500+ active investors.",
+    images: ["/images/parrot-icon.jpeg"],
   },
 };
 
