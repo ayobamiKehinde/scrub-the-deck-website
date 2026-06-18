@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/process", label: "Process" },
-  { href: "/blog", label: "Blog" },
+  { href: "/davecall-q", label: "Get a Deck" },
 ];
 
 export default function Nav() {
@@ -39,6 +39,8 @@ export default function Nav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => { setOpen(false); }, [pathname]);
 
   const hamburgerLines = (
     <>
@@ -92,7 +94,7 @@ export default function Nav() {
         aria-hidden={!open}
       >
         <ul className={styles.links} role="list">
-          {[...NAV_LINKS, { href: "/davecall-q", label: "Book a Call" }].map(({ href, label }) => (
+          {NAV_LINKS.map(({ href, label }) => (
             <li key={href + label}>
               <Link
                 href={href}
@@ -105,6 +107,9 @@ export default function Nav() {
             </li>
           ))}
         </ul>
+        <div className={styles.overlayBtn}>
+          <GoldButton href="/davecall-q" label="Get in touch" size="lg" />
+        </div>
         <p className={styles.overlayTagline}>
           Helping you navigate the rough seas of investment
         </p>

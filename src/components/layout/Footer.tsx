@@ -39,7 +39,7 @@ export default function Footer() {
         <div className={styles.contact}>
           <p className={styles.contactLabel}>Get in touch</p>
           <a
-            href="https://linkedin.com/company/scrub-the-deck"
+            href="https://www.linkedin.com/in/scrubthedeck/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.social}
@@ -58,9 +58,9 @@ export default function Footer() {
           167&ndash;169 Great Portland Street, 5th Floor, London, W1W 5PF. Company No. 8327365.
         </p>
         <p className={styles.legal}>
-          <Link href="/privacy" className={styles.legalLink}>Privacy</Link>
+          <span className={styles.legalLink}>Privacy</span>
           <span className={styles.sep}>·</span>
-          <Link href="/terms" className={styles.legalLink}>Terms</Link>
+          <span className={styles.legalLink}>Terms</span>
         </p>
       </div>
     </footer>

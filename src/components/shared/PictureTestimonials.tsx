@@ -39,8 +39,8 @@ export default function PictureTestimonials() {
   return (
     <section ref={sectionRef} className={styles.section}>
       <div className={styles.inner}>
-        <h2 className={styles.heading}>WHAT CLIENTS ARE SAYING</h2>
-        <p className={styles.sub}>in their own words</p>
+        <h2 className={styles.heading}>SOME WROTE IT DOWN</h2>
+        <p className={styles.sub}>and sent it to us</p>
         <div className={styles.grid}>
           {NAMES.map((name) => (
             <div key={name} className={styles.item}>

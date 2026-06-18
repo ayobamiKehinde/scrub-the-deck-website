@@ -197,29 +197,11 @@
   color: var(--colour-teal);
 }
 
-/* Last link (Book a Call) — gold button */
-.links li:last-child .link {
-  background-image: url('/images/btn-gold.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  border: none;
-  width: 220px;
-  aspect-ratio: 632 / 149;
-  height: auto;
-  display: inline-flex;
-  align-items: center;
+/* ─── Overlay Get in touch button ────────────────────────────── */
+.overlayBtn {
+  margin-top: var(--space-xl);
+  display: flex;
   justify-content: center;
-  color: #3a2000;
-  padding: 0;
-  font-size: 2rem;
-  letter-spacing: 0.04em;
-  transition: filter 0.2s, transform 0.2s;
-}
-
-.links li:last-child .link:hover {
-  filter: brightness(1.08);
-  transform: translateY(-1px);
-  color: #3a2000;
 }
 
 /* ─── Tagline ─────────────────────────────────────────────────── */

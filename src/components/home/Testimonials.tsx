@@ -163,8 +163,8 @@ export default function Testimonials({ alwaysShowAll }: { alwaysShowAll?: boolea
     <section ref={sectionRef} className={styles.section}>
 
       <div className={styles.header}>
-        <h2 className={styles.heading}>Some wrote it down</h2>
-        <p className={styles.sub}>and sent it to us</p>
+        <h2 className={styles.heading}>WHAT OUR CLIENTS SAY</h2>
+        <p className={styles.sub}>in real interviews</p>
       </div>
 
       <div className={styles.grid}>

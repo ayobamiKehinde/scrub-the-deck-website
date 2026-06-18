@@ -22,19 +22,20 @@
 }
 
 .heading {
-  font-family: var(--font-script);
-  font-weight: 700;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  color: var(--colour-teal);
-  margin: 0 0 0.1em;
-  line-height: 1.1;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  letter-spacing: 0;
+  color: var(--colour-white);
+  margin: 0 0 -0.3em;
+  line-height: 1;
 }
 
 .sub {
   font-family: var(--font-script);
   font-weight: 700;
-  font-size: clamp(1.4rem, 2.8vw, 2rem);
-  color: rgba(240, 244, 248, 0.65);
+  font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+  color: var(--colour-teal);
   margin: 0;
   line-height: 1;
 }
