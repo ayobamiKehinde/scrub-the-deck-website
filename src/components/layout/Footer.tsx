@@ -57,9 +57,9 @@ export default function Footer() {
           167&ndash;169 Great Portland Street, 5th Floor, London, W1W 5PF. Company No. 8327365.
         </p>
         <p className={styles.legal}>
-          <span className={styles.legalLink}>Privacy</span>
+          <Link href="/privacy" className={styles.legalLink}>Privacy</Link>
           <span className={styles.sep}>·</span>
-          <span className={styles.legalLink}>Terms</span>
+          <Link href="/terms" className={styles.legalLink}>Terms</Link>
         </p>
       </div>
     </footer>

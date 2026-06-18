@@ -1,3 +1,4 @@
+import GoldButton from "@/components/ui/GoldButton";
 import styles from "./blog.module.css";
 
 export const metadata = {
@@ -114,7 +115,12 @@ export default function BlogPage() {
           <p className={styles.ctaText}>
             More guides dropping each month. Want them in your inbox?
           </p>
-          <a href="/davecall-q" className={styles.ctaBtn}>Get in touch</a>
+          <div className={styles.ctaSocials}>
+            <a href="https://www.linkedin.com/in/scrubthedeck/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>LinkedIn →</a>
+            <a href="https://www.youtube.com/@scrubthedeck" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>YouTube →</a>
+            <a href="https://www.crunchbase.com/organization/scrub-the-deck" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>Crunchbase →</a>
+          </div>
+          <GoldButton href="/davecall-q" label="Get in touch" size="lg" />
         </div>
       </section>
 
