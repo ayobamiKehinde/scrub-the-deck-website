@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import CalendarEmbed from "@/components/shared/CalendarEmbed";
 import styles from "./davecall.module.css";
 
 export const metadata: Metadata = {
@@ -15,16 +15,10 @@ export default function DaveCallPage() {
         <p className={styles.eyebrow}>Free Strategy Session</p>
         <h1 className={styles.heading}>Book a Call with David Pugh</h1>
         <p className={styles.sub}>Choose a time that works for you</p>
-
-        <div className={styles.calendarWrap}>
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/booking/TLw6QW1hpxCbLTzqVU6g"
-            style={{ width: "100%", border: "none", outline: "none", display: "block", background: "transparent" }}
-            scrolling="no"
-            id="TLw6QW1hpxCbLTzqVU6g_1781190938339"
-          />
-          <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
-        </div>
+        <CalendarEmbed
+          src="https://api.leadconnectorhq.com/widget/booking/TLw6QW1hpxCbLTzqVU6g"
+          id="TLw6QW1hpxCbLTzqVU6g_1781190938339"
+        />
       </div>
     </main>
   );
