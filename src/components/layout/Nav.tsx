@@ -11,7 +11,6 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/process", label: "Process" },
-  { href: "/davecall-q", label: "Get a Deck" },
 ];
 
 export default function Nav() {
