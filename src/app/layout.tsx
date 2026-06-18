@@ -72,6 +72,9 @@ export const metadata: Metadata = {
   description:
     "Scrub the Deck is a specialist pitch deck agency with an 81% fundraising success rate. We design investor pitch decks for seed, Series A and Series B startups. Trusted by BBC, Aston Martin, Cisco and 100+ tech founders.",
   metadataBase: new URL("https://scrubthedeck.com"),
+  verification: {
+    google: "BpvpCC-IFfMhhXj_m7Q7Ht2uad_NqbziyH11tCrIvc0",
+  },
   keywords: [
     "pitch deck agency",
     "investor pitch deck",
