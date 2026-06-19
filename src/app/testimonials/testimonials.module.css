@@ -34,18 +34,10 @@
   line-height: 1;
 }
 
-/* ─── Video grid — 2 cols desktop, 1 col mobile ───────────────── */
 .videos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: var(--space-xl);
-}
-
-@media (max-width: 767px) {
-  .videos {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-  }
 }
 
 .videoWrap {
