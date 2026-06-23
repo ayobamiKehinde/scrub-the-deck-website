@@ -24,7 +24,7 @@
 .sub {
   font-family: var(--font-script);
   font-weight: 700;
-  font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
   color: var(--colour-teal);
   margin: 0 0 var(--space-3xl);
   line-height: 1;

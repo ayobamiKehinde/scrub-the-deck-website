@@ -7,6 +7,15 @@ export const metadata: Metadata = {
   title: "Client Testimonials – Scrub the Deck",
   description:
     "Real testimonials from founders who raised investment with Scrub the Deck. See what clients say about working with David Pugh and the pitch deck process.",
+  openGraph: {
+    title: "Client Testimonials – Scrub the Deck",
+    description: "Real testimonials from founders who raised investment with Scrub the Deck.",
+    images: [{ url: "/images/parrot-icon.jpeg", width: 1200, height: 630, alt: "Scrub the Deck" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/parrot-icon.jpeg"],
+  },
 };
 
 const VIDEOS = [

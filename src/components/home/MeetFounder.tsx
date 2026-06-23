@@ -21,7 +21,6 @@ const BRANDS = [
   { name: "Adidas",             file: "adidas"       },
   { name: "TBT",                file: "tbt"          },
   { name: "Golf Breaks",        file: "golf-breaks"  },
-  { name: "Lego",               file: "lego"         },
 ];
 
 function BrandLogo({ name, file }: { name: string; file: string }) {

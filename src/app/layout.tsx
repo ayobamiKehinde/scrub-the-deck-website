@@ -43,7 +43,7 @@ const siteJsonLd = {
       url: "https://scrubthedeck.com",
       logo: "https://scrubthedeck.com/images/og-default.jpg",
       description:
-        "Specialist pitch deck agency with an 81% fundraising success rate. Founded by David Pugh.",
+        "Specialist pitch deck agency with an 82% fundraising success rate. Founded by David Pugh.",
       founder: {
         "@type": "Person",
         name: "David Pugh",
@@ -70,7 +70,7 @@ const siteJsonLd = {
 export const metadata: Metadata = {
   title: "Scrub the Deck | Pitch Deck Agency | Investor Pitch Decks That Raise",
   description:
-    "Scrub the Deck is a specialist pitch deck agency with an 81% fundraising success rate. We design investor pitch decks for seed, Series A and Series B startups. Trusted by BBC, Aston Martin, Cisco and 100+ tech founders.",
+    "Scrub the Deck is a specialist pitch deck agency with an 82% fundraising success rate. We design investor pitch decks for seed, Series A and Series B startups. Trusted by BBC, Aston Martin, Cisco and 100+ tech founders.",
   metadataBase: new URL("https://scrubthedeck.com"),
   verification: {
     google: "BpvpCC-IFfMhhXj_m7Q7Ht2uad_NqbziyH11tCrIvc0",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     "pitch deck consultant",
   ],
   openGraph: {
-    title: "Scrub the Deck | Pitch Deck Agency | 81% Raise Success Rate",
+    title: "Scrub the Deck | Pitch Deck Agency | 82% Raise Success Rate",
     description: "We design decks that close rounds, backed by 1500+ active investors.",
     url: "https://scrubthedeck.com",
     siteName: "Scrub the Deck",
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scrub the Deck | Pitch Deck Agency | 81% Raise Success Rate",
+    title: "Scrub the Deck | Pitch Deck Agency | 82% Raise Success Rate",
     description: "We design decks that close rounds, backed by 1500+ active investors.",
     images: ["/images/parrot-icon.jpeg"],
   },
