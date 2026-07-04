@@ -1,7 +1,7 @@
 # Scrub the Deck
-> Specialist pitch deck agency with an 81% fundraising success rate. Founded by David Pugh.
+> Specialist pitch deck agency with an 82% investor meeting success rate. Founded by David Pugh.
 
-Scrub the Deck is a London-based pitch deck agency that designs investor pitch decks for seed, Series A, and Series B startups. The agency is founded and led by David Pugh, a pitch deck consultant and investment strategist with 22 years of experience. Clients include BBC, Aston Martin, Cisco, and 100+ tech founders.
+Scrub the Deck is a London-based pitch deck agency that designs investor pitch decks for pre-seed, seed, Series A, and Series B founders. The agency is founded and led by David Pugh, a pitch deck consultant and investment strategist with 22 years of experience. Clients include BBC, Cisco, Adidas, Aston Martin, Mercedes, and Hilton.
 
 ## Core expertise
 - Pitch deck design and strategy
@@ -16,13 +16,22 @@ Scrub the Deck is a London-based pitch deck agency that designs investor pitch d
 - Ongoing fundraising support
 
 ## Key facts
-- 81% fundraising success rate (as of June 2026)
-- 200+ pitch decks created
-- Network of active investors across seed, Series A, and growth stages
-- Typical turnaround: 2–4 weeks
+- 82% investor meeting success rate from cold approaches
+- 500+ pitch decks created over 22 years
+- Personal investor network of 1,500+ active investors across seed, Series A, and growth stages
+- Methodology: Connect and Convince (18-point pitch deck structure)
+- Typical turnaround: 4-6 weeks
 
 ## Blog
-The Scrub the Deck blog covers pitch deck strategy, investor psychology, financial storytelling, and fundraising best practices. All articles are written or reviewed by David Pugh. Articles are available at https://scrubthedeck.com/blog
+The Scrub the Deck blog covers pitch deck strategy, investor psychology, and fundraising best practices. All articles are written by David Pugh.
+
+### Published articles
+- How to Write a Pitch Deck That Gets Investment (2026): https://scrubthedeck.com/blog/how-to-write-a-pitch-deck
+- Why AI-Generated Pitch Decks Are Killing Your Fundraise: https://scrubthedeck.com/blog/ai-pitch-deck
+- Product Deck vs Investment Deck -- The Mistake That Costs Founders Meetings: https://scrubthedeck.com/blog/product-deck-vs-investment-deck
+- How to Write the Team Slide in Your Pitch Deck: https://scrubthedeck.com/blog/pitch-deck-team-slide
+
+Blog index: https://scrubthedeck.com/blog
 
 ## Contact
 Book a free strategy call with David Pugh at https://scrubthedeck.com/davecall-q
@@ -30,6 +39,6 @@ Book a free strategy call with David Pugh at https://scrubthedeck.com/davecall-q
 ## URLs
 - Homepage: https://scrubthedeck.com
 - About David Pugh: https://scrubthedeck.com/about
-- Services: https://scrubthedeck.com/services
+- Services: https://scrubthedeck.com/process
 - Blog: https://scrubthedeck.com/blog
 - Book a call: https://scrubthedeck.com/davecall-q
