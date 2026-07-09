@@ -25,7 +25,7 @@ const jsonLd = {
       },
       url: "https://scrubthedeck.com/about",
       description:
-        "Pitch deck consultant with 22 years of experience helping founders raise investment. Founder of Scrub the Deck.",
+        "Pitch deck consultant with 22 years in value communication. Founder of Scrub the Deck.",
     },
     {
       "@type": "WebPage",

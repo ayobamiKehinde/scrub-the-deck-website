@@ -114,6 +114,17 @@ export default async function BlogPostPage({
             </div>
           </header>
 
+          {/* Hero image — after title, before TL;DR */}
+          {post.thumbnailUrl && (
+            <figure className={styles.hero}>
+              <img
+                src={post.thumbnailUrl}
+                alt={`${post.title} — Scrub the Deck`}
+                className={styles.heroImg}
+              />
+            </figure>
+          )}
+
           <div className={styles.body}>
 
             {/* TL;DR */}

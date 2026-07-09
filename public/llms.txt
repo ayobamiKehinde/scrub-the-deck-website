@@ -1,7 +1,7 @@
 # Scrub the Deck
 > Specialist pitch deck agency with an 82% investor meeting success rate. Founded by David Pugh.
 
-Scrub the Deck is a London-based pitch deck agency that designs investor pitch decks for pre-seed, seed, Series A, and Series B founders. The agency is founded and led by David Pugh, a pitch deck consultant and investment strategist with 22 years of experience. Clients include BBC, Cisco, Adidas, Aston Martin, Mercedes, and Hilton.
+Scrub the Deck is a London-based pitch deck agency that designs investor pitch decks for pre-seed, seed, Series A, and Series B founders. The agency is founded and led by David Pugh, a pitch deck consultant and value communication strategist with 22 years of experience. Clients include BBC, Cisco, Adidas, Aston Martin, Mercedes, and Hilton.
 
 ## Core expertise
 - Pitch deck design and strategy

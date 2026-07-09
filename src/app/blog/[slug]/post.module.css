@@ -18,9 +18,8 @@
 
 /* ─── Header ───────────────────────────────────────────────────── */
 .header {
-  margin-bottom: var(--space-3xl);
-  padding-bottom: var(--space-2xl);
-  border-bottom: 1px solid var(--colour-border);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
 }
 
 .headerInner {
@@ -70,6 +69,18 @@
   line-height: 1.6;
   border-left: 2px solid var(--colour-teal);
   padding-left: var(--space-md);
+}
+
+/* ─── Hero image ───────────────────────────────────────────────── */
+.hero {
+  margin: 0 0 var(--space-3xl);
+}
+
+.heroImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
 }
 
 /* ─── Body ─────────────────────────────────────────────────────── */

@@ -76,21 +76,32 @@ export default async function BlogPage() {
             ) : (
               posts.map((p) => (
                 <article key={p._id} className={styles.card}>
-                  <div className={styles.cardTop}>
-                    <span className={styles.category}>{p.category}</span>
-                    <span className={styles.meta}>
-                      {new Date(p.publishedAt).toLocaleDateString("en-GB", {
-                        month: "long",
-                        year: "numeric",
-                      })}{" "}
-                      · {p.readTime} min read
-                    </span>
+                  {p.thumbnailUrl && (
+                    <a href={`/blog/${p.slug.current}`} className={styles.cardImgWrap}>
+                      <img
+                        src={p.thumbnailUrl}
+                        alt={`${p.title} — Scrub the Deck`}
+                        className={styles.cardImg}
+                      />
+                    </a>
+                  )}
+                  <div className={styles.cardBody}>
+                    <div className={styles.cardTop}>
+                      <span className={styles.category}>{p.category}</span>
+                      <span className={styles.meta}>
+                        {new Date(p.publishedAt).toLocaleDateString("en-GB", {
+                          month: "long",
+                          year: "numeric",
+                        })}{" "}
+                        · {p.readTime} min read
+                      </span>
+                    </div>
+                    <h2 className={styles.cardTitle}>{p.title}</h2>
+                    <p className={styles.cardExcerpt}>{p.metaDescription}</p>
+                    <a href={`/blog/${p.slug.current}`} className={styles.cardCta}>
+                      Read article →
+                    </a>
                   </div>
-                  <h2 className={styles.cardTitle}>{p.title}</h2>
-                  <p className={styles.cardExcerpt}>{p.metaDescription}</p>
-                  <a href={`/blog/${p.slug.current}`} className={styles.cardCta}>
-                    Read article →
-                  </a>
                 </article>
               ))
             )}

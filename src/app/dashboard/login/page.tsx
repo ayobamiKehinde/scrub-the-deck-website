@@ -32,6 +32,7 @@ export default function LoginPage() {
   return (
     <main className={styles.page}>
       <div className={styles.box}>
+        <div className={styles.dot} />
         <p className={styles.label}>GEO Dashboard</p>
         <h1 className={styles.heading}>Scrub the Deck</h1>
         <form onSubmit={handleSubmit} className={styles.form}>

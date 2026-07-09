@@ -20,6 +20,7 @@ export interface SanityPost {
   pillarOrCluster: string;
   tldr: string[];
   body: string;
+  thumbnailUrl?: string;
   faq: { question: string; answer: string }[];
   statSources: { claim: string; source: string; sourceScreenshotUrl?: string }[];
   author: {
@@ -33,6 +34,7 @@ export async function getAllPosts(): Promise<SanityPost[]> {
   return sanityClient.fetch(
     `*[_type == "post" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
       _id, title, slug, metaTitle, metaDescription, category, readTime, publishedAt, updatedAt, pillarOrCluster,
+      "thumbnailUrl": thumbnail.asset->url,
       "author": author->{ name, title, credentials }
     }`
   );
@@ -43,6 +45,7 @@ export async function getPostBySlug(slug: string): Promise<SanityPost | null> {
     `*[_type == "post" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
       _id, title, slug, metaTitle, metaDescription, category, readTime, publishedAt, updatedAt, pillarOrCluster,
       tldr, body, faq, statSources,
+      "thumbnailUrl": thumbnail.asset->url,
       "author": author->{ name, title, credentials }
     }`,
     { slug }
