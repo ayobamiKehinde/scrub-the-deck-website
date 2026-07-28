@@ -20,7 +20,7 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   // Welcome page has no nav at all — only a logo + Book a Call
-  const hideNav = pathname === "/welcome";
+  const hideNav = pathname === "/welcome" || pathname === "/meta";
   // Pages with their own logo header don't need the scrolled nav
   const alwaysVisible = pathname !== "/" && !hideNav;
 
