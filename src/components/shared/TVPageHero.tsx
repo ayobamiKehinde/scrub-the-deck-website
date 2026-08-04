@@ -17,6 +17,7 @@ interface TVPageHeroProps {
   compact?: boolean;
   logoSrc?: string;
   note?: React.ReactNode;
+  centerPlay?: boolean;
 }
 
 export default function TVPageHero({
@@ -31,6 +32,7 @@ export default function TVPageHero({
   compact = false,
   logoSrc,
   note,
+  centerPlay = false,
 }: TVPageHeroProps) {
   const [playing, setPlaying] = useState(false);
 
@@ -62,7 +64,7 @@ export default function TVPageHero({
             />
             {videoId && (
               <button
-                className={styles.playBtn}
+                className={`${styles.playBtn} ${centerPlay ? styles.playBtnCenter : ""}`}
                 onClick={() => setPlaying(true)}
                 aria-label="Play intro video"
               >

@@ -83,6 +83,7 @@ export default function ProcessPage() {
           tvSrc="/images/Pirate-Treasure-Map-layers-reveal-web.png"
           tvAlt="The Scrub the Deck 6-step road to investment process"
           noBlend
+          centerPlay
           ctaHref={BOOK_URL}
           videoId="Du2x24MmBLk"
           note={<>*Since recording this video not only has my hair grown,<br />but also the investor network has grown from 650 to over 1,500 investors.</>}
