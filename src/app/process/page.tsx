@@ -86,7 +86,6 @@ export default function ProcessPage() {
           centerPlay
           ctaHref={BOOK_URL}
           videoId="Du2x24MmBLk"
-          note={<>*Since recording this video not only has my hair grown,<br />but also the investor network has grown from 650 to over 1,500 investors.</>}
         />
 
         <article className={styles.content}>
