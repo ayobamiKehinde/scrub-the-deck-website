@@ -42,11 +42,11 @@ const siteJsonLd = {
       logo: "https://scrubthedeck.com/images/og-default.jpg",
       description:
         "Specialist pitch deck agency with an 82% fundraising success rate. Founded by David Pugh.",
-      founder: {
-        "@type": "Person",
-        name: "David Pugh",
-        jobTitle: "Founder and Pitch Deck Consultant",
-      },
+      founder: { "@id": "https://scrubthedeck.com/#david-pugh" },
+      sameAs: [
+        "https://www.linkedin.com/in/scrubthedeck/",
+        "https://www.linkedin.com/company/scrub-the-deck",
+      ],
       areaServed: "Worldwide",
       knowsAbout: [
         "pitch deck design",
@@ -61,6 +61,58 @@ const siteJsonLd = {
       url: "https://scrubthedeck.com",
       name: "Scrub the Deck",
       publisher: { "@id": "https://scrubthedeck.com/#org" },
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://scrubthedeck.com/#business",
+      name: "Scrub the Deck",
+      url: "https://scrubthedeck.com",
+      description:
+        "Specialist pitch deck agency with an 82% fundraising success rate. Helping founders raise seed, Series A, and Series B investment.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "167–169 Great Portland Street, 5th Floor",
+        addressLocality: "London",
+        postalCode: "W1W 5PF",
+        addressCountry: "GB",
+      },
+      areaServed: "Worldwide",
+      priceRange: "££££",
+      parentOrganization: { "@id": "https://scrubthedeck.com/#org" },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://scrubthedeck.com/#david-pugh",
+      name: "David Pugh",
+      jobTitle: "Founder and Pitch Deck Consultant",
+      description:
+        "Pitch deck consultant with 22 years of experience. Founder of Scrub the Deck. Has helped founders raise over £30M across 100+ investor pitch decks.",
+      url: "https://scrubthedeck.com/about",
+      sameAs: [
+        "https://www.linkedin.com/in/scrubthedeck/",
+        "https://www.linkedin.com/company/scrub-the-deck",
+      ],
+      worksFor: { "@id": "https://scrubthedeck.com/#org" },
+    },
+    {
+      "@type": "Service",
+      "@id": "https://scrubthedeck.com/#service-pitch-deck",
+      name: "Pitch Deck Design",
+      description:
+        "End-to-end investor pitch deck design following an 18-point structure developed over 22 years. Includes narrative, visual design, and investor distribution to 1,500+ active investors.",
+      provider: { "@id": "https://scrubthedeck.com/#org" },
+      serviceType: "Pitch Deck Design",
+      areaServed: "Worldwide",
+    },
+    {
+      "@type": "Service",
+      "@id": "https://scrubthedeck.com/#service-fundraising",
+      name: "Fundraising Consulting",
+      description:
+        "Full fundraising support including investor narrative, pitch deck creation, and direct distribution to 1,500+ investors. 82% success rate across seed, Series A, and Series B rounds.",
+      provider: { "@id": "https://scrubthedeck.com/#org" },
+      serviceType: "Fundraising Consulting",
+      areaServed: "Worldwide",
     },
   ],
 };
