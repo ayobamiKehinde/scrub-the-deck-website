@@ -83,7 +83,7 @@ export default function StatsSection({ wooden }: Props) {
                 data-end={s.end}
                 data-prefix={s.prefix}
                 data-suffix={s.suffix}
-              />
+              >{s.prefix}{s.end}{s.suffix}</p>
               <p className={styles.label}>{s.label}</p>
             </div>
           ))}
