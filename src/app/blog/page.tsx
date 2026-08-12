@@ -23,24 +23,23 @@ export default async function BlogPage() {
         url: "https://scrubthedeck.com/blog",
         description:
           "No-fluff guides on pitch strategy, investor psychology, and how to build a deck that closes rounds. Written by David Pugh, founder of Scrub the Deck.",
-        author: {
-          "@type": "Person",
-          name: "David Pugh",
-          url: "https://scrubthedeck.com/about",
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "Scrub the Deck",
-          url: "https://scrubthedeck.com",
-        },
+        author: { "@id": "https://scrubthedeck.com/#david-pugh" },
+        publisher: { "@id": "https://scrubthedeck.com/#org" },
         blogPost: posts.map((p) => ({
           "@type": "BlogPosting",
           headline: p.title,
           description: p.metaDescription,
           url: `https://scrubthedeck.com/blog/${p.slug.current}`,
-          author: { "@type": "Person", name: "David Pugh" },
-          publisher: { "@type": "Organization", name: "Scrub the Deck" },
+          author: { "@id": "https://scrubthedeck.com/#david-pugh" },
+          publisher: { "@id": "https://scrubthedeck.com/#org" },
         })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://scrubthedeck.com" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://scrubthedeck.com/blog" },
+        ],
       },
     ],
   };

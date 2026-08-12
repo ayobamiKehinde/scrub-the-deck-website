@@ -46,19 +46,21 @@ export default async function BlogPostPage({
     "@type": "Article",
     headline: post.title,
     description: post.metaDescription,
-    author: {
-      "@type": "Person",
-      name: post.author?.name ?? "David Pugh",
-      url: "https://www.linkedin.com/in/scrubthedeck/",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Scrub the Deck",
-      url: "https://scrubthedeck.com",
-    },
+    author: { "@id": "https://scrubthedeck.com/#david-pugh" },
+    publisher: { "@id": "https://scrubthedeck.com/#org" },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     url: `https://scrubthedeck.com/blog/${slug}`,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home",  item: "https://scrubthedeck.com" },
+      { "@type": "ListItem", position: 2, name: "Blog",  item: "https://scrubthedeck.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://scrubthedeck.com/blog/${slug}` },
+    ],
   };
 
   const faqJsonLd =
@@ -82,6 +84,10 @@ export default async function BlogPostPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {faqJsonLd && (
         <script
