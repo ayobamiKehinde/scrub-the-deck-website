@@ -118,23 +118,10 @@
 
 .founderThumb {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center top;
   display: block;
-}
-
-.founderThumbPlaceholder {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: var(--colour-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-size: 2rem;
-  letter-spacing: 0.1em;
-  color: var(--colour-muted);
 }
 
 .outcome {
