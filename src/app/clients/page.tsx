@@ -15,6 +15,7 @@ const FOUNDERS = [
     company: "Brickflow",
     outcome: "£2M+ raised",
     linkedin: "https://uk.linkedin.com/in/ianjhumphreys",
+    ytId: "q3O4s3LBLvc",
   },
   {
     name: "Philip Werner",
@@ -22,6 +23,7 @@ const FOUNDERS = [
     company: "Maekersuite",
     outcome: "£650K raised",
     linkedin: "https://www.linkedin.com/in/philip-werner-8851ba155/",
+    ytId: "Xu9UHAzF8Ns",
   },
   {
     name: "Nick van Dijk",
@@ -29,6 +31,7 @@ const FOUNDERS = [
     company: "Oort Energy",
     outcome: "$10M+ raised",
     linkedin: "https://www.linkedin.com/in/nick-van-dijk-9005aa4/",
+    ytId: "AXW3JaEdP7o",
   },
   {
     name: "Aaron Phethean",
@@ -36,6 +39,7 @@ const FOUNDERS = [
     company: "Meltano",
     outcome: "£500K+ raised",
     linkedin: "https://uk.linkedin.com/in/aaron-phethean",
+    ytId: null,
   },
   {
     name: "Elliott Myers",
@@ -43,6 +47,7 @@ const FOUNDERS = [
     company: "RotoVR",
     outcome: "£7M raised",
     linkedin: "https://uk.linkedin.com/in/elliott-myers-b8917015",
+    ytId: "T09LioATiWM",
   },
   {
     name: "Kara Stanford",
@@ -50,6 +55,7 @@ const FOUNDERS = [
     company: "Insight Delivered",
     outcome: "$300K raised",
     linkedin: null,
+    ytId: "PJYiTuin8Yk",
   },
   {
     name: "Aramide Adebanjo",
@@ -57,6 +63,7 @@ const FOUNDERS = [
     company: "Gist Mobile",
     outcome: "£500K+ raising",
     linkedin: "https://www.linkedin.com/in/aramideadebanjo/",
+    ytId: "z1Lahe7qq-I",
   },
   {
     name: "Manoli Yannaghas",
@@ -64,6 +71,7 @@ const FOUNDERS = [
     company: "VoltVision",
     outcome: "£1.2M raised",
     linkedin: "https://uk.linkedin.com/in/manoli-yannaghas",
+    ytId: "WeemMI5dk8Q",
   },
 ];
 
@@ -198,8 +206,20 @@ export default function ClientsPage() {
             <div className={styles.foundersGrid}>
               {FOUNDERS.map((f) => (
                 <div key={f.name} className={styles.founderCard}>
-                  <span className={styles.outcome}>{f.outcome}</span>
+                  {f.ytId ? (
+                    <img
+                      src={`https://img.youtube.com/vi/${f.ytId}/hqdefault.jpg`}
+                      alt={`${f.name}, ${f.role} at ${f.company}`}
+                      className={styles.founderThumb}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className={styles.founderThumbPlaceholder}>
+                      {f.name.split(" ").map((n) => n[0]).join("")}
+                    </div>
+                  )}
                   <div className={styles.founderInfo}>
+                    <span className={styles.outcome}>{f.outcome}</span>
                     {f.linkedin ? (
                       <a
                         href={f.linkedin}
