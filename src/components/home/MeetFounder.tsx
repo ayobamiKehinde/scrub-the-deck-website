@@ -10,7 +10,9 @@ import RopeDivider from "@/components/ui/RopeDivider";
 gsap.registerPlugin(ScrollTrigger);
 
 const BRANDS = [
+  { name: "BBC",                file: "bbc",          ext: "png" },
   { name: "Mercedes-Benz",      file: "mercedes"     },
+  { name: "BMW",                file: "bmw"          },
   { name: "O2",                 file: "o2"           },
   { name: "Aston Martin",       file: "aston-martin" },
   { name: "Cisco",              file: "cisco"        },
@@ -23,13 +25,13 @@ const BRANDS = [
   { name: "Golf Breaks",        file: "golf-breaks"  },
 ];
 
-function BrandLogo({ name, file }: { name: string; file: string }) {
+function BrandLogo({ name, file, ext = "jpg" }: { name: string; file: string; ext?: string }) {
   const [imgFailed, setImgFailed] = useState(false);
   if (imgFailed) return <span className={styles.brandText}>{name}</span>;
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`/images/brands/${file}.jpg`}
+      src={`/images/brands/${file}.${ext}`}
       alt={name}
       className={styles.brandLogo}
       onError={() => setImgFailed(true)}
@@ -110,7 +112,7 @@ export default function MeetFounder() {
           <div className={styles.marqueeTrack}>
             {[...BRANDS, ...BRANDS, ...BRANDS, ...BRANDS].map((brand, i) => (
               <span key={i} className={styles.brandItem}>
-                <BrandLogo name={brand.name} file={brand.file} />
+                <BrandLogo name={brand.name} file={brand.file} ext={brand.ext} />
               </span>
             ))}
           </div>
