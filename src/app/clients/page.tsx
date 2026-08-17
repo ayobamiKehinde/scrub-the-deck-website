@@ -360,7 +360,7 @@ export default function ClientsPage() {
               Work with David on your pitch deck and get introduced to 1,500+
               investors.
             </p>
-            <GoldButton href="/davecall-q" label="Book a Call" size="lg" />
+            <GoldButton href="/davecall-q" label="Book a Call" size="lg" className={styles.ctaBtn} />
           </div>
         </section>
       </main>

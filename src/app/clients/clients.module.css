@@ -333,3 +333,7 @@ a.recItem:hover {
   color: var(--colour-muted);
 }
 
+.ctaBtn {
+  align-self: center;
+}
+
