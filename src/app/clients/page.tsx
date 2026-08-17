@@ -139,6 +139,21 @@ const PORTFOLIO_BRANDS = [
   },
 ];
 
+const RECOMMENDATIONS = [
+  { file: "AKK",       name: "Alex Kayode-Kay",     linkedin: "https://www.linkedin.com/in/alex-kayode-kay-0755858b/" },
+  { file: "AR",        name: "Annabelle Roseborne",  linkedin: null },
+  { file: "AP",        name: "Ashley Pugh",          linkedin: null },
+  { file: "DF",        name: "David Flavin",         linkedin: null },
+  { file: "DL",        name: "Daryl Leigh",          linkedin: null },
+  { file: "JD",        name: "Jonathan Dooley",      linkedin: null },
+  { file: "NF",        name: "Neil Fogarty",         linkedin: "https://uk.linkedin.com/in/neildfogarty" },
+  { file: "MO",        name: "Michael Ojo",          linkedin: null },
+  { file: "RH",        name: "Robin Holiday",        linkedin: "https://www.linkedin.com/in/robin-holiday-46079b24/" },
+  { file: "RW",        name: "Richard Woods",        linkedin: "https://www.linkedin.com/in/richardwoodsofficial/" },
+  { file: "SH",        name: "Sam Holden",           linkedin: "https://uk.linkedin.com/in/sampholden" },
+  { file: "boomquote", name: "David Bacon",          linkedin: null },
+];
+
 const clientsJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -294,6 +309,46 @@ export default function ClientsPage() {
                 freelancegraphicdesigner.co.uk
               </a>
             </p>
+          </div>
+        </section>
+
+        {/* Written recommendations */}
+        <section className={styles.section}>
+          <div className={styles.sectionInner}>
+            <div className={styles.sectionHeader}>
+              <h2 className={styles.sectionHeading}>Written recommendations</h2>
+              <p className={styles.sectionSub}>
+                LinkedIn recommendations and reviews from clients who wrote it down.
+              </p>
+            </div>
+            <div className={styles.recsGrid}>
+              {RECOMMENDATIONS.map((r) => {
+                const img = (
+                  <img
+                    src={`/images/testimonials/${r.file}.jpg`}
+                    alt={`${r.name} — recommendation for David Pugh, Scrub the Deck`}
+                    className={styles.recImg}
+                    loading="lazy"
+                  />
+                );
+                return r.linkedin ? (
+                  <a
+                    key={r.file}
+                    href={r.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.recItem}
+                    aria-label={`${r.name} on LinkedIn`}
+                  >
+                    {img}
+                  </a>
+                ) : (
+                  <div key={r.file} className={styles.recItem}>
+                    {img}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </section>
 
