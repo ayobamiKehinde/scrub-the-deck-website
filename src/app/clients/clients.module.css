@@ -184,24 +184,45 @@
 }
 
 .brandCard {
-  background: var(--colour-bg);
-  border: 1px solid var(--colour-border);
+  position: relative;
   border-radius: 4px;
-  padding: var(--space-lg);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  transition: border-color 0.2s, background 0.2s;
+  overflow: hidden;
+  display: block;
+  aspect-ratio: 4 / 3;
 }
 
-.brandCard:hover {
-  border-color: var(--colour-gold);
-  background: rgba(201, 168, 76, 0.04);
+.brandImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.brandCard:hover .brandImg {
+  transform: scale(1.04);
+}
+
+.brandOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 10, 15, 0.92) 0%, rgba(7, 10, 15, 0.3) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-lg);
+  gap: var(--space-xs);
+  transition: background 0.3s;
+}
+
+.brandCard:hover .brandOverlay {
+  background: linear-gradient(to top, rgba(7, 10, 15, 0.97) 0%, rgba(7, 10, 15, 0.5) 60%, rgba(7, 10, 15, 0.1) 100%);
 }
 
 .brandName {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--colour-white);
@@ -211,7 +232,6 @@
   font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--colour-muted);
-  flex: 1;
 }
 
 .brandArrow {
@@ -220,11 +240,14 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--colour-gold);
-  transition: opacity 0.2s;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .brandCard:hover .brandArrow {
-  opacity: 0.7;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .portfolioNote {

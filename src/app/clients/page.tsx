@@ -80,51 +80,61 @@ const PORTFOLIO_BRANDS = [
     name: "BBC Worldwide",
     category: "Brand & Campaign",
     url: "https://www.freelancegraphicdesigner.co.uk/portfolio/bbc-worldwide/",
+    image: "https://www.freelancegraphicdesigner.co.uk/wp-content/uploads/2017/04/bbc-ww.png",
   },
   {
     name: "BBC Earth",
     category: "Presentation Design",
     url: "https://www.freelancegraphicdesigner.co.uk/portfolio/bbc-earth/",
+    image: "https://www.freelancegraphicdesigner.co.uk/wp-content/uploads/2014/08/00-Intro-screen-white.jpg",
   },
   {
     name: "Mercedes AMG",
     category: "Pitch & Brand",
     url: "https://www.freelancegraphicdesigner.co.uk/portfolio/mercedes-amg/",
+    image: "https://www.freelancegraphicdesigner.co.uk/wp-content/uploads/2014/08/ABCofAMG_visual_03-1.jpg",
   },
   {
     name: "Hilton",
     category: "Campaign Design",
     url: "https://www.freelancegraphicdesigner.co.uk/portfolio/hilton/",
+    image: "https://www.freelancegraphicdesigner.co.uk/wp-content/uploads/2014/08/19th-Dec-closed.jpg",
   },
   {
     name: "MTV",
     category: "Creative Direction",
     url: "https://www.freelancegraphicdesigner.co.uk/portfolio/mtv/",
+    image: "https://www.freelancegraphicdesigner.co.uk/wp-content/uploads/2014/08/student-of-the-year-logo-design.jpg",
   },
   {
     name: "Top Gear USA",
     category: "Brand Identity",
     url: "https://www.freelancegraphicdesigner.co.uk/portfolio/top-gear-usa/",
+    image: "https://www.freelancegraphicdesigner.co.uk/wp-content/uploads/2018/03/TGusa.jpg",
   },
   {
     name: "BMW M Series",
     category: "Campaign Design",
     url: "https://www.freelancegraphicdesigner.co.uk/portfolio/bmw-m-series/",
+    image: "https://www.freelancegraphicdesigner.co.uk/wp-content/uploads/2014/08/BMW-design-1.jpg",
   },
   {
     name: "Kellogg's",
     category: "Brand Campaign",
     url: "https://www.freelancegraphicdesigner.co.uk/portfolio/kelloggs/",
+    image: "https://www.freelancegraphicdesigner.co.uk/wp-content/uploads/2014/05/kelloggswe7.png",
   },
   {
     name: "Jim Beam",
     category: "Presentation Design",
     url: "https://www.freelancegraphicdesigner.co.uk/portfolio/jim-beam/",
+    image: "https://www.freelancegraphicdesigner.co.uk/wp-content/uploads/2014/08/jimbeampicbig.jpg",
   },
   {
     name: "Golfbreaks",
     category: "Brand Design",
     url: "https://www.freelancegraphicdesigner.co.uk/portfolio/golfbreaks/",
+    image: "https://www.freelancegraphicdesigner.co.uk/wp-content/uploads/2017/04/golfer.png",
   },
 ];
 
@@ -257,9 +267,17 @@ export default function ClientsPage() {
                   rel="noopener noreferrer"
                   className={styles.brandCard}
                 >
-                  <span className={styles.brandName}>{b.name}</span>
-                  <span className={styles.brandCategory}>{b.category}</span>
-                  <span className={styles.brandArrow}>View project ↗</span>
+                  <img
+                    src={b.image}
+                    alt={`${b.name} — ${b.category} by David Pugh`}
+                    className={styles.brandImg}
+                    loading="lazy"
+                  />
+                  <div className={styles.brandOverlay}>
+                    <span className={styles.brandName}>{b.name}</span>
+                    <span className={styles.brandCategory}>{b.category}</span>
+                    <span className={styles.brandArrow}>View project ↗</span>
+                  </div>
                 </a>
               ))}
             </div>
