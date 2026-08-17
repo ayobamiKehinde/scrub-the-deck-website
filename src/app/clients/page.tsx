@@ -53,9 +53,9 @@ const FOUNDERS = [
   {
     name: "Kara Stanford",
     role: "Founder",
-    company: "Insight Delivered",
+    company: "formerly Insight Delivered",
     outcome: "$300K raised",
-    linkedin: null,
+    linkedin: "https://www.linkedin.com/in/karastanford/",
     image: "kara-stanford.jpg",
   },
   {
@@ -73,6 +73,22 @@ const FOUNDERS = [
     outcome: "£1.2M raised",
     linkedin: "https://uk.linkedin.com/in/manoli-yannaghas",
     image: "manoli.jpg",
+  },
+  {
+    name: "James Dyer",
+    role: "CEO",
+    company: "At Last",
+    outcome: "£900K+ raised",
+    linkedin: "https://www.linkedin.com/in/ja-dyer/",
+    image: "james-dyer.jpg",
+  },
+  {
+    name: "Ellis Achim",
+    role: "Founder",
+    company: "Bioflow",
+    outcome: "Pre-seed secured",
+    linkedin: "https://www.linkedin.com/in/ellis-achim-917914155/",
+    image: "achim.jpg",
   },
 ];
 
@@ -145,13 +161,13 @@ const RECOMMENDATIONS = [
   { file: "AP",        name: "Ashley Pugh",          linkedin: null },
   { file: "DF",        name: "David Flavin",         linkedin: null },
   { file: "DL",        name: "Daryl Leigh",          linkedin: null },
-  { file: "JD",        name: "Jonathan Dooley",      linkedin: null },
+  { file: "JD",        name: "James Dyer",            linkedin: "https://www.linkedin.com/in/ja-dyer/" },
   { file: "NF",        name: "Neil Fogarty",         linkedin: "https://uk.linkedin.com/in/neildfogarty" },
   { file: "MO",        name: "Michael Ojo",          linkedin: null },
   { file: "RH",        name: "Robin Holiday",        linkedin: "https://www.linkedin.com/in/robin-holiday-46079b24/" },
   { file: "RW",        name: "Richard Woods",        linkedin: "https://www.linkedin.com/in/richardwoodsofficial/" },
   { file: "SH",        name: "Sam Holden",           linkedin: "https://uk.linkedin.com/in/sampholden" },
-  { file: "boomquote", name: "David Bacon",          linkedin: null },
+  { file: "boomquote", name: "David Bacon",          linkedin: "https://www.linkedin.com/in/davidbaconfc/" },
 ];
 
 const clientsJsonLd = {
