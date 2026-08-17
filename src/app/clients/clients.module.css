@@ -1,0 +1,283 @@
+/* ─── Page wrapper ─────────────────────────────────────────────── */
+.page {
+  min-height: 100vh;
+}
+
+/* ─── Hero ─────────────────────────────────────────────────────── */
+.hero {
+  padding: var(--space-5xl) var(--space-lg) var(--space-4xl);
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--colour-teal);
+  margin-bottom: var(--space-md);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--colour-white);
+  margin-bottom: var(--space-lg);
+}
+
+.heading em {
+  font-style: italic;
+  color: var(--colour-teal);
+}
+
+.sub {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--colour-muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ─── Sections ─────────────────────────────────────────────────── */
+.section {
+  padding: var(--space-4xl) var(--space-lg);
+  border-top: 1px solid var(--colour-border);
+}
+
+.sectionAlt {
+  background: var(--colour-surface);
+}
+
+.sectionInner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  margin-bottom: var(--space-3xl);
+}
+
+.sectionHeading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--colour-white);
+  margin-bottom: var(--space-md);
+}
+
+.sectionSub {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--colour-muted);
+  max-width: 560px;
+}
+
+/* ─── Founders grid ────────────────────────────────────────────── */
+.foundersGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 600px) {
+  .foundersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .foundersGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.founderCard {
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-border);
+  border-radius: 4px;
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  transition: border-color 0.2s;
+}
+
+.founderCard:hover {
+  border-color: var(--colour-teal-dim);
+}
+
+.outcome {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  color: var(--colour-teal);
+}
+
+.founderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.founderName {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--colour-white);
+  transition: color 0.2s;
+}
+
+.founderName:hover {
+  color: var(--colour-teal);
+}
+
+.founderNameStatic {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--colour-white);
+}
+
+.founderRole {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--colour-muted);
+}
+
+/* ─── Brands grid ──────────────────────────────────────────────── */
+.brandsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+@media (min-width: 600px) {
+  .brandsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .brandsGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.brandCard {
+  background: var(--colour-bg);
+  border: 1px solid var(--colour-border);
+  border-radius: 4px;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.brandCard:hover {
+  border-color: var(--colour-gold);
+  background: rgba(201, 168, 76, 0.04);
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--colour-white);
+}
+
+.brandCategory {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--colour-muted);
+  flex: 1;
+}
+
+.brandArrow {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--colour-gold);
+  transition: opacity 0.2s;
+}
+
+.brandCard:hover .brandArrow {
+  opacity: 0.7;
+}
+
+.portfolioNote {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--colour-muted);
+}
+
+.portfolioLink {
+  color: var(--colour-teal);
+  transition: opacity 0.2s;
+}
+
+.portfolioLink:hover {
+  opacity: 0.7;
+}
+
+/* ─── CTA ──────────────────────────────────────────────────────── */
+.cta {
+  padding: var(--space-5xl) var(--space-lg);
+  border-top: 1px solid var(--colour-border);
+  text-align: center;
+}
+
+.ctaInner {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.ctaHeading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--colour-white);
+}
+
+.ctaSub {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--colour-muted);
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: var(--space-md) var(--space-2xl);
+  background: var(--colour-teal);
+  color: var(--colour-bg);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: opacity 0.2s;
+}
+
+.ctaButton:hover {
+  opacity: 0.85;
+}
