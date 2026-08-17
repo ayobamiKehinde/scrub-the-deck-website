@@ -296,19 +296,3 @@
   color: var(--colour-muted);
 }
 
-.ctaButton {
-  display: inline-block;
-  padding: var(--space-md) var(--space-2xl);
-  background: var(--colour-teal);
-  color: var(--colour-bg);
-  font-family: var(--font-display);
-  font-size: 1rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  border-radius: 2px;
-  transition: opacity 0.2s;
-}
-
-.ctaButton:hover {
-  opacity: 0.85;
-}

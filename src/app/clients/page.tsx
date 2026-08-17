@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import GoldButton from "@/components/ui/GoldButton";
 import styles from "./clients.module.css";
 
 export const metadata: Metadata = {
@@ -304,9 +305,7 @@ export default function ClientsPage() {
               Work with David on your pitch deck and get introduced to 1,500+
               investors.
             </p>
-            <a href="/davecall-q" className={styles.ctaButton}>
-              Book a free call
-            </a>
+            <GoldButton href="/davecall-q" label="Book a Call" size="lg" />
           </div>
         </section>
       </main>
