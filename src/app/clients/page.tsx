@@ -322,7 +322,7 @@ export default function ClientsPage() {
               </p>
             </div>
             <div className={styles.recsGrid}>
-              {RECOMMENDATIONS.map((r) => {
+              {RECOMMENDATIONS.filter((r) => r.linkedin).map((r) => {
                 const img = (
                   <img
                     src={`/images/testimonials/${r.file}.jpg`}
