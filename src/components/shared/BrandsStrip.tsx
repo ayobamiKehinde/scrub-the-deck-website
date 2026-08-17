@@ -4,7 +4,9 @@ import { useState } from "react";
 import styles from "./BrandsStrip.module.css";
 
 const BRANDS = [
+  { name: "BBC",            file: "bbc"          },
   { name: "Mercedes-Benz",  file: "mercedes"     },
+  { name: "BMW",            file: "bmw"          },
   { name: "O2",             file: "o2"           },
   { name: "Aston Martin",   file: "aston-martin" },
   { name: "Cisco",          file: "cisco"        },
