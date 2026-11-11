@@ -19,12 +19,11 @@ const FOUNDERS = [
     image: "ian-humphreys.jpg",
   },
   {
-    name: "Philip Werner",
+    name: "Matt Marshall",
     role: "Founder",
-    company: "Maekersuite",
-    outcome: "£650K raised",
-    linkedin: "https://www.linkedin.com/in/philip-werner-8851ba155/",
-    image: "philip-werner.jpg",
+    company: "1Clinical",
+    outcome: "£950K raised",
+    image: "matt-marshall.jpg",
   },
   {
     name: "Nick van Dijk",
@@ -33,6 +32,14 @@ const FOUNDERS = [
     outcome: "$10M+ raised",
     linkedin: "https://www.linkedin.com/in/nick-van-dijk-9005aa4/",
     image: "nick.jpg",
+  },
+  {
+    name: "Philip Werner",
+    role: "Founder",
+    company: "Maekersuite",
+    outcome: "£650K raised",
+    linkedin: "https://www.linkedin.com/in/philip-werner-8851ba155/",
+    image: "philip-werner.jpg",
   },
   {
     name: "Aaron Phethean",
