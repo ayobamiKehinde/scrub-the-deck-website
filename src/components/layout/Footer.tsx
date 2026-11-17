@@ -26,6 +26,15 @@ export default function Footer() {
           <p className={styles.tagline}>
             Helping you navigate the rough seas of investment.
           </p>
+          <Link href="/seedlegals" className={styles.partner}>
+            <Image
+              src="/images/seedlegals-partner.png"
+              alt="SeedLegals official partner"
+              width={414}
+              height={83}
+              className={styles.partnerLogo}
+            />
+          </Link>
         </div>
 
         <nav className={styles.nav} aria-label="Footer navigation">

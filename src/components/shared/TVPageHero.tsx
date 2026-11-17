@@ -6,7 +6,9 @@ import GoldButton from "@/components/ui/GoldButton";
 import styles from "./TVPageHero.module.css";
 
 interface TVPageHeroProps {
-  headline: string;
+  headline: React.ReactNode;
+  // required when headline isn't plain text, for the section's aria-label
+  ariaLabel?: string;
   subtitle: string;
   tvSrc: string;
   tvAlt: string;
@@ -16,12 +18,15 @@ interface TVPageHeroProps {
   noBlend?: boolean;
   compact?: boolean;
   logoSrc?: string;
+  partnerLogoSrc?: string;
+  partnerLogoAlt?: string;
   note?: React.ReactNode;
   centerPlay?: boolean;
 }
 
 export default function TVPageHero({
   headline,
+  ariaLabel,
   subtitle,
   tvSrc,
   tvAlt,
@@ -31,6 +36,8 @@ export default function TVPageHero({
   noBlend = false,
   compact = false,
   logoSrc,
+  partnerLogoSrc,
+  partnerLogoAlt = "",
   note,
   centerPlay = false,
 }: TVPageHeroProps) {
@@ -38,7 +45,7 @@ export default function TVPageHero({
 
   return (
     <>
-      <section className={`${styles.hero} ${compact ? styles.heroCompact : ""}`} aria-label={headline}>
+      <section className={`${styles.hero} ${compact ? styles.heroCompact : ""}`} aria-label={ariaLabel ?? (typeof headline === "string" ? headline : undefined)}>
         <div className={`${styles.inner} ${compact ? styles.innerCompact : ""}`}>
           {logoSrc && (
             <Image
@@ -46,7 +53,17 @@ export default function TVPageHero({
               alt="Scrub the Deck"
               width={280}
               height={72}
-              className={styles.heroLogo}
+              className={`${styles.heroLogo} ${partnerLogoSrc ? styles.heroLogoWithPartner : ""}`}
+              priority
+            />
+          )}
+          {partnerLogoSrc && (
+            <Image
+              src={partnerLogoSrc}
+              alt={partnerLogoAlt}
+              width={414}
+              height={83}
+              className={styles.partnerLogo}
               priority
             />
           )}

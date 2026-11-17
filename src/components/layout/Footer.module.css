@@ -39,6 +39,22 @@
   max-width: 280px;
 }
 
+/* ─── Partner badge ───────────────────────────────────────────── */
+.partner {
+  display: inline-block;
+  margin-top: var(--space-2xl);
+  transition: opacity 0.2s;
+}
+
+.partner:hover {
+  opacity: 0.8;
+}
+
+.partnerLogo {
+  height: 40px;
+  width: auto;
+}
+
 /* ─── Nav ─────────────────────────────────────────────────────── */
 .links {
   list-style: none;

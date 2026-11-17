@@ -29,10 +29,31 @@
   margin-bottom: var(--space-2xl);
 }
 
+/* Partner lockup: logo sits tight under the main logo, gap moves below it */
+.heroLogoWithPartner {
+  margin-bottom: calc(-1 * var(--space-sm));
+}
+
+.partnerLogo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: var(--space-xl);
+}
+
 @media (max-width: 767px) {
   .heroLogo {
     height: 64px;
     margin-bottom: var(--space-xl);
+  }
+
+  .heroLogoWithPartner {
+    margin-bottom: 0;
+  }
+
+  .partnerLogo {
+    height: 36px;
+    margin-bottom: var(--space-lg);
   }
 }
 

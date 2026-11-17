@@ -54,3 +54,8 @@
   color: var(--colour-gold);
   margin-top: -20px;
 }
+
+/* ─── Gold word inside the hero headline (SeedLegals page) ────── */
+.headlineAccent {
+  color: var(--colour-gold);
+}
