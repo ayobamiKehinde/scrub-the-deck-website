@@ -33,6 +33,7 @@ export default function SeedLegalsPage() {
         logoSrc="/images/logo-silver.png"
         partnerLogoSrc="/images/seedlegals-partner.png"
         partnerLogoAlt="SeedLegals official partner"
+        logoHref="/"
       />
 
       <BrandsStrip label="Some of the clients I've worked with in a 20 year career" />

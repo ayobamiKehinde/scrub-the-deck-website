@@ -16,17 +16,19 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.brand}>
-          <Image
-            src="/images/logo-silver.png"
-            alt="Scrub the Deck"
-            width={180}
-            height={46}
-            className={styles.footerLogo}
-          />
+          <Link href="/" aria-label="Scrub the Deck home">
+            <Image
+              src="/images/logo-silver.png"
+              alt="Scrub the Deck"
+              width={180}
+              height={46}
+              className={styles.footerLogo}
+            />
+          </Link>
           <p className={styles.tagline}>
             Helping you navigate the rough seas of investment.
           </p>
-          <Link href="/seedlegals" className={styles.partner}>
+          <Link href="/" className={styles.partner}>
             <Image
               src="/images/seedlegals-partner.png"
               alt="SeedLegals official partner"

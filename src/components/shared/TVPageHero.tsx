@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GoldButton from "@/components/ui/GoldButton";
 import styles from "./TVPageHero.module.css";
 
@@ -20,6 +21,8 @@ interface TVPageHeroProps {
   logoSrc?: string;
   partnerLogoSrc?: string;
   partnerLogoAlt?: string;
+  // wraps the logo lockup in a link (welcome/meta deliberately have no way off the page)
+  logoHref?: string;
   note?: React.ReactNode;
   centerPlay?: boolean;
 }
@@ -38,35 +41,46 @@ export default function TVPageHero({
   logoSrc,
   partnerLogoSrc,
   partnerLogoAlt = "",
+  logoHref,
   note,
   centerPlay = false,
 }: TVPageHeroProps) {
   const [playing, setPlaying] = useState(false);
 
+  const logos = (
+    <>
+      {logoSrc && (
+        <Image
+          src={logoSrc}
+          alt="Scrub the Deck"
+          width={280}
+          height={72}
+          className={`${styles.heroLogo} ${partnerLogoSrc ? styles.heroLogoWithPartner : ""}`}
+          priority
+        />
+      )}
+      {partnerLogoSrc && (
+        <Image
+          src={partnerLogoSrc}
+          alt={partnerLogoAlt}
+          width={414}
+          height={83}
+          className={styles.partnerLogo}
+          priority
+        />
+      )}
+    </>
+  );
+
   return (
     <>
       <section className={`${styles.hero} ${compact ? styles.heroCompact : ""}`} aria-label={ariaLabel ?? (typeof headline === "string" ? headline : undefined)}>
         <div className={`${styles.inner} ${compact ? styles.innerCompact : ""}`}>
-          {logoSrc && (
-            <Image
-              src={logoSrc}
-              alt="Scrub the Deck"
-              width={280}
-              height={72}
-              className={`${styles.heroLogo} ${partnerLogoSrc ? styles.heroLogoWithPartner : ""}`}
-              priority
-            />
-          )}
-          {partnerLogoSrc && (
-            <Image
-              src={partnerLogoSrc}
-              alt={partnerLogoAlt}
-              width={414}
-              height={83}
-              className={styles.partnerLogo}
-              priority
-            />
-          )}
+          {logoHref ? (
+            <Link href={logoHref} className={styles.logoLink} aria-label="Scrub the Deck home">
+              {logos}
+            </Link>
+          ) : logos}
           <p className={styles.headline}>{headline}</p>
           <p className={styles.subtitle}>{subtitle}</p>
 

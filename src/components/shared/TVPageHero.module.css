@@ -29,6 +29,18 @@
   margin-bottom: var(--space-2xl);
 }
 
+/* Logo lockup as a home link: column so the partner logo stays underneath */
+.logoLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.logoLink:hover {
+  opacity: 0.85;
+}
+
 /* Partner lockup: logo sits tight under the main logo, gap moves below it */
 .heroLogoWithPartner {
   margin-bottom: calc(-1 * var(--space-sm));
